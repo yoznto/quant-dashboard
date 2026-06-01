@@ -3,6 +3,16 @@ import time
 import subprocess
 import sys
 from datetime import datetime
+def auto_push_to_github():
+    print("🔄 正在將最新網頁推送到 GitHub...")
+    try:
+        # 讓 Python 模擬你在終端機打的指令，只上傳變更的網頁檔案
+        subprocess.run(["git", "add", "index.html", "dashboard_data.json"], check=True)
+        subprocess.run(["git", "commit", "-m", "Auto-update AI dashboard"], check=True)
+        subprocess.run(["git", "push"], check=True)
+        print("✅ 網頁已成功同步至雲端！網址將在 1~2 分鐘後自動更新。")
+    except Exception as e:
+        print(f"❌ 同步失敗: {e}")
 
 def run_script(script_name, job_title):
     print("="*50)
@@ -11,6 +21,7 @@ def run_script(script_name, job_title):
         # 呼叫獨立腳本執行，跑完釋放記憶體
         subprocess.run([sys.executable, script_name], check=True)
         print(f"✅ {job_title} 發送完畢！")
+        auto_push_to_github()
     except Exception as e:
         print(f"❌ {job_title} 發生錯誤: {e}")
     print("="*50 + "\n")
@@ -21,7 +32,7 @@ def run_script(script_name, job_title):
 schedule.every().day.at("08:00").do(run_script, "run_global_news.py", "國際政經晨報")
 
 # 2. 每天早上 09:00 跑【台股大數據版】
-schedule.every().day.at("09:00").do(run_script, "run_analysis.py", "台股大數據晨報")
+schedule.every().day.at("21:36").do(run_script, "run_analysis.py", "台股大數據晨報")
 
 # 3. 每天晚上 21:00 (下午9:00) 跑【美股焦點版】
 schedule.every().day.at("21:00").do(run_script, "run_us_stocks.py", "美股科技巨頭晚報")
