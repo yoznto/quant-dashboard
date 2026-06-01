@@ -99,11 +99,19 @@
     },
     "tw": {
         "title": "📊 台股大數據晨報",
-        "time": "2026-06-01 21:19:42",
+        "time": "2026-06-01 21:26:42",
         "data": [
+            {
+                "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E7%99%BC%E5%A8%81%E5%8F%B0%E8%82%A1%E7%8B%82%E5%99%B4-%E8%83%A1%E9%87%87%E8%98%8B%E8%A6%8B-%E9%80%991%E6%AA%94-%E6%84%8F%E5%A4%96%E6%BC%B2%E5%81%9C%E5%82%BB%E4%BA%86-130120782.html",
+                "title": "黃仁勳發威台股狂噴！胡采蘋見「這1檔」意外漲停傻了"
+            },
             {
                 "url": "https://autos.yahoo.com.tw/news/computex-2026-%E9%B4%BB%E8%8F%AF%E5%85%88%E9%80%B2%E6%94%9C%E8%81%AF%E7%99%BC%E7%A7%91%E6%8A%80%E3%80%81nvidia%E7%AD%96%E7%95%A5%E5%90%88%E4%BD%9C%EF%BC%81%E5%B0%8E%E5%85%A5%E5%A4%A9%E7%92%A3%E6%B1%BD%E8%BB%8Ac-x1%E5%B9%B3%E5%8F%B0%E6%89%93%E9%80%A0ai%E6%99%BA%E6%85%A7%E5%BA%A7%E8%89%99-125225076.html",
                 "title": "[Computex 2026] 鴻華先進攜聯發科技、NVIDIA策略合作！導入天璣汽車C-X1平台打造AI智慧座艙"
+            },
+            {
+                "url": "https://tw.stock.yahoo.com/news/%E9%B4%BB%E6%B5%B7%E6%94%BB%E6%AD%90%E6%B4%B2%E5%85%88%E9%80%B2%E5%B0%81%E8%A3%9D-%E6%B3%95%E5%9C%8B%E5%90%88%E8%B3%87%E5%85%AC%E5%8F%B8%E7%9B%AE%E6%A8%992033%E5%B9%B4%E7%94%A25000%E8%90%AC%E9%A1%86sip%E5%85%83%E4%BB%B6-124223256.html",
+                "title": "鴻海攻歐洲先進封裝 法國合資公司目標2033年產5000萬顆SIP元件"
             },
             {
                 "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%89%8D%E6%8E%92%E7%AC%AC%E4%B8%83%EF%BC%81%E4%B8%8A%E5%B8%82%E5%93%A1%E5%B7%A5%E8%96%AA%E8%B3%87%E6%A6%9C-%E6%97%A5%E6%9C%88%E5%85%89%E4%BA%BA%E5%9D%87628%E8%90%AC%E5%85%83%E5%A5%AA%E5%86%A0-123611787.html",
@@ -120,10 +128,6 @@
             {
                 "url": "https://tw.stock.yahoo.com/news/3%E5%B7%A8%E9%A0%AD%E8%81%AF%E6%89%8B-%E8%BC%9D%E9%81%94%E6%94%9C%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%81%AF%E7%99%BC%E7%A7%91%E6%89%93%E9%80%A0n1x%E6%99%B6%E7%89%87-%E6%88%90%E4%BA%A4%E9%A1%8D%E5%90%88%E7%A0%B41600%E5%84%84%E5%85%83-%E9%BB%83%E4%BB%81%E5%8B%B3%E7%9B%9B%E8%AE%9A-%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%A9%9A%E8%89%B7-121500806.html",
                 "title": "3巨頭聯手！輝達攜台積電聯發科打造N1X晶片「成交額合破1600億元」　黃仁勳盛讚：史上最驚艷"
-            },
-            {
-                "url": "https://tw.stock.yahoo.com/news/computex-%E8%81%AF%E7%99%BC%E7%A7%91%E8%BB%8A%E7%94%A8%E6%99%B6%E7%89%87%E5%A0%B1%E6%8D%B7-%E5%A4%A9%E7%92%A3%E6%B1%BD%E8%BB%8A%E5%BA%A7%E8%89%99%E5%B9%B3%E5%8F%B0c-x1%E6%89%93%E9%80%B2%E9%B4%BB%E8%8F%AF%E5%85%88%E9%80%B2-105527307.html",
-                "title": "〈COMPUTEX〉聯發科車用晶片報捷 天璣汽車座艙平台C-X1打進鴻華先進"
             },
             {
                 "url": "https://tw.stock.yahoo.com/news/%E4%B8%AD%E7%9F%B3%E5%8C%96%E6%96%B0%E8%91%A3%E5%BA%A7%E5%87%BA%E7%88%90-%E8%B3%87%E6%B7%B1%E5%AA%92%E9%AB%94%E4%BA%BA%E8%91%9B%E6%A8%B9%E4%BA%BA%E6%8E%A5%E4%BB%BB%E8%91%A3%E4%BA%8B%E9%95%B7-110302437.html",
@@ -162,36 +166,36 @@
                 "title": "查看原始新聞"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%85%89-%E8%8B%B1%E7%89%B9%E7%88%BE%E5%A4%A7%E5%96%AE%E5%8A%A0%E6%8C%81%E4%BB%8D%E9%81%AD%E6%AE%BA-%E5%A4%96%E8%B3%87%E9%80%A3%E7%A0%8D-%E8%A8%98%E6%86%B6%E9%AB%94%E5%BB%A0-2%E5%88%80%E6%8D%B2146%E5%84%84%E5%85%83-123000699.html",
-                "title": "美光、英特爾大單加持仍遭殺！外資連砍「記憶體廠」2刀捲146億元　股價止步連7漲"
-            },
-            {
                 "url": "https://tw.stock.yahoo.com/news/94%E8%90%AC%E8%82%A1%E6%B0%91%E6%B3%A8%E6%84%8F-%E7%91%A4%E6%B1%A0%E9%87%91%E6%AF%8D-%E8%A6%81%E7%99%BC%E9%8C%A2%E4%BA%86-%E4%BB%8A%E5%85%AC%E5%B8%83%E7%AC%AC%E4%BA%8C%E5%AD%A3%E9%85%8D0-63%E5%85%83-124500848.html",
                 "title": "94萬股民注意「瑤池金母」要發錢了！今公布第二季配0.63元　最後上車日在「這天」"
-            },
-            {
-                "url": "https://tw.stock.yahoo.com/news/dram%E6%BC%B2%E4%B8%8D%E5%81%9C-%E8%A8%98%E6%86%B6%E9%AB%94%E5%A4%A7%E5%BB%A0-%E7%8D%B2%E4%B8%89%E5%A4%A7%E6%B3%95%E4%BA%BA%E5%A4%A7%E6%8A%95426%E5%84%84%E5%85%83%E9%80%A35%E5%A4%A9%E9%80%B2%E5%A0%B4-%E5%A4%96%E8%B3%87%E9%BB%9E%E8%AE%9A%E8%82%A1%E5%83%B9%E9%A3%86%E6%BC%B2%E5%81%9C-125500573.html",
-                "title": "DRAM漲不停！「記憶體大廠」獲三大法人大投426億元連5天進場　外資點讚股價飆漲停"
-            },
-            {
-                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A15%E6%9C%88%E6%97%A5%E5%9D%87%E9%87%8F%E9%A3%86%E7%A0%B41-3%E5%85%86-%E7%AB%8B%E9%99%A2%E6%8B%8D%E6%9D%BF%E8%B2%A1%E6%94%BF%E9%83%A8%E7%A8%85%E5%85%A5%E5%A2%9E%E5%88%976%E5%8D%83%E5%84%84-125023882.html",
-                "title": "台股5月日均量飆破1.3兆 立院拍板財政部稅入增列6千億"
             },
             {
                 "url": "https://tw.stock.yahoo.com/news/%E5%9C%8B%E7%A5%A8%E8%AD%89%E5%88%B8%E9%81%AD%E6%AA%A2%E8%AA%BF%E6%90%9C%E7%B4%A2-%E5%9C%8B%E7%A5%A8%E9%87%91%E6%8E%A7%E6%80%A5%E7%99%BC%E9%87%8D%E8%A8%8A-%E5%85%A8%E5%8A%9B%E9%85%8D%E5%90%88%E8%AA%BF%E6%9F%A5-124200561.html",
                 "title": "國票證券遭檢調搜索！國票金控急發重訊：全力配合調查"
             },
             {
+                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A15%E6%9C%88%E6%97%A5%E5%9D%87%E9%87%8F%E9%A3%86%E7%A0%B41-3%E5%85%86-%E7%AB%8B%E9%99%A2%E6%8B%8D%E6%9D%BF%E8%B2%A1%E6%94%BF%E9%83%A8%E7%A8%85%E5%85%A5%E5%A2%9E%E5%88%976%E5%8D%83%E5%84%84-125023882.html",
+                "title": "台股5月日均量飆破1.3兆 立院拍板財政部稅入增列6千億"
+            },
+            {
+                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%85%89-%E8%8B%B1%E7%89%B9%E7%88%BE%E5%A4%A7%E5%96%AE%E5%8A%A0%E6%8C%81%E4%BB%8D%E9%81%AD%E6%AE%BA-%E5%A4%96%E8%B3%87%E9%80%A3%E7%A0%8D-%E8%A8%98%E6%86%B6%E9%AB%94%E5%BB%A0-2%E5%88%80%E6%8D%B2146%E5%84%84%E5%85%83-123000699.html",
+                "title": "美光、英特爾大單加持仍遭殺！外資連砍「記憶體廠」2刀捲146億元　股價止步連7漲"
+            },
+            {
+                "url": "https://tw.stock.yahoo.com/news/ai-pc%E6%97%8F%E7%BE%A4%E9%A0%98%E8%BB%8D-%E5%8F%B0%E8%82%A1%E7%AB%99%E7%A9%A94%E8%90%AC5%E5%A4%A7%E9%97%9C-125116136.html",
+                "title": "AI、PC族群領軍 台股站穩4萬5大關"
+            },
+            {
                 "url": "https://tw.stock.yahoo.com/news/%E6%89%8D%E5%89%9B%E9%81%B8%E5%AE%8C%E8%91%A3%E4%BA%8B-%E5%9C%8B%E7%A5%A8%E8%AD%89%E5%88%B8%E7%AA%81%E9%81%AD%E5%A4%A7%E5%8B%95%E4%BD%9C%E6%90%9C%E7%B4%A2-%E5%9C%8B%E7%A5%A8%E9%87%91%E5%9B%9E%E6%87%89%E4%BA%86-125700113.html",
                 "title": "才剛選完董事！國票證券突遭大動作搜索　國票金回應了"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E6%8C%87%E9%80%A3%E4%B8%89%E5%A4%A9%E5%89%B5%E9%AB%98-%E7%BE%8E%E8%82%A1etf%E5%BE%8C%E5%B8%82%E7%9C%8B%E4%BF%8F-%E7%BE%A4%E7%9B%8A009823-009824%E5%B0%87%E6%96%BC6%E6%9C%888%E6%97%A5%E9%96%8B%E5%8B%9F-114500951.html",
-                "title": "美指連三天創高！美股ETF後市看俏　群益009823、009824將於6月8日開募"
-            },
-            {
                 "url": "https://tw.stock.yahoo.com/news/%E5%A4%8F%E5%AD%A3%E9%9B%BB%E8%B2%BB%E4%BB%8A%E8%B5%B7%E4%B8%8A%E8%B7%AF-%E5%8F%B0%E9%9B%BB-%E8%B6%85%E9%81%8E7%E6%88%90%E7%94%A8%E6%88%B6%E6%AF%8F%E5%BA%A6%E9%9B%BB%E5%83%B9%E4%B8%8D%E5%88%B03%E5%85%83-123931896.html",
                 "title": "夏季電費今起上路　台電：超過7成用戶每度電價不到3元"
+            },
+            {
+                "url": "https://tw.stock.yahoo.com/news/%E5%8B%9E%E5%B7%A5%E8%B3%BA%E7%BF%BB-%E5%8B%9E%E5%8B%95%E5%9F%BA%E9%87%91%E5%89%B5%E6%96%B0%E9%AB%98-%E5%B9%B3%E5%9D%87%E6%AF%8F%E4%BA%BA%E5%8F%AF%E5%88%86%E7%B4%858-1%E8%90%AC%E5%85%83-122900423.html",
+                "title": "勞工賺翻！勞動基金創新高 平均每人可分紅8.1萬元"
             }
         ]
     },
