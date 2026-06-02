@@ -1,5 +1,5 @@
+import os
 import requests
-from bs4 import BeautifulSoup
 import ollama
 import time
 from datetime import datetime
@@ -91,11 +91,13 @@ if __name__ == "__main__":
     raw_news_pool, info_list = get_huge_taiwan_stock_news(target_limit=30)
     if not raw_news_pool: exit()
         
-    # 傳入「tw」識別碼、純名稱標題、以及帶有標題說明的 info_list
+    # 🚀 1. 儲存原始新聞清單 (Tab 1: 📊 台股大數據資料來源)
     generate_html_dashboard("tw", "📊 台股大數據晨報", info_list)
     
     print(f"2. 【台股資料庫建立完成】正在將海量原始資料丟給 Llama 3.1 分析...\n")
     system_prompt = "你是一個高冷且極度嚴謹的台股量化策略師。你的任務是從大量新聞中萃取純乾貨，請直接陳述市場事實。"
+    
+    # 🎯 格式對齊優化：移除標題內緊黏的表情符號，確保前端 indexOf 100% 成功解構切片
     user_prompt = f"""
     分析以下台股新聞資料庫：
     {raw_news_pool}
@@ -104,14 +106,18 @@ if __name__ == "__main__":
     1. 絕對不准捏造大盤點位或股價！
     2. 必須點出具體「公司名稱」或「族群」。
     3. 嚴禁廢話。
+    4. 必須嚴格按照以下指定標題輸出，以便系統進行網頁橫向三欄切片。
     
-    🎯 **今日市場焦點**
+    市場事實如下：
+    1. [在這裡列出核心市場事實 1]
+    2. [在這裡列出核心市場事實 2]
+    
+    **今日市場焦點**
     • [產業與板塊動態]：(熱門產業事實與具體公司)
     • [大盤與總體表現]：(客觀描述大盤氛圍)
     • [個股與強勢標的]：(突出的個股或 ETF)
 
-    ---
-    📈 **操盤策略與投資建議**
+    **操盤策略與投資建議**
     • ⚖️ 潛在風險：(一句極度客觀的風險警告)
     • 💰 行動方針：(短線操作的具體方向)
     """
@@ -124,4 +130,9 @@ if __name__ == "__main__":
     final_report = final_response['message']['content'].strip()
     
     print("="*60 + f"\n{final_report}\n" + "="*60)
+    
+    # 🚀 2. 推送 Discord 頻道
     send_to_discord(final_report)
+    
+    # 🚀 3. 同步回流到網頁快取槽 (對齊網頁 v1.5.1 的 Tab 4 獨立台股子區塊)
+    generate_html_dashboard("ai_news_tw", "🧠 台股 AI 核心戰略", final_report)

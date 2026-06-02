@@ -38,7 +38,7 @@ def fetch_single_article(link):
         return None
 
 def get_huge_us_news(target_limit=30):
-    print("1. 正在從 Yahoo 國際與美股焦點專區取得文章列表與摘要...")
+    print("1. 正在從 Yahoo 國際與美股焦點專專區取得文章列表與摘要...")
     url = "https://tw.stock.yahoo.com/intl-markets/" 
     headers = {'User-Agent': 'Mozilla/5.0'}
     try:
@@ -86,10 +86,13 @@ if __name__ == "__main__":
     raw_news_pool, info_list = get_huge_us_news(target_limit=30)
     if not raw_news_pool: exit()
         
-    generate_html_dashboard("us", "🦅 美股科技巨頭晚報", info_list)
+    # 🚀 1. 儲存原始新聞清單 (Tab 2: 🦅 美股焦點資料來源)
+    generate_html_dashboard("us", "🦅 美股焦點資料來源", info_list)
     
     print(f"2. 【美股資料庫建立完成】正在將海量原始資料丟給 Llama 3.1 分析...\n")
     system_prompt = "你是一個華爾街頂級量化分析師。你的任務是從下方資料庫中，**只篩選出與美股、聯準會或美國科技巨頭相關的情報**進行分析，其餘非美地區直接忽略，嚴禁廢話。"
+    
+    # 🎯 格式對齊優化：強迫模型吐出精密錨點標題，以便前端 100% 解構切片並投放到三個橫向卡片
     user_prompt = f"""
     分析以下美股與華爾街新聞資料庫：
     {raw_news_pool}
@@ -98,15 +101,19 @@ if __name__ == "__main__":
     1. 絕對不准捏造指數或股價！
     2. 如果情報內沒有美股動態，請根據現有資料陳述華爾街事實。
     3. 嚴禁廢話。
+    4. 必須嚴格按照以下指定標題格式輸出，不准自行加表情符號，以便系統進行網頁橫向三欄切片。
     
-    🦅 **美股與華爾街焦點**
-    • [科技巨頭動態]：(輝達、蘋果等科技股具體事實)
-    • [聯準會與總經]：(Fed 官員談話、利率或通膨)
-    • [大盤指數表現]：(納斯達克、標普500氛圍)
-
-    ---
-    📉 **資金風向與台股連動**
-    (根據美股表現，推測外資動向及對台股供應鏈的影響)
+    市場事實如下：
+    1. [科技巨頭動態事実：輝達、蘋果等科技股具體事實]
+    2. [聯準會與總經事實：Fed 官員談話、利率或通膨]
+    
+    **今日市場焦點**
+    • [大盤指數表現]：(納斯達克、標普500氛圍與客觀數據)
+    • [主力強勢板塊]：(今日資金集中追捧的科技或半導體板塊)
+    
+    **操盤策略與投資建議**
+    • 💰 資金風向：(分析華爾街機構最新聰明錢流向)
+    • ⚡ 台股連動影響：(根據美股表現，推測外資明日動向及對台股供應鏈的具體連動衝擊)
     """
     
     final_response = ollama.chat(
@@ -117,4 +124,9 @@ if __name__ == "__main__":
     final_report = final_response['message']['content'].strip()
     
     print("="*60 + f"\n{final_report}\n" + "="*60)
+    
+    # 🚀 2. 推送 Discord 頻道
     send_to_discord(final_report)
+    
+    # 🚀 3. 同步回流到網頁快取槽 (對齊網頁 v1.5.1 的 Tab 4 獨立美股子區塊)
+    generate_html_dashboard("ai_news_us", "🧠 美股 AI 核心戰略", final_report)

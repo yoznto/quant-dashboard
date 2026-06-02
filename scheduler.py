@@ -29,13 +29,13 @@ def run_script(script_name, job_title):
 # ================= 時間排程設定 =================
 
 # 1. 每天早上 08:00 跑【國際形勢版】
-schedule.every().day.at("08:00").do(run_script, "run_global_news.py", "國際政經晨報")
+schedule.every().day.at("16:15").do(run_script, "run_global_news.py", "國際政經晨報")
 
 # 2. 每天早上 09:00 跑【台股大數據版】
-schedule.every().day.at("21:36").do(run_script, "run_analysis.py", "台股大數據晨報")
+schedule.every().day.at("16:19").do(run_script, "run_analysis.py", "台股大數據晨報")
 
 # 3. 每天晚上 21:00 (下午9:00) 跑【美股焦點版】
-schedule.every().day.at("21:00").do(run_script, "run_us_stocks.py", "美股科技巨頭晚報")
+schedule.every().day.at("16:23").do(run_script, "run_us_stocks.py", "美股科技巨頭晚報")
 
 # ================= 主程式區塊 =================
 if __name__ == "__main__":
