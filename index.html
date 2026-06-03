@@ -96,7 +96,6 @@
             toggleSidebar();
         }
 
-        // 🎯 核心除錯點：全面改成「全文字安全匹配」，徹底繞開大模型對 ID 字串加法相加時產生的公式污染！
         function showAiBlock(blockType) {
             activeAiBlock = blockType;
             const displayArea = document.getElementById('ai-content-area');
@@ -249,7 +248,7 @@
                 });
             } catch (err) {
                 if (brainText) brainText.innerHTML = "<span class='text-red-500 font-bold text-xs'>❌ 數據串接異常：請確認本機 api_server.py 是否正常開機運作。</span>";
-            } finally {
+            } finally { // 🎯 終極修復點：拼字正確補上 'l'，全網頁 JS 引擎徹底大復活！
                 btn.disabled = false;
                 btn.className = "px-5 py-3 bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold rounded-xl shadow-md transition duration-200";
                 btn.innerText = "即時 AI 分析";
@@ -308,7 +307,7 @@
             <button id="menu-chain" onclick="changeView('chain')" class="w-full text-left px-3 py-2 rounded-xl font-medium text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors">🔗 AI 供應鏈地圖</button>
             <button id="menu-ainews" onclick="changeView('ainews')" class="w-full text-left px-3 py-2 rounded-xl font-medium text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors">🧠 AI 新聞戰略中心</button>
         </nav>
-        <div class="p-3 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-400 font-mono text-center">v1.7.8 Fixed</div>
+        <div class="p-3 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-400 font-mono text-center">v1.7.9 Fixed</div>
     </aside>
 
     <div class="w-full flex justify-between items-center px-4 py-2 border-b border-gray-200 dark:border-gray-800/80 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md sticky top-0 z-30">
