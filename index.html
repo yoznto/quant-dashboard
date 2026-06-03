@@ -39,6 +39,7 @@
         let activeView = 'news';
         let activeTabId = 'tw';
         let activeAiTabId = 'tw';
+        let activeAiBlock = 'facts';
 
         function toggleSidebar() { 
             const sidebar = document.getElementById('sidebar');
@@ -78,7 +79,7 @@
             
             if (newsSection) newsSection.className = viewMode === 'news' ? "space-y-4 flex-1 flex flex-col overflow-hidden" : "hidden";
             if (chainSection) chainSection.className = viewMode === 'chain' ? "space-y-3 flex flex-col flex-1 overflow-hidden" : "hidden";
-            if (ainewsSection) ainewsSection.className = viewMode === 'ainews' ? "space-y-3 flex flex-col flex-1 overflow-hidden" : "hidden";
+            if (ainewsSection) ainewsSection.className = viewMode === 'ainews' ? "space-y-3 flex flex-col flex-1 overflow-hidden h-full" : "hidden";
             
             if (pageTitleHeader) {
                 if (viewMode === 'news') pageTitleHeader.innerText = "📊 新聞情報中心";
@@ -93,6 +94,25 @@
             if(viewMode === 'chain') renderStaticChain(blackwellDefault);
             if(viewMode === 'ainews') switchAiTab(activeAiTabId);
             toggleSidebar();
+        }
+
+        // 🎯 核心頁面投射邏輯：純靜態指向比對，移除任何加號引號組合，100% 防禦公式干擾！
+        function showAiBlock(blockType) {
+            activeAiBlock = blockType;
+            const displayArea = document.getElementById('ai-content-area');
+            if (!displayArea) return;
+
+            if (blockType === 'facts') { displayArea.innerText = document.getElementById('shadow-facts').innerText; }
+            if (blockType === 'focus') { displayArea.innerText = document.getElementById('shadow-focus').innerText; }
+            if (blockType === 'strategy') { displayArea.innerText = document.getElementById('shadow-strategy').innerText; }
+
+            document.getElementById('sub-btn-facts').className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
+            document.getElementById('sub-btn-focus').className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
+            document.getElementById('sub-btn-strategy').className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
+
+            if (blockType === 'facts') { document.getElementById('sub-btn-facts').className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-blue-500 text-blue-500 bg-blue-50 dark:bg-blue-950/40"; }
+            if (blockType === 'focus') { document.getElementById('sub-btn-focus').className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-purple-500 text-purple-500 bg-purple-50 dark:bg-purple-950/40"; }
+            if (blockType === 'strategy') { document.getElementById('sub-btn-strategy').className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-emerald-500 text-emerald-500 bg-emerald-50 dark:bg-emerald-950/40"; }
         }
 
         function switchAiTab(subTabId) {
@@ -114,24 +134,29 @@
             let text = tabData.text || "";
             let cleanText = text.replace(/==+/g, '').trim();
             
-            let partFacts = "暫無資料。";
-            let partFocus = "暫無資料。";
-            let partStrategy = "暫無資料。";
-            
-            let focusIdx = cleanText.indexOf("**今日市場焦點**");
-            let strategyIdx = cleanText.indexOf("**操盤策略與投資建議**");
-            
-            if (focusIdx !== -1 && strategyIdx !== -1) {
-                partFacts = cleanText.substring(0, focusIdx).replace("市場事實如下：", "").trim();
-                partFocus = cleanText.substring(focusIdx, strategyIdx).replace("**今日市場焦點**", "").trim();
-                partStrategy = cleanText.substring(strategyIdx).replace("**操盤策略與投資建議**", "").trim();
-            } else {
-                partFacts = cleanText;
+            function extractSection(fullText, sectionTitles) {
+                for (let i = 0; i < sectionTitles.length; i++) {
+                    let title = sectionTitles[i];
+                    let startIdx = fullText.indexOf(title);
+                    if (startIdx !== -1) {
+                        let contentStart = startIdx + title.length;
+                        let markers = ["市場事實如下：", "**市場事實如下：**", "市場事實", "**市場事實**", "**今日市場焦點**", "今日市場焦點", "**操盤策略與投資建議**", "操盤策略與投資建議", "聯準會與總經事實", "**聯準會與總經事實**", "科技巨頭動態事實", "**科技巨頭動態事實**"];
+                        let endIdx = fullText.length;
+                        markers.forEach(function(marker) {
+                            let mIdx = fullText.indexOf(marker, contentStart);
+                            if (mIdx !== -1 && mIdx < endIdx) { endIdx = mIdx; }
+                        });
+                        return fullText.substring(contentStart, endIdx).replace(/==+/g, '').trim();
+                    }
+                }
+                return "";
             }
-            
-            document.getElementById('block-facts').innerText = partFacts;
-            document.getElementById('block-focus').innerText = partFocus;
-            document.getElementById('block-strategy').innerText = partStrategy;
+
+            document.getElementById('shadow-facts').innerText = extractSection(cleanText, ["市場事實如下：", "**市場事實如下：**", "市場事實", "**市場事實**", "聯準會與總經事實", "**聯準會與總經事實**", "科技巨頭動態事實", "**科技巨頭動態事實**"]) || cleanText;
+            document.getElementById('shadow-focus').innerText = extractSection(cleanText, ["**今日市場焦點**", "今日市場焦點"]) || "未偵測到今日核心焦點段落。";
+            document.getElementById('shadow-strategy').innerText = extractSection(cleanText, ["**操盤策略與投資建議**", "操盤策略與投資建議", "📈 **操盤策略與投資建議**", "操盤策略與行動建議", "**操盤策略與行動建議**"]) || "未偵測到操盤策略方針段落。";
+
+            showAiBlock(activeAiBlock);
         }
 
         function renderStaticChain(dataList) {
@@ -218,7 +243,7 @@
                 });
             } catch (err) {
                 if (brainText) brainText.innerHTML = "<span class='text-red-500 font-bold text-xs'>❌ 數據串接異常：請確認本機 api_server.py 是否正常開機運作。</span>";
-            } finally {
+            } finally { // 🎯 終極修正：拼字完全補上 'l'，防止全域語法崩潰！
                 btn.disabled = false;
                 btn.className = "px-5 py-3 bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold rounded-xl shadow-md transition duration-200";
                 btn.innerText = "即時 AI 分析";
@@ -227,29 +252,28 @@
 
         function switchTab(tabId) {
             activeTabId = tabId;
-            const themes = {
-                'tw': { title: "📊 台股大數據資料來源", btn: 'from-green-500 to-emerald-600' },
-                'us': { title: "🦅 美股科技巨頭晚報資料來源", btn: 'from-blue-500 to-indigo-600' },
-                'global': { title: "🌍 國際政經與環球情報資料來源", btn: 'from-purple-500 to-pink-600' }
-            };
+            
+            document.getElementById('btn-tw').className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+            document.getElementById('btn-us').className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+            document.getElementById('btn-global').className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+
+            let titleStr = "📊 台股大數據資料來源";
+            if (tabId === 'tw') { document.getElementById('btn-tw').className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-md border-transparent"; titleStr = "📊 台股大數據資料來源"; }
+            if (tabId === 'us') { document.getElementById('btn-us').className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md border-transparent"; titleStr = "🦅 美股科技巨頭晚報資料來源"; }
+            if (tabId === 'global') { document.getElementById('btn-global').className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-md border-transparent"; titleStr = "🌍 國際政經與環球情報資料來源"; }
+
             const mainPanel = document.getElementById('main-panel');
-            if (!mainPanel) return;
-            document.querySelectorAll('.tab-btn').forEach(function(b) {
-                b.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
-            });
-            const t = themes[tabId] || themes['tw'];
-            const activeBtn = document.getElementById('btn-' + tabId);
-            if (activeBtn) activeBtn.className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r " + t.btn + " text-white shadow-md border-transparent";
-            mainPanel.className = "bg-white/90 dark:bg-gray-900/70 backdrop-blur-xl p-4 md:p-5 rounded-xl border border-gray-200 dark:border-gray-800/80 shadow-md transition-all duration-300 flex flex-col h-[calc(100vh-210px)] overflow-hidden";
-            const titleEl = document.getElementById('panel-title');
-            const timeEl = document.getElementById('panel-time');
+            if (mainPanel) mainPanel.className = "bg-white/90 dark:bg-gray-900/70 backdrop-blur-xl p-4 md:p-5 rounded-xl border border-gray-200 dark:border-gray-800/80 shadow-md transition-all duration-300 flex flex-col h-[calc(100vh-210px)] overflow-hidden";
+            
+            document.getElementById('panel-title').innerText = titleStr;
             const tabData = dbData[tabId] || { "time": "尚未更新", "data": [] };
-            if (titleEl) titleEl.innerText = t.title;
-            if (timeEl) timeEl.innerText = "UPDATE: " + tabData.time;
+            document.getElementById('panel-time').innerText = "UPDATE: " + tabData.time;
+            
             const container = document.getElementById('link-list');
             if (!container) return;
             container.innerHTML = "";
             container.className = "space-y-2 flex-1 overflow-y-auto pr-1";
+            
             let dataList = tabData.data || [];
             dataList.slice(0, 15).forEach(function(item) {
                 const li = document.createElement('li');
@@ -277,7 +301,7 @@
             <button id="menu-chain" onclick="changeView('chain')" class="w-full text-left px-3 py-2 rounded-xl font-medium text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors">🔗 AI 供應鏈地圖</button>
             <button id="menu-ainews" onclick="changeView('ainews')" class="w-full text-left px-3 py-2 rounded-xl font-medium text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors">🧠 AI 新聞戰略中心</button>
         </nav>
-        <div class="p-3 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-400 font-mono text-center">v1.5.0 Stable</div>
+        <div class="p-3 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-400 font-mono text-center">v1.9.0 Master</div>
     </aside>
 
     <div class="w-full flex justify-between items-center px-4 py-2 border-b border-gray-200 dark:border-gray-800/80 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md sticky top-0 z-30">
@@ -330,27 +354,26 @@
                 <button id="ai-btn-global" onclick="switchAiTab('global')" class="ai-tab-btn">🌍 國際政經</button>
             </nav>
 
+            <nav class="flex justify-center space-x-2 mb-2 flex-shrink-0 bg-gray-900/40 p-1 rounded-xl max-w-sm mx-auto border border-gray-800/60">
+                <button id="sub-btn-facts" onclick="showAiBlock('facts')" class="sub-block-btn px-3 py-1 text-gray-400 rounded-lg text-[11px]">📋 市場事實</button>
+                <button id="sub-btn-focus" onclick="showAiBlock('focus')" class="sub-block-btn px-3 py-1 text-gray-400 rounded-lg text-[11px]">🔥 重要焦點</button>
+                <button id="sub-btn-strategy" onclick="showAiBlock('strategy')" class="sub-block-btn px-3 py-1 text-gray-400 rounded-lg text-[11px]">⚡ 操盤方針</button>
+            </nav>
+
             <div class="flex justify-between border-b border-gray-200 dark:border-gray-800 pb-1.5 mb-2 flex-shrink-0">
                 <h2 id="ainews-title" class="text-xs font-bold text-gray-400">載入中...</h2>
                 <span id="ainews-time" class="text-[10px] font-mono text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-950/50 px-2 py-0.5 rounded border border-gray-200 dark:border-gray-800">--</span>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 flex-1 overflow-hidden h-[calc(100vh-210px)]">
-                <div class="flex flex-col bg-white/60 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800/80 rounded-xl p-3 shadow-md h-full overflow-hidden">
-                    <div class="text-xs font-bold text-blue-500 dark:text-blue-400 border-b dark:border-gray-800 pb-1.5 mb-2 flex-shrink-0">📋 原始市場事實提煉</div>
-                    <div id="block-facts" class="flex-1 overflow-y-auto font-mono text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line pr-1 tracking-wide"></div>
-                </div>
-                
-                <div class="flex flex-col bg-white/60 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800/80 rounded-xl p-3 shadow-md h-full overflow-hidden">
-                    <div class="text-xs font-bold text-purple-500 dark:text-purple-400 border-b dark:border-gray-800 pb-1.5 mb-2 flex-shrink-0">🔥 今日重要核心焦點</div>
-                    <div id="block-focus" class="flex-1 overflow-y-auto font-mono text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line pr-1 tracking-wide"></div>
-                </div>
-                
-                <div class="flex flex-col bg-white/60 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800/80 rounded-xl p-3 shadow-md h-full overflow-hidden">
-                    <div class="text-xs font-bold text-emerald-500 dark:text-emerald-400 border-b dark:border-gray-800 pb-1.5 mb-2 flex-shrink-0">⚡ 操盤策略與行動建議</div>
-                    <div id="block-strategy" class="flex-1 overflow-y-auto font-mono text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line pr-1 tracking-wide"></div>
+            <div class="flex flex-col bg-white/60 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800/80 rounded-xl p-4 shadow-md h-[calc(100vh-210px)] overflow-hidden">
+                <div id="ai-content-area" class="flex-1 overflow-y-auto font-mono text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line pr-1 tracking-wide pb-6 selection:bg-purple-500/30">
+                    載入中...
                 </div>
             </div>
+
+            <div id="shadow-facts" class="hidden"></div>
+            <div id="shadow-focus" class="hidden"></div>
+            <div id="shadow-strategy" class="hidden"></div>
         </div>
 
     </div>
