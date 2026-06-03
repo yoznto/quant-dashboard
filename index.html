@@ -39,7 +39,7 @@
         let activeView = 'news';
         let activeTabId = 'tw';
         let activeAiTabId = 'tw';
-        let activeAiBlock = 'facts'; // 預設子區塊
+        let activeAiBlock = 'facts';
 
         function toggleSidebar() { 
             const sidebar = document.getElementById('sidebar');
@@ -96,18 +96,20 @@
             toggleSidebar();
         }
 
-        // 🎯 核心功能：子頁籤點擊切換，最大化全螢幕投放，並給予選中高亮按鈕樣式
+        // 🎯 核心除錯點：全面改成「全文字安全匹配」，徹底繞開大模型對 ID 字串加法相加時產生的公式污染！
         function showAiBlock(blockType) {
             activeAiBlock = blockType;
-            const shadowStorage = document.getElementById('shadow-' + blockType);
             const displayArea = document.getElementById('ai-content-area');
-            if (shadowStorage && displayArea) {
-                displayArea.innerText = shadowStorage.innerText;
-            }
-            // 刷新子按鈕樣式高亮
+            if (!displayArea) return;
+
+            if (blockType === 'facts') { displayArea.innerText = document.getElementById('shadow-facts').innerText; }
+            if (blockType === 'focus') { displayArea.innerText = document.getElementById('shadow-focus').innerText; }
+            if (blockType === 'strategy') { displayArea.innerText = document.getElementById('shadow-strategy').innerText; }
+
             document.querySelectorAll('.sub-block-btn').forEach(function(btn) {
                 btn.className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
             });
+
             const subColors = { 'facts': 'border-blue-500 text-blue-500 bg-blue-50 dark:bg-blue-950/40', 'focus': 'border-purple-500 text-purple-500 bg-purple-50 dark:bg-purple-950/40', 'strategy': 'border-emerald-500 text-emerald-500 bg-emerald-50 dark:bg-emerald-950/40' };
             const activeSubBtn = document.getElementById('sub-btn-' + blockType);
             if (activeSubBtn) {
@@ -156,12 +158,10 @@
                 return "";
             }
 
-            // 🎯 核心防禦點：切片文字全數空投進隱藏 Shadow 碟片
-            document.getElementById('shadow-facts').innerText = extractSection(cleanText, ["市場事實如下：", "**市場事實如下：**", "市場事實", "**市場事實**", "聯準會與總經事實", "**聯蹤會與總經事實**", "科技巨頭動態事實", "**科技巨頭動態事實**"]) || cleanText;
+            document.getElementById('shadow-facts').innerText = extractSection(cleanText, ["市場事實如下：", "**市場事實如下：**", "市場事實", "**市場事實**", "聯準會與總經事實", "**聯準會與總經事實**", "科技巨頭動態事實", "**科技巨頭動態事實**"]) || cleanText;
             document.getElementById('shadow-focus').innerText = extractSection(cleanText, ["**今日市場焦點**", "今日市場焦點"]) || "未偵測到今日核心焦點段落。";
             document.getElementById('shadow-strategy').innerText = extractSection(cleanText, ["**操盤策略與投資建議**", "操盤策略與投資建議", "📈 **操盤策略與投資建議**", "操盤策略與行動建議", "**操盤策略與行動建議**"]) || "未偵測到操盤策略方針段落。";
 
-            // 投放到當前選中的子卡片畫面上
             showAiBlock(activeAiBlock);
         }
 
@@ -249,7 +249,7 @@
                 });
             } catch (err) {
                 if (brainText) brainText.innerHTML = "<span class='text-red-500 font-bold text-xs'>❌ 數據串接異常：請確認本機 api_server.py 是否正常開機運作。</span>";
-            } finaly {
+            } finally {
                 btn.disabled = false;
                 btn.className = "px-5 py-3 bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold rounded-xl shadow-md transition duration-200";
                 btn.innerText = "即時 AI 分析";
@@ -308,7 +308,7 @@
             <button id="menu-chain" onclick="changeView('chain')" class="w-full text-left px-3 py-2 rounded-xl font-medium text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors">🔗 AI 供應鏈地圖</button>
             <button id="menu-ainews" onclick="changeView('ainews')" class="w-full text-left px-3 py-2 rounded-xl font-medium text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors">🧠 AI 新聞戰略中心</button>
         </nav>
-        <div class="p-3 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-400 font-mono text-center">v1.7.6 Final</div>
+        <div class="p-3 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-400 font-mono text-center">v1.7.8 Fixed</div>
     </aside>
 
     <div class="w-full flex justify-between items-center px-4 py-2 border-b border-gray-200 dark:border-gray-800/80 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md sticky top-0 z-30">
@@ -326,14 +326,14 @@
             <h1 id="page-title-header" class="text-xl font-black font-mono tracking-wider text-gray-800 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-gray-100 dark:via-gray-200 dark:to-gray-300">📊 新聞情報中心</h1>
         </header>
 
-        <div id="news-section" class="space-y-4">
+        <div id="news-section" class="space-y-4 flex-1 flex flex-col overflow-hidden">
             <nav class="flex justify-center space-x-2 mb-2 flex-shrink-0">
                 <button id="btn-tw" onclick="switchTab('tw')" class="tab-btn">📊 台股大數據</button>
                 <button id="btn-us" onclick="switchTab('us')" class="tab-btn">🦅 美股焦點</button>
                 <button id="btn-global" onclick="switchTab('global')" class="tab-btn">🌍 國際政經</button>
             </nav>
             <main id="main-panel" class="p-4 rounded-xl min-h-[300px] flex-1 flex flex-col overflow-hidden">
-                <div class="flex justify-between border-b border-gray-200 dark:border-gray-800 pb-2 mb-3 flex-shrink-0">
+                <div class="flex justify-between border-b border-gray-200 dark:border-gray-200 pb-2 mb-3 flex-shrink-0">
                     <h2 id="panel-title" class="text-xs font-bold text-gray-400">載入中...</h2>
                     <span id="panel-time" class="text-[10px] font-mono text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-950/50 px-2 py-0.5 rounded">--</span>
                 </div>
