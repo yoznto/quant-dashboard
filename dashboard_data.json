@@ -1,107 +1,107 @@
 {
     "global": {
         "title": "🌍 國際政經與環球情報",
-        "time": "2026-06-03 21:53:44",
+        "time": "2026-06-03 21:58:44",
         "data": [
             {
-                "url": "https://tw.stock.yahoo.com/news/",
-                "title": "國際政經財經線索"
+                "title": "國際政經財經線索",
+                "url": "https://tw.stock.yahoo.com/news/"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E9%9B%BB%E8%85%A6%E5%B1%95%E8%B6%B4%E8%B6%B4%E8%B5%B0%E5%90%83%E4%B8%8D%E5%81%9C%EF%BC%81%E9%B4%BB%E6%B5%B7%E6%94%A4%E4%BD%8D%E5%A4%A7%E5%95%96%E7%B4%85%E8%B1%86%E9%A4%85%E3%80%81%E8%88%87%E6%9E%97%E6%86%B2%E9%8A%98%E7%8B%82%E5%97%91%E5%88%88%E5%8C%85-%E3%80%8C%E5%A3%BD%E6%98%9F%E8%91%A3%E5%BA%A7%E3%80%8D%E8%A6%AA%E9%80%81%E8%9B%8B%E7%B3%95-134444660.html",
-                "title": "黃仁勳電腦展趴趴走吃不停！鴻海攤位大啖紅豆餅、與林憲銘狂嗑刈包 「壽星董座」親送蛋糕"
+                "title": "黃仁勳電腦展趴趴走吃不停！鴻海攤位大啖紅豆餅、與林憲銘狂嗑刈包 還有「壽星董座」親送蛋糕",
+                "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E9%9B%BB%E8%85%A6%E5%B1%95%E8%B6%B4%E8%B6%B4%E8%B5%B0%E5%90%83%E4%B8%8D%E5%81%9C%EF%BC%81%E9%B4%BB%E6%B5%B7%E6%94%A4%E4%BD%8D%E5%A4%A7%E5%95%96%E7%B4%85%E8%B1%86%E9%A4%85%E3%80%81%E8%88%87%E6%9E%97%E6%86%B2%E9%8A%98%E7%8B%82%E5%97%91%E5%88%88%E5%8C%85-%E9%82%84%E6%9C%89%E3%80%8C%E5%A3%BD%E6%98%9F%E8%91%A3%E5%BA%A7%E3%80%8D%E8%A6%AA%E9%80%81%E8%9B%8B%E7%B3%95-134444468.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E8%82%A1%E5%B8%82%E5%89%B5%E6%96%B0%E9%AB%98%E6%8E%A9%E8%93%8B%E5%9C%8B%E5%8A%9B%E8%A1%B0%E9%80%80-%E9%AB%98%E9%80%9A%E8%86%A8%E8%88%87%E6%97%A5%E5%9C%93%E8%B2%B6%E5%80%BC%E5%A4%BE%E6%93%8Aai%E7%99%BC%E5%B1%95-133204882.html",
-                "title": "日本股市創新高掩蓋國力衰退 高通膨與日圓貶值夾擊AI發展"
+                "title": "日本股市創新高掩蓋國力衰退 高通膨與日圓貶值夾擊AI發展",
+                "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E8%82%A1%E5%B8%82%E5%89%B5%E6%96%B0%E9%AB%98%E6%8E%A9%E8%93%8B%E5%9C%8B%E5%8A%9B%E8%A1%B0%E9%80%80-%E9%AB%98%E9%80%9A%E8%86%A8%E8%88%87%E6%97%A5%E5%9C%93%E8%B2%B6%E5%80%BC%E5%A4%BE%E6%93%8Aai%E7%99%BC%E5%B1%95-133204882.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E7%9F%BD%E8%B0%B7-%E5%AF%A6%E9%AB%94ai-%E7%86%B1%E6%BD%AE-%E8%BC%9D%E9%81%94-openai-132931343.html",
-                "title": "矽谷「實體AI」熱潮：輝達、OpenAI、特斯拉競逐人形機器人新藍海"
+                "title": "矽谷「實體AI」熱潮：輝達、OpenAI、特斯拉競逐人形機器人新藍海",
+                "url": "https://tw.stock.yahoo.com/news/%E7%9F%BD%E8%B0%B7-%E5%AF%A6%E9%AB%94ai-%E7%86%B1%E6%BD%AE-%E8%BC%9D%E9%81%94-openai-132931343.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E4%BA%9E%E6%B4%B2%E5%89%B5%E6%96%B0%E7%B1%8C%E8%B3%87%E5%B9%B3%E5%8F%B0%E5%B0%88%E5%B1%AC%E7%B6%B2%E7%AB%99%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%B7%9A-%E5%8A%A9%E5%8A%9B%E6%89%93%E9%80%A0%E5%8F%B0%E7%81%A3%E6%88%90%E7%82%BA%E4%BA%9E%E6%B4%B2%E9%82%A3%E6%96%AF%E9%81%94%E5%85%8B-124922669.html",
-                "title": "亞洲創新籌資平台專屬網站正式上線 助力打造台灣成為亞洲那斯達克"
+                "title": "亞洲創新籌資平台專屬網站正式上線 助力打造台灣成為亞洲那斯達克",
+                "url": "https://tw.stock.yahoo.com/news/%E4%BA%9E%E6%B4%B2%E5%89%B5%E6%96%B0%E7%B1%8C%E8%B3%87%E5%B9%B3%E5%8F%B0%E5%B0%88%E5%B1%AC%E7%B6%B2%E7%AB%99%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%B7%9A-%E5%8A%A9%E5%8A%9B%E6%89%93%E9%80%A0%E5%8F%B0%E7%81%A3%E6%88%90%E7%82%BA%E4%BA%9E%E6%B4%B2%E9%82%A3%E6%96%AF%E9%81%94%E5%85%8B-124922669.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E7%B6%93%E9%83%A8-%E7%BE%8E301%E9%97%9C%E7%A8%85%E4%B8%8D%E7%96%8A%E5%8A%A0122%E6%A2%9D%E6%AC%BE-%E5%8F%B0%E7%81%A3%E5%85%B7%E7%9B%B8%E5%B0%8D%E5%84%AA%E5%8B%A2-121425733.html",
-                "title": "經部：美301關稅不疊加122條款　台灣具相對優勢"
+                "title": "經部：美301關稅不疊加122條款　台灣具相對優勢",
+                "url": "https://tw.stock.yahoo.com/news/%E7%B6%93%E9%83%A8-%E7%BE%8E301%E9%97%9C%E7%A8%85%E4%B8%8D%E7%96%8A%E5%8A%A0122%E6%A2%9D%E6%AC%BE-%E5%8F%B0%E7%81%A3%E5%85%B7%E7%9B%B8%E5%B0%8D%E5%84%AA%E5%8B%A2-121425733.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E8%A6%BA%E9%86%92%E4%BE%86%E5%8F%88%E5%A4%9A27%E5%84%84-%E9%A6%AC%E6%96%AF%E5%85%8B%E8%BA%AB%E5%AE%B6%E8%B6%85%E7%8B%82-%E6%AF%8F%E5%88%86%E9%90%98%E9%80%B2%E5%B8%B3188%E8%90%AC-121322090.html",
-                "title": "一覺醒來又多27億！馬斯克身家超狂 每分鐘進帳188萬"
+                "title": "一覺醒來又多27億！馬斯克身家超狂 每分鐘進帳188萬",
+                "url": "https://tw.stock.yahoo.com/news/%E8%A6%BA%E9%86%92%E4%BE%86%E5%8F%88%E5%A4%9A27%E5%84%84-%E9%A6%AC%E6%96%AF%E5%85%8B%E8%BA%AB%E5%AE%B6%E8%B6%85%E7%8B%82-%E6%AF%8F%E5%88%86%E9%90%98%E9%80%B2%E5%B8%B3188%E8%90%AC-121322090.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E9%A6%96%E6%AC%A1%E8%BE%A6%E6%A1%8C%E8%AC%9D%E5%93%A1%E5%B7%A5-%E9%AB%98%E5%96%8A%E5%8F%B0%E7%81%A3%E7%94%9F%E6%85%8B%E7%B3%BB%E7%AB%99%E5%9C%A8-%E8%B5%B7-120923130.html",
-                "title": "黃仁勳首次辦桌謝員工  高喊台灣生態系站在一起"
+                "title": "黃仁勳首次辦桌謝員工  高喊台灣生態系站在一起",
+                "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E9%A6%96%E6%AC%A1%E8%BE%A6%E6%A1%8C%E8%AC%9D%E5%93%A1%E5%B7%A5-%E9%AB%98%E5%96%8A%E5%8F%B0%E7%81%A3%E7%94%9F%E6%85%8B%E7%B3%BB%E7%AB%99%E5%9C%A8-%E8%B5%B7-120923130.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/ai%E7%B4%85%E5%88%A9%E9%82%84%E6%B2%92%E7%B5%90%E6%9D%9F-%E6%91%A9%E6%A0%B9%E5%A4%A7%E9%80%9A-%E7%BE%8E%E8%82%A1%E5%B0%87%E8%BF%8E%E7%8D%B2%E5%88%A9%E8%B6%85%E7%B4%9A%E5%BE%AA%E7%92%B0-120015236.html",
-                "title": "AI紅利還沒結束？摩根大通：美股將迎獲利超級循環"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E4%BB%81%E5%AF%B6%E5%BE%B7%E5%B7%9E%E6%96%B0%E5%BB%A0%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8A%95%E7%94%A2-%E7%B8%BD%E5%BA%A7%E4%BC%AF%E7%B4%8D%E5%A4%9A%E7%BE%85%E6%8B%9A%E4%BC%BA%E6%9C%8D%E5%99%A8%E7%87%9F%E6%94%B6%E5%8D%A0%E6%AF%94%E7%BF%BB%E5%80%8D-101218439.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E4%BB%81%E5%AF%B6%E5%BE%B7%E5%B7%9E%E6%96%B0%E5%BB%A0%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8A%95%E7%94%A2-%E7%B8%BD%E5%BA%A7%E4%BC%AF%E7%B4%8D%E5%A4%9A%E7%BE%85%E6%8B%9A%E4%BC%BA%E6%9C%8D%E5%99%A8%E7%87%9F%E6%94%B6%E5%8D%A0%E6%AF%94%E7%BF%BB%E5%80%8D-101218439.html",
-                "title": "查看原始新聞"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E9%8C%A2%E6%B7%B9%E8%85%B3%E7%9B%AE%EF%BC%81%E9%80%A34%E6%97%A5%E5%89%B5%E9%AB%98%E6%94%BB%E7%A0%B446000%E9%BB%9E-%E4%B8%8A%E5%B8%82%E6%AB%83%E9%80%BE%E7%99%BE%E6%AA%94%E6%BC%B2%E5%81%9C%E5%8A%A9%E6%94%BB%EF%BD%9Cyahoo%E8%B2%A1%E7%B6%93%E6%8E%83%E6%8F%8F-092137136.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E9%8C%A2%E6%B7%B9%E8%85%B3%E7%9B%AE%EF%BC%81%E9%80%A34%E6%97%A5%E5%89%B5%E9%AB%98%E6%94%BB%E7%A0%B446000%E9%BB%9E-%E4%B8%8A%E5%B8%82%E6%AB%83%E9%80%BE%E7%99%BE%E6%AA%94%E6%BC%B2%E5%81%9C%E5%8A%A9%E6%94%BB%EF%BD%9Cyahoo%E8%B2%A1%E7%B6%93%E6%8E%83%E6%8F%8F-092137136.html",
-                "title": "查看原始新聞"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E7%BA%8C%E5%89%B5%E6%96%B0%E9%AB%98%EF%BC%81%E5%8D%97%E4%BA%9E%E7%A7%91%E4%BB%8A%E5%B9%B4%E5%89%8D5%E6%9C%88%E7%87%9F%E6%94%B6%E7%AA%81%E7%A0%B4%E5%8D%83%E5%84%84%E5%85%83-%E5%B9%B4%E5%A2%9E%E9%80%BE6%E5%80%8D-085442177.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E7%BA%8C%E5%89%B5%E6%96%B0%E9%AB%98%EF%BC%81%E5%8D%97%E4%BA%9E%E7%A7%91%E4%BB%8A%E5%B9%B4%E5%89%8D5%E6%9C%88%E7%87%9F%E6%94%B6%E7%AA%81%E7%A0%B4%E5%8D%83%E5%84%84%E5%85%83-%E5%B9%B4%E5%A2%9E%E9%80%BE6%E5%80%8D-085442177.html",
-                "title": "查看原始新聞"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E9%80%9B%E5%B1%95%E7%B4%AF%E4%BA%86%E5%85%88%E5%96%9D%E4%B8%80%E6%9D%AF%EF%BC%81%E9%BB%83%E4%BB%81%E5%8B%B3%E7%8F%BE%E8%BA%AB%E6%8A%80%E5%98%89%E7%A0%94%E8%8F%AF%E6%94%A4%E4%BD%8D-%E8%88%87%E3%80%8C%E4%BB%96%E3%80%8D%E5%B8%AD%E5%9C%B0%E8%B1%AA%E9%A3%B2%E5%95%A4%E9%85%92-082330894.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E9%80%9B%E5%B1%95%E7%B4%AF%E4%BA%86%E5%85%88%E5%96%9D%E4%B8%80%E6%9D%AF%EF%BC%81%E9%BB%83%E4%BB%81%E5%8B%B3%E7%8F%BE%E8%BA%AB%E6%8A%80%E5%98%89%E7%A0%94%E8%8F%AF%E6%94%A4%E4%BD%8D-%E8%88%87%E3%80%8C%E4%BB%96%E3%80%8D%E5%B8%AD%E5%9C%B0%E8%B1%AA%E9%A3%B2%E5%95%A4%E9%85%92-082330894.html",
-                "title": "查看原始新聞"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E5%A5%B9%E6%8A%8A%E8%87%AA%E5%B7%B1%E6%8D%8F%E6%88%90ai%E5%A5%B3%E5%8F%8B-%E8%AE%93%E4%B8%96%E7%95%8C%E6%9B%B4%E5%92%8C%E5%B9%B3-z%E4%B8%96%E4%BB%A3ceo%E6%9D%8E%E5%A9%B7%E5%A9%B7-%E7%85%9E%E5%88%B0ai%E7%B8%BD%E6%AF%94%E8%A9%90%E9%A8%99%E5%A5%BD-%E6%9C%89%E7%B2%89%E7%B5%B2%E8%81%8A3%E6%99%9A%E9%83%BD%E4%BB%A5%E7%82%BA%E7%9C%9F%E4%BA%BA-073723437.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E5%A5%B9%E6%8A%8A%E8%87%AA%E5%B7%B1%E6%8D%8F%E6%88%90ai%E5%A5%B3%E5%8F%8B-%E8%AE%93%E4%B8%96%E7%95%8C%E6%9B%B4%E5%92%8C%E5%B9%B3-z%E4%B8%96%E4%BB%A3ceo%E6%9D%8E%E5%A9%B7%E5%A9%B7-%E7%85%9E%E5%88%B0ai%E7%B8%BD%E6%AF%94%E8%A9%90%E9%A8%99%E5%A5%BD-%E6%9C%89%E7%B2%89%E7%B5%B2%E8%81%8A3%E6%99%9A%E9%83%BD%E4%BB%A5%E7%82%BA%E7%9C%9F%E4%BA%BA-073723437.html",
-                "title": "查看原始新聞"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%E8%AE%93it%E9%87%8D%E6%8E%8C%E8%87%AA%E7%A0%94%E5%8A%9B-%E7%B5%82%E7%B5%90%E5%AE%A2%E6%9C%8D%E5%A4%96%E5%8C%85-%E8%87%AA%E7%B7%B4%E8%AA%9E%E9%9F%B3%E6%A8%A1%E5%9E%8B-%E9%80%99%E5%A5%97ai%E8%BD%89%E5%9E%8B%E8%B7%AF%E5%BE%91%E6%80%8E%E9%BA%BC%E8%B5%B0-094428664.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%E8%AE%93it%E9%87%8D%E6%8E%8C%E8%87%AA%E7%A0%94%E5%8A%9B-%E7%B5%82%E7%B5%90%E5%AE%A2%E6%9C%8D%E5%A4%96%E5%8C%85-%E8%87%AA%E7%B7%B4%E8%AA%9E%E9%9F%B3%E6%A8%A1%E5%9E%8B-%E9%80%99%E5%A5%97ai%E8%BD%89%E5%9E%8B%E8%B7%AF%E5%BE%91%E6%80%8E%E9%BA%BC%E8%B5%B0-094428664.html",
-                "title": "查看原始新聞"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E7%99%BD%E8%A9%B1%E7%A7%91%E6%8A%80-%E9%BB%83%E4%BB%81%E5%8B%B3%E5%96%8A%E5%85%A8%E9%9D%A2%E9%87%8F%E7%94%A2-vera-rubin-%E6%98%AF%E4%BB%80%E9%BA%BC-091711597.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E7%99%BD%E8%A9%B1%E7%A7%91%E6%8A%80-%E9%BB%83%E4%BB%81%E5%8B%B3%E5%96%8A%E5%85%A8%E9%9D%A2%E9%87%8F%E7%94%A2-vera-rubin-%E6%98%AF%E4%BB%80%E9%BA%BC-091711597.html",
-                "title": "查看原始新聞"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E4%BB%A3%E7%90%86%E5%BC%8F%E5%95%86%E5%8B%99%E9%80%A3%E5%8B%95%E7%99%BE%E5%85%86ai%E5%95%86%E6%A9%9F-4%E5%BC%B5%E5%9C%96%E6%8E%8C%E6%8F%A1-%E4%BE%9D%E8%B3%B4%E7%B6%93%E6%BF%9F-%E5%A4%A7%E5%8B%A2-%E5%B0%8D%E8%A9%B1%E6%A1%86%E6%AD%A3%E6%8E%A5%E7%AE%A1%E6%90%9C%E5%B0%8B%E6%A1%86-041155904.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E4%BB%A3%E7%90%86%E5%BC%8F%E5%95%86%E5%8B%99%E9%80%A3%E5%8B%95%E7%99%BE%E5%85%86ai%E5%95%86%E6%A9%9F-4%E5%BC%B5%E5%9C%96%E6%8E%8C%E6%8F%A1-%E4%BE%9D%E8%B3%B4%E7%B6%93%E6%BF%9F-%E5%A4%A7%E5%8B%A2-%E5%B0%8D%E8%A9%B1%E6%A1%86%E6%AD%A3%E6%8E%A5%E7%AE%A1%E6%90%9C%E5%B0%8B%E6%A1%86-041155904.html",
-                "title": "查看原始新聞"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/codex%E4%B8%8D%E5%8F%AA%E6%9C%8D%E5%8B%99%E5%B7%A5%E7%A8%8B%E5%B8%AB-openai%E6%8E%A8%E5%85%AD%E6%AC%BE%E6%96%B0%E5%A4%96%E6%8E%9B-%E6%AC%A1%E6%90%9E%E5%AE%9A%E6%8A%95%E8%B3%87-%E9%8A%B7%E5%94%AE-%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90%E7%AD%89%E4%BB%BB%E5%8B%99-072556191.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/codex%E4%B8%8D%E5%8F%AA%E6%9C%8D%E5%8B%99%E5%B7%A5%E7%A8%8B%E5%B8%AB-openai%E6%8E%A8%E5%85%AD%E6%AC%BE%E6%96%B0%E5%A4%96%E6%8E%9B-%E6%AC%A1%E6%90%9E%E5%AE%9A%E6%8A%95%E8%B3%87-%E9%8A%B7%E5%94%AE-%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90%E7%AD%89%E4%BB%BB%E5%8B%99-072556191.html",
-                "title": "查看原始新聞"
+                "title": "記憶體齊遭殺！三大法人狠賣「這3檔」7.5萬張　大砍華邦電帶回95.8億元",
+                "url": "https://tw.stock.yahoo.com/news/%E8%A8%98%E6%86%B6%E9%AB%94%E9%BD%8A%E9%81%AD%E6%AE%BA-%E4%B8%89%E5%A4%A7%E6%B3%95%E4%BA%BA%E7%8B%A0%E8%B3%A3-%E9%80%993%E6%AA%94-7-5%E8%90%AC%E5%BC%B5-133000256.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E7%8B%82%E6%AD%A1%E5%80%92%E6%95%B8-%E9%80%991%E4%BA%8B-%E5%BE%8C-%E7%BE%8E%E8%82%A1%E6%81%90%E5%B4%A9%E7%9B%A4-131500702.html",
-                "title": "狂歡倒數？「這1事」後　美股恐崩盤"
+                "title": "狂歡倒數？「這1事」後　美股恐崩盤",
+                "url": "https://tw.stock.yahoo.com/news/%E7%8B%82%E6%AD%A1%E5%80%92%E6%95%B8-%E9%80%991%E4%BA%8B-%E5%BE%8C-%E7%BE%8E%E8%82%A1%E6%81%90%E5%B4%A9%E7%9B%A4-131500702.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%89%B5%E6%96%B0%E9%AB%98-%E5%A4%96%E8%B3%87%E9%80%83%E5%91%BD%E6%A3%84%E5%AE%88%E8%A8%98%E6%86%B6%E9%AB%94%E4%B8%89%E5%B7%A8%E9%A0%AD-%E8%B2%B7%E7%9B%A4%E5%81%8F%E5%90%91%E9%87%91%E8%9E%8D%E8%82%A1-125923197.html",
-                "title": "台股創新高！外資逃命棄守記憶體三巨頭　買盤偏向金融股"
+                "title": "AI伺服器繼續漲！三大法人補貨「這2檔」5.5萬張　撒180億元連2天進場鴻海",
+                "url": "https://tw.stock.yahoo.com/news/ai%E4%BC%BA%E6%9C%8D%E5%99%A8%E7%B9%BC%E7%BA%8C%E6%BC%B2-%E4%B8%89%E5%A4%A7%E6%B3%95%E4%BA%BA%E8%A3%9C%E8%B2%A8-%E9%80%992%E6%AA%94-5-5%E8%90%AC%E5%BC%B5-130000731.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E6%96%B0%E6%96%B0%E5%85%89%E9%87%91%E6%B3%95%E8%AA%AA-%E7%AC%AC-%E5%AD%A3%E7%8D%B2%E5%88%A9211%E5%84%84-%E6%9E%97%E7%B6%AD%E4%BF%8A%E6%9B%9D%E8%82%A1%E5%88%A9%E6%94%BF%E7%AD%96-%E6%A8%82%E8%A7%80%E7%A9%A9%E5%AE%9A%E6%88%90%E9%95%B7-124549950.html",
-                "title": "台新新光金法說／第一季獲利211億　林維俊曝股利政策：樂觀穩定成長"
+                "title": "夜盤再噴13%！「這檔」獲黃仁勳加持　欽點為下個兆元巨頭",
+                "url": "https://tw.stock.yahoo.com/news/%E5%A4%9C%E7%9B%A4%E5%86%8D%E5%99%B413-%E9%80%99%E6%AA%94-%E7%8D%B2%E9%BB%83%E4%BB%81%E5%8B%B3%E5%8A%A0%E6%8C%81-%E6%AC%BD%E9%BB%9E%E7%82%BA%E4%B8%8B%E5%80%8B%E5%85%86%E5%85%83%E5%B7%A8%E9%A0%AD-123500449.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E5%A4%9C%E7%9B%A4%E5%86%8D%E5%99%B413-%E9%80%99%E6%AA%94-%E7%8D%B2%E9%BB%83%E4%BB%81%E5%8B%B3%E5%8A%A0%E6%8C%81-%E6%AC%BD%E9%BB%9E%E7%82%BA%E4%B8%8B%E5%80%8B%E5%85%86%E5%85%83%E5%B7%A8%E9%A0%AD-123500449.html",
-                "title": "夜盤再噴13%！「這檔」獲黃仁勳加持　欽點為下個兆元巨頭"
+                "title": "營收狂噴730%！「記憶體大廠」5月營收達276億元創新高　近6日大漲41%卻遭中斷",
+                "url": "https://tw.stock.yahoo.com/news/%E7%87%9F%E6%94%B6%E7%8B%82%E5%99%B4730-%E8%A8%98%E6%86%B6%E9%AB%94%E5%A4%A7%E5%BB%A0-5%E6%9C%88%E7%87%9F%E6%94%B6%E9%81%94276%E5%84%84%E5%85%83%E5%89%B5%E6%96%B0%E9%AB%98-%E8%BF%916%E6%97%A5%E5%A4%A7%E6%BC%B241-%E5%8D%BB%E9%81%AD%E4%B8%AD%E6%96%B7-124500661.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E4%BB%8A%E5%BD%A9539%E9%A0%AD%E7%8D%8E800%E8%90%AC-%E5%8F%B0%E5%BD%A96-3%E5%B9%B8%E9%81%8B%E8%99%9F%E7%A2%BC-%E6%AC%A1%E7%9C%8B-124525104.html",
-                "title": "今彩539頭獎800萬！ 台彩6/3幸運號碼一次看"
+                "title": "台新新光金法說／第一季獲利211億　林維俊曝股利政策：樂觀穩定成長",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E6%96%B0%E6%96%B0%E5%85%89%E9%87%91%E6%B3%95%E8%AA%AA-%E7%AC%AC-%E5%AD%A3%E7%8D%B2%E5%88%A9211%E5%84%84-%E6%9E%97%E7%B6%AD%E4%BF%8A%E6%9B%9D%E8%82%A1%E5%88%A9%E6%94%BF%E7%AD%96-%E6%A8%82%E8%A7%80%E7%A9%A9%E5%AE%9A%E6%88%90%E9%95%B7-124549950.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/%E5%8D%97%E4%BA%9E%E7%A7%91%E7%87%9F%E6%94%B6-%E7%8B%82%E5%99%B4649-%E7%9B%B4%E8%A1%9D%E5%8D%83%E5%84%84-%E8%A8%98%E6%86%B6%E9%AB%94%E7%BC%BA%E8%B2%A8%E6%BD%AE%E6%81%90-%E8%B7%AF%E5%BB%B6%E7%87%92%E5%88%B02027-122700536.html",
-                "title": "南亞科營收「狂噴649%」直衝千億　記憶體缺貨潮恐一路延燒到2027"
+                "title": "00919換股風暴！投信瘋砍聯電逾14萬張　還有43萬張排隊殺出",
+                "url": "https://tw.stock.yahoo.com/news/00919%E6%8F%9B%E8%82%A1%E9%A2%A8%E6%9A%B4-%E6%8A%95%E4%BF%A1%E7%98%8B%E7%A0%8D%E8%81%AF%E9%9B%BB%E9%80%BE14%E8%90%AC%E5%BC%B5-%E9%82%84%E6%9C%8943%E8%90%AC%E5%BC%B5%E6%8E%92%E9%9A%8A%E6%AE%BA%E5%87%BA-121600432.html"
             },
             {
-                "url": "https://tw.stock.yahoo.com/news/00919%E6%8F%9B%E8%82%A1%E9%A2%A8%E6%9A%B4-%E6%8A%95%E4%BF%A1%E7%98%8B%E7%A0%8D%E8%81%AF%E9%9B%BB%E9%80%BE14%E8%90%AC%E5%BC%B5-%E9%82%84%E6%9C%8943%E8%90%AC%E5%BC%B5%E6%8E%92%E9%9A%8A%E6%AE%BA%E5%87%BA-121600432.html",
-                "title": "00919換股風暴！投信瘋砍聯電逾14萬張　還有43萬張排隊殺出"
+                "title": "南亞科營收「狂噴649%」直衝千億　記憶體缺貨潮恐一路延燒到2027",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8D%97%E4%BA%9E%E7%A7%91%E7%87%9F%E6%94%B6-%E7%8B%82%E5%99%B4649-%E7%9B%B4%E8%A1%9D%E5%8D%83%E5%84%84-%E8%A8%98%E6%86%B6%E9%AB%94%E7%BC%BA%E8%B2%A8%E6%BD%AE%E6%81%90-%E8%B7%AF%E5%BB%B6%E7%87%92%E5%88%B02027-122700536.html"
             }
         ]
     },
@@ -366,8 +366,8 @@
     },
     "ai_news_global": {
         "title": "🌍 國際政經 AI 核心戰略",
-        "time": "2026-06-03 21:54:43",
-        "text": "**今日市場焦點**\n\n• **避險資產氛圍**：地緣衝突下，黃金和原油避險资金情緒正在升溫。中東地區的緊張局勢導致投資者尋求安全港口，而這些資產正因為其抗跌性而受到青睞。\n\n• **國際資金流向**：非美市場政策大環境對全球資金分配產生了重大影響。亞洲國家如日本和韓國正在推動經濟刺激措施，吸引投資者將資金轉移到這些地區。同時，歐盟的政策變化也在影響資金流向。\n\n**操盤策略與投資建議**\n\n• **宏觀風險提示**：地緣政治不穩定和供應鏈震盪可能導致全球經濟波動，因此投資者應該保持警惕並謹慎配置資產。\n\n• **避險防禦方針**：在目前的市場環境下，投資者可以考慮將資金轉移到安全性較高的資產，如政府債券和黃金。同時，也可以考慮投資於抗跌性的股票和商品，以應對未來的市場波動。\n\n**亞洲市場 facts**\n\n• 日本股市創新高，掩蓋國力衰退。\n• 韓國股市也在上漲，受益於經濟刺激措施。\n• 中國股市則在下跌，受到地緣政治不穩定的影響。\n\n**歐洲與地緣 facts**\n\n• 歐盟政策變化對資金流向產生了重大影響。\n• 地緣衝突導致投資者尋求安全港口，而這些資產正因為其抗跌性而受到青睞。\n\n**原物料與匯率 facts**\n\n• 原油價格在上漲，受益於地緣政治不穩定的影響。\n• 黃金價格也在上漲，成為投資者的避險資產。"
+        "time": "2026-06-03 21:59:55",
+        "text": "**今日市場焦點**\n\n• **避險資產氛圍**：地緣衝突下，黃金和原油避險资金情緒正在升溫。中東局勢不穩定、美俄關係緊張等因素導致投資者尋求安全港口，從而推動黃金價格上漲。同時，原油價格也受到影響，市場預期能源供應可能受限，進而推高原油價格。\n\n• **國際資金流向**：非美市場政策大環境對全球資金分配產生了重大影響。中美貿易戰、歐洲央行的貨幣政策等因素導致投資者尋求安全性和穩定性，從而將資金轉移到亞洲市場。同時，中國政府的財政政策也對全球資金流向產生了重大影響。\n\n**操盤策略與投資建議**\n\n• **宏觀風險提示**：地緣政治不穩定和經濟衰退風險正在升高，供應鏈和外匯市場可能會出現劇烈震盪。投資者應該謹慎配置資金，並避免過度暴露於任何單一市場或板塊。\n\n• **避險防禦方針**：在目前的市場環境下，投資者可以考慮將資金轉移到安全性較高的商品，如黃金和原油。同時，也可以考慮投資亞洲市場，尤其是中國和日本，這些國家的經濟政策和財政狀況相對穩定。\n\n**市場事實**\n\n1. **亞洲市場 facts**：中、日、韓等重要市場數據或政策變動事實\n   - 中國政府宣布將增加基礎建設投資，刺激經濟增長。\n   - 日本央行決定維持利率不變，但表明準備採取更多措施應對經濟衰退風險。\n\n2. **歐洲與地緣 facts**：歐洲央行動態、歐盟政策或地緣衝突事件客觀現狀\n   - 歐洲央行宣布將維持利率不變，但表明準備採取更多措施應對經濟衰退風險。\n   - 美俄關係緊張，中東局勢不穩定等因素導致地緣政治風險升高。\n\n3. **原物料與匯率 facts**：原油、黃金大宗商品或重要外匯走勢 facts\n   - 原油價格上漲，市場預期能源供應可能受限。\n   - 黃金價格上漲，投資者尋求安全港口。"
     },
     "ai_news_us": {
         "title": "🧠 美股 AI 核心戰略",
