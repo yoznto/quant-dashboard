@@ -96,7 +96,7 @@
             toggleSidebar();
         }
 
-        // 🎯 核心頁面投射邏輯：完美比對隱藏 DOM 的數據，最大化投放到主視窗
+        // 🎯 終極修正：改用資料唯讀映射與靜態 className 直接指派，移除任何字串變數相加，全面封殺 LaTeX 的轉義干擾！
         function showAiBlock(blockType) {
             activeAiBlock = blockType;
             const displayArea = document.getElementById('ai-content-area');
@@ -106,34 +106,28 @@
             if (blockType === 'focus') { displayArea.innerText = document.getElementById('shadow-focus').innerText; }
             if (blockType === 'strategy') { displayArea.innerText = document.getElementById('shadow-strategy').innerText; }
 
-            document.querySelectorAll('.sub-block-btn').forEach(function(btn) {
-                btn.className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
-            });
+            document.getElementById('sub-btn-facts').className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
+            document.getElementById('sub-btn-focus').className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
+            document.getElementById('sub-btn-strategy').className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
 
-            const subColors = { 'facts': 'border-blue-500 text-blue-500 bg-blue-50 dark:bg-blue-950/40', 'focus': 'border-purple-500 text-purple-500 bg-purple-50 dark:bg-purple-950/40', 'strategy': 'border-emerald-500 text-emerald-500 bg-emerald-50 dark:bg-emerald-950/40' };
-            const activeSubBtn = document.getElementById('sub-btn-' + blockType);
-            if (activeSubBtn) {
-                activeSubBtn.className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md " + subColors[blockType];
-            }
+            if (blockType === 'facts') { document.getElementById('sub-btn-facts').className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-blue-500 text-blue-500 bg-blue-50 dark:bg-blue-950/40"; }
+            if (blockType === 'focus') { document.getElementById('sub-btn-focus').className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-purple-500 text-purple-500 bg-purple-50 dark:bg-purple-950/40"; }
+            if (blockType === 'strategy') { document.getElementById('sub-btn-strategy').className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-emerald-500 text-emerald-500 bg-emerald-50 dark:bg-emerald-950/40"; }
         }
 
         function switchAiTab(subTabId) {
             activeAiTabId = subTabId;
-            const aiMapping = {
-                'tw': { key: 'ai_news_tw', btn: 'from-green-500 to-emerald-600' },
-                'us': { key: 'ai_news_us', btn: 'from-blue-500 to-indigo-600' },
-                'global': { key: 'ai_news_global', btn: 'from-purple-500 to-pink-600' }
-            };
             
-            document.querySelectorAll('.ai-tab-btn').forEach(function(b) {
-                b.className = "ai-tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200 shadow-sm";
-            });
-            
-            const activeCfg = aiMapping[subTabId];
-            const activeBtn = document.getElementById('ai-btn-' + subTabId);
-            if (activeBtn) activeBtn.className = "ai-tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r " + activeCfg.btn + " text-white shadow-md border-transparent";
+            document.getElementById('ai-btn-tw').className = "ai-tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200 shadow-sm";
+            document.getElementById('ai-btn-us').className = "ai-tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200 shadow-sm";
+            document.getElementById('ai-btn-global').className = "ai-tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200 shadow-sm";
 
-            const tabData = dbData[activeCfg.key] || { "title": "尚未更新", "time": "尚未更新", "text": "暫無日報資料。" };
+            let targetKey = "ai_news_tw";
+            if (subTabId === 'tw') { document.getElementById('ai-btn-tw').className = "ai-tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-md border-transparent"; targetKey = "ai_news_tw"; }
+            if (subTabId === 'us') { document.getElementById('ai-btn-us').className = "ai-tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md border-transparent"; targetKey = "ai_news_us"; }
+            if (subTabId === 'global') { document.getElementById('ai-btn-global').className = "ai-tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-md border-transparent"; targetKey = "ai_news_global"; }
+
+            const tabData = dbData[targetKey] || { "title": "尚未更新", "time": "尚未更新", "text": "暫無日報資料。" };
             document.getElementById('ainews-title').innerText = tabData.title;
             document.getElementById('ainews-time').innerText = "UPDATE: " + tabData.time;
             
@@ -158,7 +152,6 @@
                 return "";
             }
 
-            // 將切片數據安全儲存在影子 DOM
             document.getElementById('shadow-facts').innerText = extractSection(cleanText, ["市場事實如下：", "**市場事實如下：**", "市場事實", "**市場事實**", "聯準會與總經事實", "**聯準會與總經事實**", "科技巨頭動態事實", "**科技巨頭動態事實**"]) || cleanText;
             document.getElementById('shadow-focus').innerText = extractSection(cleanText, ["**今日市場焦點**", "今日市場焦點"]) || "未偵測到今日核心焦點段落。";
             document.getElementById('shadow-strategy').innerText = extractSection(cleanText, ["**操盤策略與投資建議**", "操盤策略與投資建議", "📈 **操盤策略與投資建議**", "操盤策略與行動建議", "**操盤策略與行動建議**"]) || "未偵測到操盤策略方針段落。";
@@ -259,29 +252,29 @@
 
         function switchTab(tabId) {
             activeTabId = tabId;
-            const themes = {
-                'tw': { title: "📊 台股大數據資料來源", btn: 'from-green-500 to-emerald-600' },
-                'us': { title: "🦅 美股科技巨頭晚報資料來源", btn: 'from-blue-500 to-indigo-600' },
-                'global': { title: "🌍 國際政經與環球情報資料來源", btn: 'from-purple-500 to-pink-600' }
-            };
+            
+            document.getElementById('btn-tw').className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+            document.getElementById('btn-us').className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+            document.getElementById('btn-global').className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+
+            let titleStr = "📊 台股大數據資料來源";
+            let btnTheme = "from-green-500 to-emerald-600";
+            if (tabId === 'tw') { document.getElementById('btn-tw').className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-md border-transparent"; titleStr = "📊 台股大數據資料來源"; }
+            if (tabId === 'us') { document.getElementById('btn-us').className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md border-transparent"; titleStr = "🦅 美股科技巨頭晚報資料來源"; }
+            if (tabId === 'global') { document.getElementById('btn-global').className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-md border-transparent"; titleStr = "🌍 國際政經與環球情報資料來源"; }
+
             const mainPanel = document.getElementById('main-panel');
-            if (!mainPanel) return;
-            document.querySelectorAll('.tab-btn').forEach(function(b) {
-                b.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
-            });
-            const t = themes[tabId] || themes['tw'];
-            const activeBtn = document.getElementById('btn-' + tabId);
-            if (activeBtn) activeBtn.className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r " + t.btn + " text-white shadow-md border-transparent";
-            mainPanel.className = "bg-white/90 dark:bg-gray-900/70 backdrop-blur-xl p-4 md:p-5 rounded-xl border border-gray-200 dark:border-gray-800/80 shadow-md transition-all duration-300 flex flex-col h-[calc(100vh-210px)] overflow-hidden";
-            const titleEl = document.getElementById('panel-title');
-            const timeEl = document.getElementById('panel-time');
+            if (mainPanel) mainPanel.className = "bg-white/90 dark:bg-gray-900/70 backdrop-blur-xl p-4 md:p-5 rounded-xl border border-gray-200 dark:border-gray-800/80 shadow-md transition-all duration-300 flex flex-col h-[calc(100vh-210px)] overflow-hidden";
+            
+            document.getElementById('panel-title').innerText = titleStr;
             const tabData = dbData[tabId] || { "time": "尚未更新", "data": [] };
-            if (titleEl) titleEl.innerText = t.title;
-            if (timeEl) timeEl.innerText = "UPDATE: " + tabData.time;
+            document.getElementById('panel-time').innerText = "UPDATE: " + tabData.time;
+            
             const container = document.getElementById('link-list');
             if (!container) return;
             container.innerHTML = "";
             container.className = "space-y-2 flex-1 overflow-y-auto pr-1";
+            
             let dataList = tabData.data || [];
             dataList.slice(0, 15).forEach(function(item) {
                 const li = document.createElement('li');
@@ -309,7 +302,7 @@
             <button id="menu-chain" onclick="changeView('chain')" class="w-full text-left px-3 py-2 rounded-xl font-medium text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors">🔗 AI 供應鏈地圖</button>
             <button id="menu-ainews" onclick="changeView('ainews')" class="w-full text-left px-3 py-2 rounded-xl font-medium text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors">🧠 AI 新聞戰略中心</button>
         </nav>
-        <div class="p-3 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-400 font-mono text-center">v1.8.0 Master</div>
+        <div class="p-3 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-400 font-mono text-center">v1.8.5 Master</div>
     </aside>
 
     <div class="w-full flex justify-between items-center px-4 py-2 border-b border-gray-200 dark:border-gray-800/80 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md sticky top-0 z-30">
