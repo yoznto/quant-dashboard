@@ -1,15 +1,47 @@
 {
     "global": {
         "title": "🌍 國際政經與環球情報",
-        "time": "2026-06-04 08:45:44",
+        "time": "2026-06-04 09:22:43",
         "data": [
             {
                 "title": "國際政經財經線索",
                 "url": "https://tw.stock.yahoo.com/news/"
             },
             {
+                "title": "輝達推出 RTX Spark 筆電系列 AI算力下放終端裝置革新電腦市場",
+                "url": "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94%E6%8E%A8%E5%87%BA-rtx-spark-%E7%AD%86%E9%9B%BB%E7%B3%BB%E5%88%97-ai%E7%AE%97%E5%8A%9B%E4%B8%8B%E6%94%BE%E7%B5%82%E7%AB%AF%E8%A3%9D%E7%BD%AE%E9%9D%A9%E6%96%B0%E9%9B%BB%E8%85%A6%E5%B8%82%E5%A0%B4-005503823.html"
+            },
+            {
+                "title": "SpaceX衝刺史上最大IPO　馬斯克身價有望突破1兆美元",
+                "url": "https://tw.stock.yahoo.com/news/spacex%E8%A1%9D%E5%88%BA%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7ipo-%E9%A6%AC%E6%96%AF%E5%85%8B%E8%BA%AB%E5%83%B9%E6%9C%89%E6%9C%9B%E7%AA%81%E7%A0%B41%E5%85%86%E7%BE%8E%E5%85%83-005420295.html"
+            },
+            {
+                "title": "擬加徵301關稅　USTR：台法律未禁強迫勞動產品進口",
+                "url": "https://tw.stock.yahoo.com/news/%E6%93%AC%E5%8A%A0%E5%BE%B5301%E9%97%9C%E7%A8%85-ustr-%E5%8F%B0%E6%B3%95%E5%BE%8B%E6%9C%AA%E7%A6%81%E5%BC%B7%E8%BF%AB%E5%8B%9E%E5%8B%95%E7%94%A2%E5%93%81%E9%80%B2%E5%8F%A3-005318418.html"
+            },
+            {
+                "title": "美伊衝突升溫推升油價近百美元 美股漲勢止步主要指數收黑",
+                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E4%BC%8A%E8%A1%9D%E7%AA%81%E5%8D%87%E6%BA%AB%E6%8E%A8%E5%8D%87%E6%B2%B9%E5%83%B9%E8%BF%91%E7%99%BE%E7%BE%8E%E5%85%83-%E7%BE%8E%E8%82%A1%E6%BC%B2%E5%8B%A2%E6%AD%A2%E6%AD%A5%E4%B8%BB%E8%A6%81%E6%8C%87%E6%95%B8%E6%94%B6%E9%BB%91-005311898.html"
+            },
+            {
+                "title": "中東戰火致能源飆漲　聯準會：物價呈中度至強勁上漲",
+                "url": "https://tw.stock.yahoo.com/news/%E4%B8%AD%E6%9D%B1%E6%88%B0%E7%81%AB%E8%87%B4%E8%83%BD%E6%BA%90%E9%A3%86%E6%BC%B2-%E8%81%AF%E6%BA%96%E6%9C%83-%E7%89%A9%E5%83%B9%E5%91%88%E4%B8%AD%E5%BA%A6%E8%87%B3%E5%BC%B7%E5%8B%81%E4%B8%8A%E6%BC%B2-005216216.html"
+            },
+            {
+                "title": "聯準會洛根示警通膨降速緩慢 恐需年底前再升息",
+                "url": "https://tw.stock.yahoo.com/news/%E8%81%AF%E6%BA%96%E6%9C%83%E6%B4%9B%E6%A0%B9%E7%A4%BA%E8%AD%A6%E9%80%9A%E8%86%A8%E9%99%8D%E9%80%9F%E7%B7%A9%E6%85%A2-%E6%81%90%E9%9C%80%E5%B9%B4%E5%BA%95%E5%89%8D%E5%86%8D%E5%8D%87%E6%81%AF-005052260.html"
+            },
+            {
+                "title": "輝達開年薪650萬文組職缺！內行人揭「殘酷真相」勸退",
+                "url": "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94%E9%96%8B%E5%B9%B4%E8%96%AA650%E8%90%AC%E6%96%87%E7%B5%84%E8%81%B7%E7%BC%BA-%E5%85%A7%E8%A1%8C%E4%BA%BA%E6%8F%AD-%E6%AE%98%E9%85%B7%E7%9C%9F%E7%9B%B8-%E5%8B%B8%E9%80%80-003357937.html"
+            },
+            {
                 "title": "美伊衝突未斷，美股三大指數收跌費半獨強，輝達下挫未改晶片強勢格局",
                 "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E4%BC%8A%E8%A1%9D%E7%AA%81%E6%9C%AA%E6%96%B7-%E7%BE%8E%E8%82%A1%E4%B8%89%E5%A4%A7%E6%8C%87%E6%95%B8%E6%94%B6%E8%B7%8C%E8%B2%BB%E5%8D%8A%E7%8D%A8%E5%BC%B7-%E8%BC%9D%E9%81%94%E4%B8%8B%E6%8C%AB%E6%9C%AA%E6%94%B9%E6%99%B6%E7%89%87%E5%BC%B7%E5%8B%A2%E6%A0%BC%E5%B1%80-002505799.html"
+            },
+            {
+                "title": "黃仁勳才喊AI回報驚人 達里歐潑冷水：再強的科技也難逃泡沫循環",
+                "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E6%89%8D%E5%96%8Aai%E5%9B%9E%E5%A0%B1%E9%A9%9A%E4%BA%BA-%E9%81%94%E9%87%8C%E6%AD%90%E6%BD%91%E5%86%B7%E6%B0%B4-%E5%86%8D%E5%BC%B7%E7%9A%84%E7%A7%91%E6%8A%80%E4%B9%9F%E9%9B%A3%E9%80%83%E6%B3%A1%E6%B2%AB%E5%BE%AA%E7%92%B0-001005131.html"
             },
             {
                 "title": "美伊和平前景擔憂，紐約匯市週三美元兌主要貨幣上揚，日圓跌破160",
@@ -20,44 +52,12 @@
                 "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E9%AB%98%E6%AA%94%E6%8B%89%E5%9B%9E-%E8%B2%BB%E5%8D%8A%E9%80%86%E5%8B%A2%E6%92%90%E7%9B%A4-%E5%8F%B0%E8%82%A1%E7%9C%8B%E5%8F%B0%E7%A9%8D%E9%9B%BB-%E8%81%AF%E9%9B%BB%E8%83%BD%E5%90%A6%E6%AD%A2%E7%A9%A9-000557023.html"
             },
             {
-                "title": "美股回檔油價續漲通膨擔憂起 聯準會政策添變數",
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E5%9B%9E%E6%AA%94%E6%B2%B9%E5%83%B9%E7%BA%8C%E6%BC%B2%E9%80%9A%E8%86%A8%E6%93%94%E6%86%82%E8%B5%B7-%E8%81%AF%E6%BA%96%E6%9C%83%E6%94%BF%E7%AD%96%E6%B7%BB%E8%AE%8A%E6%95%B8-235902154.html"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%82%A1%E6%9D%B1%E6%9C%83%E4%B8%8D%E6%BC%B2%E5%8F%8D%E8%B7%8C%EF%BC%81%E6%8C%AB40%E5%85%83%E5%A4%B1%E5%AE%882400%E5%85%83-%E5%B0%88%E5%AE%B6%E5%96%8A%E8%B2%B7-011136149.html"
             },
             {
-                "title": "中東戰火與貿易關稅雙重夾擊 加幣匯率跌至八週低點",
-                "url": "https://tw.stock.yahoo.com/news/%E4%B8%AD%E6%9D%B1%E6%88%B0%E7%81%AB%E8%88%87%E8%B2%BF%E6%98%93%E9%97%9C%E7%A8%85%E9%9B%99%E9%87%8D%E5%A4%BE%E6%93%8A-%E5%8A%A0%E5%B9%A3%E5%8C%AF%E7%8E%87%E8%B7%8C%E8%87%B3%E5%85%AB%E9%80%B1%E4%BD%8E%E9%BB%9E-235747620.html"
-            },
-            {
-                "title": "中東衝突再掀波瀾，道瓊歐洲Stoxx 600週三收低0.66%，能源股成避險焦點",
-                "url": "https://tw.stock.yahoo.com/news/%E4%B8%AD%E6%9D%B1%E8%A1%9D%E7%AA%81%E5%86%8D%E6%8E%80%E6%B3%A2%E7%80%BE-%E9%81%93%E7%93%8A%E6%AD%90%E6%B4%B2stoxx-600%E9%80%B1%E4%B8%89%E6%94%B6%E4%BD%8E0-66-%E8%83%BD%E6%BA%90%E8%82%A1%E6%88%90%E9%81%BF%E9%9A%AA%E7%84%A6%E9%BB%9E-235618309.html"
-            },
-            {
-                "title": "中東衝突升溫油價飆漲 美股道瓊工業指數狂瀉逾600點",
-                "url": "https://tw.stock.yahoo.com/news/%E4%B8%AD%E6%9D%B1%E8%A1%9D%E7%AA%81%E5%8D%87%E6%BA%AB%E6%B2%B9%E5%83%B9%E9%A3%86%E6%BC%B2-%E7%BE%8E%E8%82%A1%E9%81%93%E7%93%8A%E5%B7%A5%E6%A5%AD%E6%8C%87%E6%95%B8%E7%8B%82%E7%80%89%E9%80%BE600%E9%BB%9E-235045624.html"
-            },
-            {
-                "title": "美股創高後回跌：標普九連漲止步 AI 主導漲勢續航力受關注",
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E5%89%B5%E9%AB%98%E5%BE%8C%E5%9B%9E%E8%B7%8C-%E6%A8%99%E6%99%AE%E4%B9%9D%E9%80%A3%E6%BC%B2%E6%AD%A2%E6%AD%A5-ai-%E4%B8%BB%E5%B0%8E%E6%BC%B2%E5%8B%A2%E7%BA%8C%E8%88%AA%E5%8A%9B%E5%8F%97%E9%97%9C%E6%B3%A8-234807634.html"
-            },
-            {
-                "title": "日圓跌破 160 關卡觸發日本官員警告 市場關注美元走勢與Fed動向",
-                "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E8%B7%8C%E7%A0%B4-160-%E9%97%9C%E5%8D%A1%E8%A7%B8%E7%99%BC%E6%97%A5%E6%9C%AC%E5%AE%98%E5%93%A1%E8%AD%A6%E5%91%8A-%E5%B8%82%E5%A0%B4%E9%97%9C%E6%B3%A8%E7%BE%8E%E5%85%83%E8%B5%B0%E5%8B%A2%E8%88%87fed%E5%8B%95%E5%90%91-233555912.html"
-            },
-            {
-                "title": "美股兩月飆16%創戰後罕見紀錄 德銀示警：上一回是1987崩盤前！",
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E5%85%A9%E6%9C%88%E9%A3%8616-%E5%89%B5%E6%88%B0%E5%BE%8C%E7%BD%95%E8%A6%8B%E7%B4%80%E9%8C%84-%E5%BE%B7%E9%8A%80%E7%A4%BA%E8%AD%A6-%E4%B8%8A-%E5%9B%9E%E6%98%AF1987%E5%B4%A9%E7%9B%A4%E5%89%8D-233012743.html"
-            },
-            {
-                "title": "聯準會報告顯示，2025年美國銀行業住宅等多類貸款逾期率小幅上升",
-                "url": "https://tw.stock.yahoo.com/news/%E8%81%AF%E6%BA%96%E6%9C%83%E5%A0%B1%E5%91%8A%E9%A1%AF%E7%A4%BA-2025%E5%B9%B4%E7%BE%8E%E5%9C%8B%E9%8A%80%E8%A1%8C%E6%A5%AD%E4%BD%8F%E5%AE%85%E7%AD%89%E5%A4%9A%E9%A1%9E%E8%B2%B8%E6%AC%BE%E9%80%BE%E6%9C%9F%E7%8E%87%E5%B0%8F%E5%B9%85%E4%B8%8A%E5%8D%87-232403118.html"
-            },
-            {
-                "title": "《美股》油價/殖利率升 太空、那指軟 費半逆漲",
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1-%E6%B2%B9%E5%83%B9-%E6%AE%96%E5%88%A9%E7%8E%87%E5%8D%87-%E5%A4%AA%E7%A9%BA-%E9%82%A3%E6%8C%87%E8%BB%9F-231700632.html"
-            },
-            {
-                "title": "聯準會褐皮書顯示，美國總體就業保持穩定，示警能源成本推升通膨",
-                "url": "https://tw.stock.yahoo.com/news/%E8%81%AF%E6%BA%96%E6%9C%83%E8%A4%90%E7%9A%AE%E6%9B%B8%E9%A1%AF%E7%A4%BA-%E7%BE%8E%E5%9C%8B%E7%B8%BD%E9%AB%94%E5%B0%B1%E6%A5%AD%E4%BF%9D%E6%8C%81%E7%A9%A9%E5%AE%9A-%E7%A4%BA%E8%AD%A6%E8%83%BD%E6%BA%90%E6%88%90%E6%9C%AC%E6%8E%A8%E5%8D%87%E9%80%9A%E8%86%A8-231230661.html"
+                "title": "查看原始新聞",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%AE%8A%E5%A4%A9%EF%BC%81%E4%B8%80%E5%BA%A6%E8%B7%8C%E9%80%BE500%E9%BB%9E-%E5%A4%B1%E5%AE%884%E8%90%AC6%E5%A4%A7%E9%97%9C-010403354.html"
             },
             {
                 "title": "查看原始新聞",
@@ -70,14 +70,6 @@
             {
                 "title": "查看原始新聞",
                 "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E9%8C%A2%E6%B7%B9%E8%85%B3%E7%9B%AE%EF%BC%81%E9%80%A34%E6%97%A5%E5%89%B5%E9%AB%98%E6%94%BB%E7%A0%B446000%E9%BB%9E-%E4%B8%8A%E5%B8%82%E6%AB%83%E9%80%BE%E7%99%BE%E6%AA%94%E6%BC%B2%E5%81%9C%E5%8A%A9%E6%94%BB%EF%BD%9Cyahoo%E8%B2%A1%E7%B6%93%E6%8E%83%E6%8F%8F-092137136.html"
-            },
-            {
-                "title": "查看原始新聞",
-                "url": "https://tw.stock.yahoo.com/news/%E7%BA%8C%E5%89%B5%E6%96%B0%E9%AB%98%EF%BC%81%E5%8D%97%E4%BA%9E%E7%A7%91%E4%BB%8A%E5%B9%B4%E5%89%8D5%E6%9C%88%E7%87%9F%E6%94%B6%E7%AA%81%E7%A0%B4%E5%8D%83%E5%84%84%E5%85%83-%E5%B9%B4%E5%A2%9E%E9%80%BE6%E5%80%8D-085442177.html"
-            },
-            {
-                "title": "查看原始新聞",
-                "url": "https://tw.stock.yahoo.com/news/%E9%80%9B%E5%B1%95%E7%B4%AF%E4%BA%86%E5%85%88%E5%96%9D%E4%B8%80%E6%9D%AF%EF%BC%81%E9%BB%83%E4%BB%81%E5%8B%B3%E7%8F%BE%E8%BA%AB%E6%8A%80%E5%98%89%E7%A0%94%E8%8F%AF%E6%94%A4%E4%BD%8D-%E8%88%87%E3%80%8C%E4%BB%96%E3%80%8D%E5%B8%AD%E5%9C%B0%E8%B1%AA%E9%A3%B2%E5%95%A4%E9%85%92-082330894.html"
             },
             {
                 "title": "查看原始新聞",
@@ -98,6 +90,14 @@
             {
                 "title": "查看原始新聞",
                 "url": "https://tw.stock.yahoo.com/news/%E4%BB%A3%E7%90%86%E5%BC%8F%E5%95%86%E5%8B%99%E9%80%A3%E5%8B%95%E7%99%BE%E5%85%86ai%E5%95%86%E6%A9%9F-4%E5%BC%B5%E5%9C%96%E6%8E%8C%E6%8F%A1-%E4%BE%9D%E8%B3%B4%E7%B6%93%E6%BF%9F-%E5%A4%A7%E5%8B%A2-%E5%B0%8D%E8%A9%B1%E6%A1%86%E6%AD%A3%E6%8E%A5%E7%AE%A1%E6%90%9C%E5%B0%8B%E6%A1%86-041155904.html"
+            },
+            {
+                "title": "台股早盤跌逾500點 台積電跌40元",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%97%A9%E7%9B%A4%E8%B7%8C%E9%80%BE500%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B7%8C40%E5%85%83-010433925.html"
+            },
+            {
+                "title": "記憶體集體遭外資重砍！「這3檔」獲國家隊急救1.8萬張　猛灌近20億元接手華邦電1萬張",
+                "url": "https://tw.stock.yahoo.com/news/%E8%A8%98%E6%86%B6%E9%AB%94%E9%9B%86%E9%AB%94%E9%81%AD%E5%A4%96%E8%B3%87%E9%87%8D%E7%A0%8D-%E9%80%993%E6%AA%94-%E7%8D%B2%E5%9C%8B%E5%AE%B6%E9%9A%8A%E6%80%A5%E6%95%911-8%E8%90%AC%E5%BC%B5-%E7%8C%9B%E7%81%8C%E8%BF%9120%E5%84%84%E5%85%83%E6%8E%A5%E6%89%8B%E8%8F%AF%E9%82%A6%E9%9B%BB1%E8%90%AC%E5%BC%B5-004500898.html"
             },
             {
                 "title": "股價1萬8》信驊科技林鴻明： 原本只是想打破當年大立光元的紀錄",
@@ -358,8 +358,8 @@
     },
     "ai_news_global": {
         "title": "🌍 國際政經 AI 核心戰略",
-        "time": "2026-06-04 08:46:27",
-        "text": "根據提供的新聞內容，我將分析國際市場的趨勢和事件。\n\n亞洲市場 facts\n\n• 台灣股市連續四天創新高，台積電、聯電等公司股價上漲。\n• 中國大陸股市表現平穩。\n• 日本股市受到美元走勢影響，日圓跌破160關卡。\n\n歐洲與地緣 facts\n\n• 美伊衝突升溫，中東地區的戰火和貿易關稅雙重夾擊，加幣匯率跌至八週低點。\n• 歐洲股市受到美伊衝突影響，道瓊工業指數狂瀉逾600點。\n\n原物料與匯率 facts\n\n• 原油價格飆漲，受美伊衝突和能源成本推升通膨的影響。\n• 美元兌主要貨幣上揚，美元走勢受到聯準會政策變數的影響。\n\n今日市場焦點\n\n• 避險資產氛圍：地緣衝突下拉動的黃金、原油避險资金情緒正在升溫。\n• 國際資金流向：非美市場政策大環境對全球資金分配的最新影響正在被關注。\n\n操盤策略與投資建議\n\n• 宏觀風險提示：國際局勢對供應鏈、外匯劇烈震盪或全球資金套牢，避險警告。\n• 避險防禦方針：宏觀資產配置、防禦型板塊避險或商品操作的具體方向建議。"
+        "time": "2026-06-04 09:23:16",
+        "text": "今日市場焦點\n\n• 避險資產氛圍：地緣衝突下，黃金和原油避險资金情緒升溫。美伊衝突升溫推升油價近百美元，美股漲勢止步主要指數收黑。\n\n• 國際資金流向：非美市場政策大環境對全球資金分配的最新影響。聯準會洛根示警通膨降速緩慢，恐需年底前再升息。\n\n操盤策略與投資建議\n\n• ⚖️ 宏觀風險提示：地緣衝突和政策變動對供應鏈、外匯劇烈震盪或全球資金套牢的避險警告。投資者應謹慎配置資產，避免過度暴露於特定市場或板塊。\n\n• 💰 避險防禦方針：在目前的地緣政治不穩和政策變動下，投資者可考慮配置避險資產，如黃金、原油等。同時，應關注非美市場政策大環境對全球資金分配的影響，並謹慎選擇具備抗跌能力的股票或基金。"
     },
     "ai_news_us": {
         "title": "🧠 美股 AI 核心戰略",
