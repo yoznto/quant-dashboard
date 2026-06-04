@@ -1,15 +1,39 @@
 {
     "global": {
         "title": "🌍 國際政經與環球情報",
-        "time": "2026-06-04 10:44:47",
+        "time": "2026-06-04 11:09:46",
         "data": [
             {
                 "title": "國際政經財經線索",
                 "url": "https://tw.stock.yahoo.com/news/"
             },
             {
+                "title": "印尼盧比波動加劇 央行嚴控外匯交易穩定市場",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8D%B0%E5%B0%BC%E7%9B%A7%E6%AF%94%E6%B3%A2%E5%8B%95%E5%8A%A0%E5%8A%87-%E5%A4%AE%E8%A1%8C%E5%9A%B4%E6%8E%A7%E5%A4%96%E5%8C%AF%E4%BA%A4%E6%98%93%E7%A9%A9%E5%AE%9A%E5%B8%82%E5%A0%B4-025451896.html"
+            },
+            {
+                "title": "聯準會褐皮書：美國經濟溫和成長 通膨壓力擴大影響降息預期",
+                "url": "https://tw.stock.yahoo.com/news/%E8%81%AF%E6%BA%96%E6%9C%83%E8%A4%90%E7%9A%AE%E6%9B%B8-%E7%BE%8E%E5%9C%8B%E7%B6%93%E6%BF%9F%E6%BA%AB%E5%92%8C%E6%88%90%E9%95%B7-%E9%80%9A%E8%86%A8%E5%A3%93%E5%8A%9B%E6%93%B4%E5%A4%A7%E5%BD%B1%E9%9F%BF%E9%99%8D%E6%81%AF%E9%A0%90%E6%9C%9F-025021556.html"
+            },
+            {
+                "title": "黃仁勳超Chill！逛COMPUTEX累了「坐地喝台啤」畫面曝　網直呼：接地氣的台灣人",
+                "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E8%B6%85chill-%E9%80%9Bcomputex%E7%B4%AF%E4%BA%86-%E5%9D%90%E5%9C%B0%E5%96%9D%E5%8F%B0%E5%95%A4-%E7%95%AB%E9%9D%A2%E6%9B%9D-%E7%B6%B2%E7%9B%B4%E5%91%BC-024000002.html"
+            },
+            {
+                "title": "美國301調查建議加徵台灣10%關稅！民進黨團籲企業接軌國際勞權",
+                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B301%E8%AA%BF%E6%9F%A5%E5%BB%BA%E8%AD%B0%E5%8A%A0%E5%BE%B5%E5%8F%B0%E7%81%A310-%E9%97%9C%E7%A8%85-%E6%B0%91%E9%80%B2%E9%BB%A8%E5%9C%98%E7%B1%B2%E4%BC%81%E6%A5%AD%E6%8E%A5%E8%BB%8C%E5%9C%8B%E9%9A%9B%E5%8B%9E%E6%AC%8A-024000689.html"
+            },
+            {
+                "title": "油價驟跌提振市場信心 美股三大指數再創歷史新高",
+                "url": "https://tw.stock.yahoo.com/news/%E6%B2%B9%E5%83%B9%E9%A9%9F%E8%B7%8C%E6%8F%90%E6%8C%AF%E5%B8%82%E5%A0%B4%E4%BF%A1%E5%BF%83-%E7%BE%8E%E8%82%A1%E4%B8%89%E5%A4%A7%E6%8C%87%E6%95%B8%E5%86%8D%E5%89%B5%E6%AD%B7%E5%8F%B2%E6%96%B0%E9%AB%98-023534991.html"
+            },
+            {
                 "title": "美債殖利率攀升衝擊科技股 Cars.com 等重挫，Meta AI 業務獲市場青睞",
                 "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%82%B5%E6%AE%96%E5%88%A9%E7%8E%87%E6%94%80%E5%8D%87%E8%A1%9D%E6%93%8A%E7%A7%91%E6%8A%80%E8%82%A1-cars-com-%E7%AD%89%E9%87%8D%E6%8C%AB-meta-023422932.html"
+            },
+            {
+                "title": "南韓股市狂飆十倍勝美股 AI帶動 台灣逾翻倍漲幅表現不俗",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8D%97%E9%9F%93%E8%82%A1%E5%B8%82%E7%8B%82%E9%A3%86%E5%8D%81%E5%80%8D%E5%8B%9D%E7%BE%8E%E8%82%A1-ai%E5%B8%B6%E5%8B%95-%E5%8F%B0%E7%81%A3%E9%80%BE%E7%BF%BB%E5%80%8D%E6%BC%B2%E5%B9%85%E8%A1%A8%E7%8F%BE%E4%B8%8D%E4%BF%97-023018660.html"
             },
             {
                 "title": "Match-Prime 推出全天候差價合約 黃金、美股指數納入週末交易",
@@ -28,28 +52,8 @@
                 "url": "https://tw.stock.yahoo.com/news/%E8%A6%81%E9%BB%83%E4%BB%81%E5%8B%B3%E7%B0%BD%E5%90%8D%E4%BB%A3%E5%83%B9%E5%A4%A7-%E6%8B%BF%E9%8C%A2%E5%8C%85-%E4%B8%8B%E7%A7%92%E6%8A%BD%E8%B5%B0%E5%A4%A7%E9%88%94-%E7%B5%90%E5%B1%80%E8%B6%85%E6%9A%96-021221502.html"
             },
             {
-                "title": "輝達認了「2027仍供不應求」：大摩點名4檔台廠「起飛股」：下一波行情才剛開始",
-                "url": "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94%E8%AA%8D%E4%BA%86-2027%E4%BB%8D%E4%BE%9B%E4%B8%8D%E6%87%89%E6%B1%82-%E5%A4%A7%E6%91%A9%E9%BB%9E%E5%90%8D4%E6%AA%94%E5%8F%B0%E5%BB%A0-%E8%B5%B7%E9%A3%9B%E8%82%A1-%E4%B8%8B-020500395.html"
-            },
-            {
-                "title": "韓國5月外匯存底減8.8億美元 主因市場穩定措施",
-                "url": "https://tw.stock.yahoo.com/news/%E9%9F%93%E5%9C%8B5%E6%9C%88%E5%A4%96%E5%8C%AF%E5%AD%98%E5%BA%95%E6%B8%9B8-8%E5%84%84%E7%BE%8E%E5%85%83-%E4%B8%BB%E5%9B%A0%E5%B8%82%E5%A0%B4%E7%A9%A9%E5%AE%9A%E6%8E%AA%E6%96%BD-015634750.html"
-            },
-            {
-                "title": "美控強迫勞動擬對台加徵10%關稅 勞動部：稅率低於日韓",
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E6%8E%A7%E5%BC%B7%E8%BF%AB%E5%8B%9E%E5%8B%95%E6%93%AC%E5%B0%8D%E5%8F%B0%E5%8A%A0%E5%BE%B510%E9%97%9C%E7%A8%85-%E5%8B%9E%E5%8B%95%E9%83%A8%EF%BC%9A%E7%A8%85%E7%8E%87%E4%BD%8E%E6%96%BC%E6%97%A5%E9%9F%93-014400175.html"
-            },
-            {
-                "title": "美國擬加徵301關稅　巴西警告動用互惠法反制",
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E6%93%AC%E5%8A%A0%E5%BE%B5301%E9%97%9C%E7%A8%85-%E5%B7%B4%E8%A5%BF%E8%AD%A6%E5%91%8A%E5%8B%95%E7%94%A8%E4%BA%92%E6%83%A0%E6%B3%95%E5%8F%8D%E5%88%B6-013738078.html"
-            },
-            {
-                "title": "美光科技市值突破兆美元 躍美國第十強有望超越特斯拉Meta",
-                "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%85%89%E7%A7%91%E6%8A%80%E5%B8%82%E5%80%BC%E7%AA%81%E7%A0%B4%E5%85%86%E7%BE%8E%E5%85%83-%E8%BA%8D%E7%BE%8E%E5%9C%8B%E7%AC%AC%E5%8D%81%E5%BC%B7%E6%9C%89%E6%9C%9B%E8%B6%85%E8%B6%8A%E7%89%B9%E6%96%AF%E6%8B%89meta-013534184.html"
-            },
-            {
-                "title": "AI需求狂潮推升：鎧俠股價飆漲5.8倍成日經希望之星，軟銀市值一度超豐田",
-                "url": "https://tw.stock.yahoo.com/news/ai%E9%9C%80%E6%B1%82%E7%8B%82%E6%BD%AE%E6%8E%A8%E5%8D%87-%E9%8E%A7%E4%BF%A0%E8%82%A1%E5%83%B9%E9%A3%86%E6%BC%B25-8%E5%80%8D%E6%88%90%E6%97%A5%E7%B6%93%E5%B8%8C%E6%9C%9B%E4%B9%8B%E6%98%9F-%E8%BB%9F%E9%8A%80%E5%B8%82%E5%80%BC-%E5%BA%A6%E8%B6%85%E8%B1%90%E7%94%B0-012426824.html"
+                "title": "財經名嘴：AI融資潮恐致供給過剩 成美股牛市下一大威脅",
+                "url": "https://tw.stock.yahoo.com/news/%E8%B2%A1%E7%B6%93%E5%90%8D%E5%98%B4-ai%E8%9E%8D%E8%B3%87%E6%BD%AE%E6%81%90%E8%87%B4%E4%BE%9B%E7%B5%A6%E9%81%8E%E5%89%A9-%E6%88%90%E7%BE%8E%E8%82%A1%E7%89%9B%E5%B8%82%E4%B8%8B-%E5%A4%A7%E5%A8%81%E8%84%85-021005337.html"
             },
             {
                 "title": "查看原始新聞",
@@ -92,16 +96,12 @@
                 "url": "https://tw.stock.yahoo.com/news/%E7%99%BD%E8%A9%B1%E7%A7%91%E6%8A%80-%E9%BB%83%E4%BB%81%E5%8B%B3%E5%96%8A%E5%85%A8%E9%9D%A2%E9%87%8F%E7%94%A2-vera-rubin-%E6%98%AF%E4%BB%80%E9%BA%BC-091711597.html"
             },
             {
+                "title": "台股盤中跌逾600點失守4萬6 台積電跌40元",
+                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E7%9B%A4%E4%B8%AD%E8%B7%8C%E9%80%BE600%E9%BB%9E%E5%A4%B1%E5%AE%884%E8%90%AC6-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B7%8C40%E5%85%83-010433452.html"
+            },
+            {
                 "title": "股王新天價1》大摩喊23456元　信驊林鴻明：高股價是做功德",
                 "url": "https://tw.stock.yahoo.com/news/%E8%82%A1%E7%8E%8B%E6%96%B0%E5%A4%A9%E5%83%B91-%E5%A4%A7%E6%91%A9%E5%96%8A23456%E5%85%83-%E4%BF%A1%E9%A9%8A%E6%9E%97%E9%B4%BB%E6%98%8E-%E9%AB%98%E8%82%A1%E5%83%B9%E6%98%AF%E5%81%9A%E5%8A%9F%E5%BE%B7-223627922.html"
-            },
-            {
-                "title": "台積電股東會》聽魏哲家的話賺到頭期款　他再喊：請繼續買股票",
-                "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%82%A1%E6%9D%B1%E6%9C%83-%E8%82%A1%E5%83%B9%E5%BE%9E950%E5%85%83%E8%A1%9D%E4%B8%8A2425%E5%85%83-%E9%AD%8F%E5%93%B2%E5%AE%B6-%E5%8F%A5%E8%A9%B1%E5%85%A8%E5%A0%B4%E9%BC%93%E6%8E%8C-021210012.html"
-            },
-            {
-                "title": "建商賣房5年不如炒股1年！台股「懼高症」爆量洗盤 全台忙增貸歐印「小心股房兩空」｜房市觀點",
-                "url": "https://tw.stock.yahoo.com/news/%E5%BB%BA%E5%95%86%E8%B3%A3%E6%88%BF5%E5%B9%B4%E4%B8%8D%E5%A6%82%E7%82%92%E8%82%A11%E5%B9%B4%EF%BC%81%E5%8F%B0%E8%82%A1%E3%80%8C%E6%87%BC%E9%AB%98%E7%97%87%E3%80%8D%E7%88%86%E9%87%8F%E6%B4%97%E7%9B%A4-%E5%85%A8%E5%8F%B0%E5%BF%99%E5%A2%9E%E8%B2%B8%E6%AD%90%E5%8D%B0%E3%80%8C%E5%B0%8F%E5%BF%83%E8%82%A1%E6%88%BF%E5%85%A9%E7%A9%BA%E3%80%8D%EF%BD%9C%E6%88%BF%E5%B8%82%E8%A7%80%E9%BB%9E-021251574.html"
             }
         ]
     },
@@ -358,8 +358,8 @@
     },
     "ai_news_global": {
         "title": "🌍 國際政經 AI 核心戰略",
-        "time": "2026-06-04 10:45:32",
-        "text": "根據提供的新聞內容，我將分析以下國際市場事實：\n\n亞洲市場 facts\n\n1. 韓國截至5月底外匯存底4269.9億美元，較前月減少8.8億美元。\n2. 台灣大哥大讓IT重掌自研力：終結客服外包、自練語音模型，這套AI轉型路徑怎麼走？\n3. 台積電股東會》聽魏哲家的話賺到頭期款 他再喊：請繼續買股票\n\n歐洲與地緣 facts\n\n1. 美伊戰事再升溫點火！造紙股全面上漲 正隆、華紙亮燈漲停 永豐餘漲逾7%\n2. 美控強迫勞動擬對台加徵10%關稅 勞動部：稅率低於日韓\n\n原物料與匯率 facts\n\n1. 原油價格持續上升，影響全球經濟。\n2. 美元走勢不穩定，美元兌人民幣匯率下跌。\n\n今日市場焦點\n\n• 避險資產氛圍：地緣衝突下拉動的黃金、原油避險资金情緒持續升溫。\n• 國際資金流向：非美市場政策大環境對全球資金分配的最新影響，投資者應關注亞洲市場的發展趨勢。\n\n操盤策略與投資建議\n\n• 宏觀風險提示：國際局勢對供應鏈、外匯劇烈震盪或全球資金套牢的避險警告。\n• 避險防禦方針：宏觀資產配置、防禦型板塊避險或商品操作，投資者應謹慎選擇投資方向。"
+        "time": "2026-06-04 11:10:19",
+        "text": "今日市場焦點\n\n• 避險資產氛圍：地緣衝突下，黃金和原油避險资金情緒加劇。美國與伊朗戰事再升溫，導致全球市場對避險資產的需求增加。\n\n• 國際資金流向：非美市場政策大環境對全球資金分配產生重大影響。印尼央行嚴控外匯交易穩定市場，而韓國外匯存底減少8.8億美元，表明市場對外匯的需求增加。\n\n操盤策略與投資建議\n\n• 宏觀風險提示：地緣衝突和政策變動可能導致供應鏈和外匯劇烈震盪。投資者應該謹慎配置資金，避免過度暴露於市場波動中。\n\n• 避險防禦方針：投資者可以考慮配置一些避險資產，如黃金或原油，以減少風險。同時，可以考慮投資在非美市場的政策穩定性較高的企業，例如台積電等。"
     },
     "ai_news_us": {
         "title": "🧠 美股 AI 核心戰略",
