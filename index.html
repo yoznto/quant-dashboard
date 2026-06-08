@@ -178,8 +178,8 @@
         }
     </style>
     <script>
-        // 安全載入資料（使用 textContent 方式避免 XSS）
-        const dbData = JSON.parse(`{"global": {"title": "🌍 國際政經與環球情報", "time": "2026-06-08 12:11:42", "data": [{"title": "國際政經財經線索", "url": "https://tw.stock.yahoo.com/news/"}, {"title": "蒸發9兆免驚？ 專家喊「沒關稅可怕」：美股這幾支已經在偷漲", "url": "https://tw.stock.yahoo.com/news/%E8%92%B8%E7%99%BC9%E5%85%86%E5%85%8D%E9%A9%9A-%E5%B0%88%E5%AE%B6%E5%96%8A-%E6%B2%92%E9%97%9C%E7%A8%85%E5%8F%AF%E6%80%95-%E7%BE%8E%E8%82%A1%E9%80%99%E5%B9%BE%E6%94%AF%E5%B7%B2%E7%B6%93%E5%9C%A8%E5%81%B7%E6%BC%B2-031300427.html"}, {"title": "美股重挫是免驚？5月非農「強中透弱」 專家爆三大驚擾利空：只是技術性修正！", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E9%87%8D%E6%8C%AB%E6%98%AF%E5%85%8D%E9%A9%9A%EF%BC%9F5%E6%9C%88%E9%9D%9E%E8%BE%B2%E3%80%8C%E5%BC%B7%E4%B8%AD%E9%80%8F%E5%BC%B1%E3%80%8D-%E5%B0%88%E5%AE%B6%E7%88%86%E4%B8%89%E5%A4%A7%E9%A9%9A%E6%93%BE%E5%88%A9%E7%A9%BA%EF%BC%9A%E5%8F%AA%E6%98%AF%E6%8A%80%E8%A1%93%E6%80%A7%E4%BF%AE%E6%AD%A3%EF%BC%81-025933038.html"}, {"title": "就業爆棚美股竟跌 川普強力質疑、高呼Fed應降息", "url": "https://tw.stock.yahoo.com/news/%E5%B0%B1%E6%A5%AD%E7%88%86%E6%A3%9A%E7%BE%8E%E8%82%A1%E7%AB%9F%E8%B7%8C-%E5%B7%9D%E6%99%AE%E5%BC%B7%E5%8A%9B%E8%B3%AA%E7%96%91-%E9%AB%98%E5%91%BCfed%E6%87%89%E9%99%8D%E6%81%AF-025800438.html"}, {"title": "韓元創17年低點，韓國金融服務委員會召集四大銀行討論匯市因應措施", "url": "https://tw.stock.yahoo.com/news/%E9%9F%93%E5%85%83%E5%89%B517%E5%B9%B4%E4%BD%8E%E9%BB%9E-%E9%9F%93%E5%9C%8B%E9%87%91%E8%9E%8D%E6%9C%8D%E5%8B%99%E5%A7%94%E5%93%A1%E6%9C%83%E5%8F%AC%E9%9B%86%E5%9B%9B%E5%A4%A7%E9%8A%80%E8%A1%8C%E8%A8%8E%E8%AB%96%E5%8C%AF%E5%B8%82%E5%9B%A0%E6%87%89%E6%8E%AA%E6%96%BD-024131952.html"}, {"title": "《日股早盤》AI、半導體慘 日經暴跌2,547點", "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E8%82%A1%E6%97%A9%E7%9B%A4-ai-%E5%8D%8A%E5%B0%8E%E9%AB%94%E6%85%98-%E6%97%A5%E7%B6%93%E6%9A%B4%E8%B7%8C2-547%E9%BB%9E-023900932.html"}, {"title": "美股AI、晶片股崩跌逾1.3兆美元 那指重挫4%創3年來最大跌幅", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1ai-%E6%99%B6%E7%89%87%E8%82%A1%E5%B4%A9%E8%B7%8C%E9%80%BE1-3%E5%85%86%E7%BE%8E%E5%85%83-%E9%82%A3%E6%8C%87%E9%87%8D%E6%8C%AB4-%E5%89%B53%E5%B9%B4%E4%BE%86%E6%9C%80%E5%A4%A7%E8%B7%8C%E5%B9%85-022917860.html"}, {"title": "美股與中東情勢影響  亞股早盤大跌油價走高", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E8%88%87%E4%B8%AD%E6%9D%B1%E6%83%85%E5%8B%A2%E5%BD%B1%E9%9F%BF-%E4%BA%9E%E8%82%A1%E6%97%A9%E7%9B%A4%E5%A4%A7%E8%B7%8C%E6%B2%B9%E5%83%B9%E8%B5%B0%E9%AB%98-021651402.html"}, {"title": "美國房貸利率飆破6% 聯準會束手無策", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E6%88%BF%E8%B2%B8%E5%88%A9%E7%8E%87%E9%A3%86%E7%A0%B46-%E8%81%AF%E6%BA%96%E6%9C%83%E6%9D%9F%E6%89%8B%E7%84%A1%E7%AD%96-021620208.html"}, {"title": "黃仁勳訪韓國宣布3大合作案　攜手布局AI資料中心", "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E8%A8%AA%E9%9F%93%E5%9C%8B%E5%AE%A3%E5%B8%833%E5%A4%A7%E5%90%88%E4%BD%9C%E6%A1%88-%E6%94%9C%E6%89%8B%E5%B8%83%E5%B1%80ai%E8%B3%87%E6%96%99%E4%B8%AD%E5%BF%83-021548590.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E7%9C%8B%E7%A9%BA%E9%82%84%E6%98%AF%E5%B0%8D%E6%B2%96%E8%B3%A0%E5%B0%91%E9%BB%9E%EF%BC%9F0050%E5%8F%8D%E4%B8%80%E7%AD%89%E3%80%8C2%E6%AA%94%E5%8F%8D%E5%90%91etf%E3%80%8D2%E5%B0%8F%E6%99%82%E7%88%86%E9%80%BE30%E8%90%AC%E5%BC%B5%E5%A4%A7%E9%87%8F-%E5%B0%88%E5%AE%B6%E8%A7%A3%E6%9E%90-040746463.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E9%9D%A2%E6%9D%BF%E9%9B%99%E8%99%8E%E4%B8%80%E5%AD%97%E9%8E%96%E8%B7%8C%E5%81%9C%EF%BC%81%E5%8F%8B%E9%81%94%E7%BE%A4%E5%89%B5%E9%80%BE18%E8%90%AC%E5%BC%B5%E6%8E%92%E9%9A%8A%E7%AD%89%E8%B3%A3-%E5%88%86%E6%9E%90%E5%B8%AB%EF%BC%9A%E8%A6%8B%E5%A4%9A%E6%AE%BA%E5%A4%9A-040517871.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/38%E8%90%AC%E6%95%A3%E6%88%B6qq%E4%BA%86%EF%BC%816%E6%9C%88%E4%BB%A5%E4%BE%86%E9%80%B2%E5%A0%B4%E5%8F%B0%E8%82%A1%E4%BB%8A%E6%85%98%E6%B7%AA%E4%BD%8F%E5%A5%97%E6%88%BF-%E5%88%86%E6%9E%90%E5%B8%AB%E6%95%99%E6%88%B0-040255027.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/momo%E5%AF%8C%E9%82%A6%E5%AA%92%E8%B6%8A%E9%97%9C%E8%B6%8A%E5%A4%A7%E5%B0%BE%EF%BC%81%E4%BB%8A%E9%80%86%E5%8B%A2%E9%A3%86%E6%BC%B2%E5%81%9C-%E5%88%86%E6%9E%90%E5%B8%AB%E9%BB%9E%E5%90%8D%E4%B8%89%E5%A4%A7%E5%84%AA%E5%8B%A2-034738688.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E3%80%90hot%E5%8F%B0%E8%82%A1%E3%80%91%E5%A4%A7%E7%9B%A4%E9%96%83%E5%B4%A9%E5%BE%8C%E4%B8%8A%E6%BC%94v%E8%BD%89%E7%A7%80%EF%BC%9F%E7%B6%B2%E5%96%8A%E3%80%8C%E7%8C%9B%E8%99%8E%E7%A1%AC%E7%88%AC%E5%B1%B1%E3%80%8D-%E5%AF%8C%E9%82%A6%E6%8A%95%E9%A1%A7%E8%91%A3%E5%BA%A7%E9%99%B3%E5%A5%95%E5%85%89%E6%8F%AD%E3%80%8C%E9%97%9C%E9%8D%B5%E9%BB%9E%E4%BD%8D%E3%80%8D-034233063.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%BC%B2%E7%BF%BB-%E8%AD%B7%E5%9C%8B%E7%A5%9E%E5%B1%B1%E9%80%A0%E5%B0%B1-%E5%8B%9E%E5%B7%A5%E8%B2%B4%E6%97%8F-%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%82%BA%E4%BD%95%E4%BB%8D%E4%B8%8D%E6%95%A2%E8%8A%B1%E9%8C%A2-104000071.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%A0%B4%E8%BB%8A%E7%A6%8D%E6%94%B9%E8%AE%8A%E4%BB%96%E7%9A%84%E4%BA%BA%E7%94%9F-%E9%87%91%E7%89%8C%E6%89%8B%E6%95%B4%E5%BE%A9%E5%B8%AB%E5%9F%B9%E8%A8%932000%E9%9B%99%E6%89%8B-%E5%89%8D%E9%80%B2%E4%BC%81%E6%A5%AD%E7%95%B6-%E5%B9%95%E5%BE%8C%E6%8E%A8%E6%89%8B-082800796.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E8%94%A3%E8%90%AC%E5%AE%89%E6%9B%9D%E5%8F%B0%E5%8C%97%E7%84%A1%E8%8F%B8%E5%9F%8E%E5%B8%82%E8%A6%8F%E5%8A%83-%E6%8C%87%E5%AE%9A%E5%90%B8%E8%8F%B8%E5%8D%80-%E8%B2%A0%E5%A3%93%E5%BC%8F%E5%90%B8%E8%8F%B8%E5%AE%A4-%E8%A1%A8%E7%9C%8B%E6%87%82-072900358.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%82%A1%E6%9D%B1%E6%9C%833%E5%80%8B%E9%97%9C%E9%8D%B5qa-%E9%AD%8F%E5%93%B2%E5%AE%B6%E5%A6%82%E4%BD%95%E8%AB%87%E8%82%A1%E5%88%A9-%E5%93%A1%E5%B7%A5%E5%88%86%E7%B4%85%E8%88%87%E5%B0%8D%E6%89%8B-033400959.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/a%E8%82%A1%E6%96%B0%E8%82%A1%E7%8E%8B%E9%9D%9E%E5%AF%92%E6%AD%A6%E7%B4%80-%E8%B6%85%E8%B6%8A%E8%B2%B4%E5%B7%9E%E8%8C%85%E5%8F%B0-%E5%A4%AA%E7%98%8B%E7%8B%82-%E4%B8%8A%E5%B8%825%E5%A4%A9%E8%82%A1%E5%83%B9%E7%A0%B4%E5%8D%83%E5%85%83-032700794.html"}, {"title": "台股跌勢收斂指數重回43000點之上 台積電盤中跌60元 【不斷更新】", "url": "https://tw.stock.yahoo.com/news/live/%E5%8F%B0%E8%82%A1%E8%B7%8C%E5%8B%A2%E6%94%B6%E6%96%82%E6%8C%87%E6%95%B8%E9%87%8D%E5%9B%9E43000%E9%BB%9E%E4%B9%8B%E4%B8%8A-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E7%9B%A4%E4%B8%AD%E8%B7%8C60%E5%85%83-%E3%80%90%E4%B8%8D%E6%96%B7%E6%9B%B4%E6%96%B0%E3%80%91-000000356.html"}, {"title": "台股血崩引發洗牌潮！阮慕驊指路「第一波抄底」策略：重量級權值股、市值型ETF優先", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%A1%80%E5%B4%A9%E5%BC%95%E7%99%BC%E6%B4%97%E7%89%8C%E6%BD%AE-%E9%98%AE%E6%85%95%E9%A9%8A%E6%8C%87%E8%B7%AF-%E7%AC%AC-%E6%B3%A2%E6%8A%84%E5%BA%95-%E7%AD%96%E7%95%A5-033500245.html"}, {"title": "「嬰兒股神」、「未成年股神」崛起！父母幫忙存股3方式 涉贈與稅申報", "url": "https://tw.stock.yahoo.com/news/%E3%80%8C%E5%AC%B0%E5%85%92%E8%82%A1%E7%A5%9E%E3%80%8D%E3%80%81%E3%80%8C%E6%9C%AA%E6%88%90%E5%B9%B4%E8%82%A1%E7%A5%9E%E3%80%8D%E5%B4%9B%E8%B5%B7%EF%BC%81%E7%88%B6%E6%AF%8D%E5%B9%AB%E5%BF%99%E5%AD%98%E8%82%A13%E6%96%B9%E5%BC%8F-%E6%B6%89%E8%B4%88%E8%88%87%E7%A8%85%E7%94%B3%E5%A0%B1-115356044.html"}, {"title": "267萬股東憂心！台積電新增1萬股東一張賠13萬元 「接最後一棒？」分析師給答案", "url": "https://tw.stock.yahoo.com/news/267%E8%90%AC%E8%82%A1%E6%9D%B1%E6%86%82%E5%BF%83%EF%BC%81%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%96%B0%E5%A2%9E1%E8%90%AC%E8%82%A1%E6%9D%B1%E4%B8%80%E5%BC%B5%E8%B3%A013%E8%90%AC%E5%85%83-%E3%80%8C%E6%8E%A5%E6%9C%80%E5%BE%8C%E4%B8%80%E6%A3%92%EF%BC%9F%E3%80%8D%E5%88%86%E6%9E%90%E5%B8%AB%E7%B5%A6%E7%AD%94%E6%A1%88-025047526.html"}, {"title": "台股崩盤成提款機？財經專家喊「千萬不要賣」0056重摔、0050跌到雙位數又拉回爆23萬張巨量", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%B4%A9%E7%9B%A4%E6%88%90%E6%8F%90%E6%AC%BE%E6%A9%9F-%E8%B2%A1%E7%B6%93%E5%B0%88%E5%AE%B6%E5%96%8A-%E5%8D%83%E8%90%AC%E4%B8%8D%E8%A6%81%E8%B3%A3-0056%E9%87%8D%E6%91%94-0050%E8%B7%8C%E5%88%B0%E9%9B%99%E4%BD%8D%E6%95%B8%E5%8F%88%E6%8B%89%E5%9B%9E%E7%88%8623%E8%90%AC%E5%BC%B5%E5%B7%A8%E9%87%8F-032000110.html"}]}, "tw": {"title": "📊 台股大數據晨報", "time": "2026-06-08 08:25:57", "data": [{"title": "血色星期一台股崩3000點？謝金河：最慘的不是台灣", "url": "https://tw.stock.yahoo.com/news/%E8%A1%80%E8%89%B2%E6%98%9F%E6%9C%9F-%E5%8F%B0%E8%82%A1%E5%B4%A93000%E9%BB%9E-%E8%AC%9D%E9%87%91%E6%B2%B3-%E6%9C%80%E6%85%98%E7%9A%84%E4%B8%8D%E6%98%AF%E5%8F%B0%E7%81%A3-232236347.html"}, {"title": "台股行情反轉？吳淡如看專家「用賭徒眼光看賭桌」：當烏鴉示警並不難", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%A1%8C%E6%83%85%E5%8F%8D%E8%BD%89-%E5%90%B3%E6%B7%A1%E5%A6%82%E7%9C%8B%E5%B0%88%E5%AE%B6-%E7%94%A8%E8%B3%AD%E5%BE%92%E7%9C%BC%E5%85%89%E7%9C%8B%E8%B3%AD%E6%A1%8C-%E7%95%B6%E7%83%8F%E9%B4%89%E7%A4%BA%E8%AD%A6%E4%B8%A6%E4%B8%8D%E9%9B%A3-231044034.html"}, {"title": "美國半導體、科技股出現多殺多行情，週一台股交易增添變數", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E5%8D%8A%E5%B0%8E%E9%AB%94-%E7%A7%91%E6%8A%80%E8%82%A1%E5%87%BA%E7%8F%BE%E5%A4%9A%E6%AE%BA%E5%A4%9A%E8%A1%8C%E6%83%85-%E9%80%B1-%E5%8F%B0%E8%82%A1%E4%BA%A4%E6%98%93%E5%A2%9E%E6%B7%BB%E8%AE%8A%E6%95%B8-230838374.html"}, {"title": "台股5000~7000點多殺多來了、「四貸同堂」恐斷頭登出…為何房市無法成避風港？專家示警：資金早已卡死", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A150007000%E9%BB%9E%E5%A4%9A%E6%AE%BA%E5%A4%9A%E4%BE%86%E4%BA%86%E3%80%81%E3%80%8C%E5%9B%9B%E8%B2%B8%E5%90%8C%E5%A0%82%E3%80%8D%E6%81%90%E6%96%B7%E9%A0%AD%E7%99%BB%E5%87%BA%E7%82%BA%E4%BD%95%E6%88%BF%E5%B8%82%E7%84%A1%E6%B3%95%E6%88%90%E9%81%BF%E9%A2%A8%E6%B8%AF%EF%BC%9F%E5%B0%88%E5%AE%B6%E7%A4%BA%E8%AD%A6%EF%BC%9A%E8%B3%87%E9%87%91%E6%97%A9%E5%B7%B2%E5%8D%A1%E6%AD%BB-230700429.html"}, {"title": "台股「10檔融資大增」恐釀斷頭！網點最抗跌「2檔」", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1-10%E6%AA%94%E8%9E%8D%E8%B3%87%E5%A4%A7%E5%A2%9E-%E6%81%90%E9%87%80%E6%96%B7%E9%A0%AD-%E7%B6%B2%E9%BB%9E%E6%9C%80%E6%8A%97%E8%B7%8C-2%E6%AA%94-224754041.html"}, {"title": "週一台股開盤怕爆！財經網美一句話示警「投機民眾」", "url": "https://tw.stock.yahoo.com/news/%E9%80%B1-%E5%8F%B0%E8%82%A1%E9%96%8B%E7%9B%A4%E6%80%95%E7%88%86-%E8%B2%A1%E7%B6%93%E7%B6%B2%E7%BE%8E-%E5%8F%A5%E8%A9%B1%E7%A4%BA%E8%AD%A6-%E6%8A%95%E6%A9%9F%E6%B0%91%E7%9C%BE-223314996.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E6%B5%B7%E5%A4%A7990%E4%BB%B6%E6%88%90%E7%B8%BE%E5%96%AE%E5%8D%A1%E9%97%9C-a7%E8%87%AA%E5%8B%95%E5%8C%96%E8%A8%AD%E5%82%99%E6%83%B9%E7%A6%8D%EF%BC%9F%E4%B8%AD%E8%8F%AF%E9%83%B5%E6%94%BF%E8%AA%8D%E4%BA%86%E6%A9%9F%E5%99%A8%E8%AA%A4%E5%88%A4-025504328.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E6%B5%B7%E5%A4%A7990%E4%BB%B6%E6%88%90%E7%B8%BE%E5%96%AE%E5%BB%B6%E8%AA%A4%EF%BC%81%E4%B8%AD%E8%8F%AF%E9%83%B5%E6%94%BF%E8%87%B4%E6%AD%89%EF%BC%9A%E8%80%83%E7%94%9F%E6%AC%8A%E7%9B%8A%E6%9C%AA%E5%8F%97%E5%BD%B1%E9%9F%BF-023706859.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1etf%E6%96%B0%E5%85%B5%E9%96%8B%E5%8B%9F-%E8%98%8B%E6%9E%9Cwwdc-2026%E5%8F%B0%E7%81%A3%E4%BE%9B%E6%87%89%E9%8F%88%E6%A6%82%E5%BF%B5%E8%82%A1%E5%82%99%E5%8F%97%E7%9F%9A%E7%9B%AE-spacex%E6%9C%80%E5%BF%AB6%E6%9C%8812%E6%97%A5%E6%8E%9B%E7%89%8C-%E9%80%9A%E8%86%A8%E6%95%B8%E6%93%9A%E6%B1%BA%E5%AE%9Afed%E9%99%8D%E6%81%AF%E7%A9%BA%E9%96%93-%E6%9C%AC%E5%91%A8%E6%B2%B9%E5%83%B9%E7%B9%BC%E7%BA%8C%E5%87%8D%E6%BC%B2%EF%BD%9C%E6%8A%95%E8%B3%87%E6%97%A9%E7%9F%A"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E3%80%90%E5%86%8D%E8%A6%8B%E4%BB%81%E4%BE%86%E7%98%8B2%E3%80%91%E9%BB%83%E4%BB%81%E5%8B%B3%E4%BE%86%E5%8F%B0%E5%85%A9%E5%91%A8%E5%8F%B0%E8%82%A1%E6%BC%B2%E9%80%BE2800%E9%BB%9E%EF%BC%813%E5%A4%A7%E7%BE%A4%E6%97%8F%E8%A1%A8%E7%8F%BE%E6%9C%80%E7%8C%9B-020100721.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%BC%B2%E7%BF%BB-%E8%AD%B7%E5%9C%8B%E7%A5%9E%E5%B1%B1%E9%80%A0%E5%B0%B1-%E5%8B%9E%E5%B7%A5%E8%B2%B4%E6%97%8F-%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%82%BA%E4%BD%95%E4%BB%8D%E4%B8%8D%E6%95%A2%E8%8A%B1%E9%8C%A2-104000071.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%A0%B4%E8%BB%8A%E7%A6%8D%E6%94%B9%E8%AE%8A%E4%BB%96%E7%9A%84%E4%BA%BA%E7%94%9F-%E9%87%91%E7%89%8C%E6%89%8B%E6%95%B4%E5%BE%A9%E5%B8%AB%E5%9F%B9%E8%A8%932000%E9%9B%99%E6%89%8B-%E5%89%8D%E9%80%B2%E4%BC%81%E6%A5%AD%E7%95%B6-%E5%B9%95%E5%BE%8C%E6%8E%A8%E6%89%8B-082800796.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E8%94%A3%E8%90%AC%E5%AE%89%E6%9B%9D%E5%8F%B0%E5%8C%97%E7%84%A1%E8%8F%B8%E5%9F%8E%E5%B8%82%E8%A6%8F%E5%8A%83-%E6%8C%87%E5%AE%9A%E5%90%B8%E8%8F%B8%E5%8D%80-%E8%B2%A0%E5%A3%93%E5%BC%8F%E5%90%B8%E8%8F%B8%E5%AE%A4-%E8%A1%A8%E7%9C%8B%E6%87%82-072900358.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%82%A1%E6%9D%B1%E6%9C%833%E5%80%8B%E9%97%9C%E9%8D%B5qa-%E9%AD%8F%E5%93%B2%E5%AE%B6%E5%A6%82%E4%BD%95%E8%AB%87%E8%82%A1%E5%88%A9-%E5%93%A1%E5%B7%A5%E5%88%86%E7%B4%85%E8%88%87%E5%B0%8D%E6%89%8B-033400959.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/a%E8%82%A1%E6%96%B0%E8%82%A1%E7%8E%8B%E9%9D%9E%E5%AF%92%E6%AD%A6%E7%B4%80-%E8%B6%85%E8%B6%8A%E8%B2%B4%E5%B7%9E%E8%8C%85%E5%8F%B0-%E5%A4%AA%E7%98%8B%E7%8B%82-%E4%B8%8A%E5%B8%825%E5%A4%A9%E8%82%A1%E5%83%B9%E7%A0%B4%E5%8D%83%E5%85%83-032700794.html"}, {"title": "台股大考驗1／美股血洗台股要崩了？　杜金龍示警：籌碼極度浮躁", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%A4%A7%E8%80%83%E9%A9%971%EF%BC%8F%E7%BE%8E%E8%82%A1%E8%A1%80%E6%B4%97%E5%8F%B0%E8%82%A1%E8%A6%81%E5%B4%A9%E4%BA%86%EF%BC%9F-%E6%9D%9C%E9%87%91%E9%BE%8D%E7%A4%BA%E8%AD%A6%EF%BC%9A%E7%B1%8C%E7%A2%BC%E6%A5%B5%E5%BA%A6%E6%B5%AE%E8%BA%81-230001054.html"}, {"title": "台股迎綠光估崩3千點！分析師籲緊盯「2大止穩訊號」：到週三是關鍵", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%BF%8E%E7%B6%A0%E5%85%89%E4%BC%B0%E5%B4%A93%E5%8D%83%E9%BB%9E-%E5%88%86%E6%9E%90%E5%B8%AB%E7%B1%B2%E7%B7%8A%E7%9B%AF-2%E5%A4%A7%E6%AD%A2%E7%A9%A9%E8%A8%8A%E8%99%9F-%E5%88%B0%E9%80%B1%E4%B8%89%E6%98%AF%E9%97%9C%E9%8D%B5-000000964.html"}, {"title": "比特幣創FTX崩潰後最慘跌幅 分析師警示恐下探5萬美元", "url": "https://tw.stock.yahoo.com/news/%E6%AF%94%E7%89%B9%E5%B9%A3%E5%89%B5ftx%E5%B4%A9%E6%BD%B0%E5%BE%8C%E6%9C%80%E6%85%98%E8%B7%8C%E5%B9%85-%E5%88%86%E6%9E%90%E5%B8%AB%E8%AD%A6%E7%A4%BA%E6%81%90%E4%B8%8B%E6%8E%A25%E8%90%AC%E7%BE%8E%E5%85%83-233949585.html"}, {"title": "申購抽抽樂最後一天！「光電投控」進行增資　抽中就賺2250元小紅包", "url": "https://tw.stock.yahoo.com/news/%E7%94%B3%E8%B3%BC%E6%8A%BD%E6%8A%BD%E6%A8%82%E6%9C%80%E5%BE%8C-%E5%A4%A9-%E5%85%89%E9%9B%BB%E6%8A%95%E6%8E%A7-%E9%80%B2%E8%A1%8C%E5%A2%9E%E8%B3%87-%E6%8A%BD%E4%B8%AD%E5%B0%B1%E8%B3%BA2250%E5%85%83%E5%B0%8F%E7%B4%85%E5%8C%85-233000595.html"}, {"title": "日圓破160關卡 市場聚焦美日歐央行政策與市場動向", "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E7%A0%B4160%E9%97%9C%E5%8D%A1-%E5%B8%82%E5%A0%B4%E8%81%9A%E7%84%A6%E7%BE%8E%E6%97%A5%E6%AD%90%E5%A4%AE%E8%A1%8C%E6%94%BF%E7%AD%96%E8%88%87%E5%B8%82%E5%A0%B4%E5%8B%95%E5%90%91-233502765.html"}, {"title": "美國五月就業增長超預期 聯準會升息壓力再起", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E4%BA%94%E6%9C%88%E5%B0%B1%E6%A5%AD%E5%A2%9E%E9%95%B7%E8%B6%85%E9%A0%90%E6%9C%9F-%E8%81%AF%E6%BA%96%E6%9C%83%E5%8D%87%E6%81%AF%E5%A3%93%E5%8A%9B%E5%86%8D%E8%B5%B7-233459240.html"}, {"title": "台股將成全球重災區！　謝金河：日韓同挫、台灣光通訊無天險可守", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%B0%87%E6%88%90%E5%85%A8%E7%90%83%E9%87%8D%E7%81%BD%E5%8D%80-%E8%AC%9D%E9%87%91%E6%B2%B3-%E6%97%A5%E9%9F%93%E5%90%8C%E6%8C%AB-%E5%8F%B0%E7%81%A3%E5%85%89%E9%80%9A%E8%A8%8A%E7%84%A1%E5%A4%A9%E9%9A%AA%E5%8F%AF%E5%AE%88-231917764.html"}, {"title": "台積電毛利率創高！AI供應鏈續強 下一波買誰？3大受惠族群全掌握", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%AF%9B%E5%88%A9%E7%8E%87%E5%89%B5%E9%AB%98-ai%E4%BE%9B%E6%87%89%E9%8F%88%E7%BA%8C%E5%BC%B7-%E4%B8%8B-%E6%B3%A2%E8%B2%B7%E8%AA%B0-3%E5%A4%A7%E5%8F%97%E6%83%A0%E6%97%8F%E7%BE%A4%E5%85%A8%E6%8E%8C%E6%8F%A1-230600311.html"}, {"title": "黑色星期一恐見「0050跌停」？他沙盤推演可能劇本", "url": "https://tw.stock.yahoo.com/news/%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F-%E6%81%90%E8%A6%8B-0050%E8%B7%8C%E5%81%9C-%E4%BB%96%E6%B2%99%E7%9B%A4%E6%8E%A8%E6%BC%94%E5%8F%AF%E8%83%BD%E5%8A%87%E6%9C%AC-230348353.html"}]}, "us": {"title": "🦅 美股焦點資料來源", "time": "2026-06-08 08:27:46", "data": [{"title": "美股財經新聞線索", "url": "https://tw.stock.yahoo.com/news/"}, {"title": "美股急殺未見人踩人，高盛稱倉位不極端為多頭留一線生機", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E6%80%A5%E6%AE%BA%E6%9C%AA%E8%A6%8B%E4%BA%BA%E8%B8%A9%E4%BA%BA-%E9%AB%98%E7%9B%9B%E7%A8%B1%E5%80%89%E4%BD%8D%E4%B8%8D%E6%A5%B5%E7%AB%AF%E7%82%BA%E5%A4%9A%E9%A0%AD%E7%95%99-%E7%B7%9A%E7%94%9F%E6%A9%9F-001105991.html"}, {"title": "非農就業數據太強嚇壞市場，川普喊美股該漲、哈塞特急滅升息火", "url": "https://tw.stock.yahoo.com/news/%E9%9D%9E%E8%BE%B2%E5%B0%B1%E6%A5%AD%E6%95%B8%E6%93%9A%E5%A4%AA%E5%BC%B7%E5%9A%87%E5%A3%9E%E5%B8%82%E5%A0%B4-%E5%B7%9D%E6%99%AE%E5%96%8A%E7%BE%8E%E8%82%A1%E8%A9%B2%E6%BC%B2-%E5%93%88%E5%A1%9E%E7%89%B9%E6%80%A5%E6%BB%85%E5%8D%87%E6%81%AF%E7%81%AB-000834551.html"}, {"title": "科技股熄火，道瓊歐洲600上週五回吐0.29%，英飛凌重摔逾9%", "url": "https://tw.stock.yahoo.com/news/%E7%A7%91%E6%8A%80%E8%82%A1%E7%86%84%E7%81%AB-%E9%81%93%E7%93%8A%E6%AD%90%E6%B4%B2600%E4%B8%8A%E9%80%B1%E4%BA%94%E5%9B%9E%E5%90%900-29-%E8%8B%B1%E9%A3%9B%E5%87%8C%E9%87%8D%E6%91%94%E9%80%BE9-000317767.html"}, {"title": "晶片股單日蒸發1.3兆美元 美股重挫加密市場同受衝擊", "url": "https://tw.stock.yahoo.com/news/%E6%99%B6%E7%89%87%E8%82%A1%E5%96%AE%E6%97%A5%E8%92%B8%E7%99%BC1-3%E5%85%86%E7%BE%8E%E5%85%83-%E7%BE%8E%E8%82%A1%E9%87%8D%E6%8C%AB%E5%8A%A0%E5%AF%86%E5%B8%82%E5%A0%B4%E5%90%8C%E5%8F%97%E8%A1%9D%E6%93%8A-235612146.html"}, {"title": "日圓空軍捲土重來，投機淨空單升至近兩年新高", "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E7%A9%BA%E8%BB%8D%E6%8D%B2%E5%9C%9F%E9%87%8D%E4%BE%86-%E6%8A%95%E6%A9%9F%E6%B7%A8%E7%A9%BA%E5%96%AE%E5%8D%87%E8%87%B3%E8%BF%91%E5%85%A9%E5%B9%B4%E6%96%B0%E9%AB%98-235050909.html"}, {"title": "加州汽油衝上全美最貴，美能源部研議設石油儲備穩油市", "url": "https://tw.stock.yahoo.com/news/%E5%8A%A0%E5%B7%9E%E6%B1%BD%E6%B2%B9%E8%A1%9D%E4%B8%8A%E5%85%A8%E7%BE%8E%E6%9C%80%E8%B2%B4-%E7%BE%8E%E8%83%BD%E6%BA%90%E9%83%A8%E7%A0%94%E8%AD%B0%E8%A8%AD%E7%9F%B3%E6%B2%B9%E5%84%B2%E5%82%99%E7%A9%A9%E6%B2%B9%E5%B8%82-234707220.html"}, {"title": "日圓破160關卡 市場聚焦美日歐央行政策與市場動向", "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E7%A0%B4160%E9%97%9C%E5%8D%A1-%E5%B8%82%E5%A0%B4%E8%81%9A%E7%84%A6%E7%BE%8E%E6%97%A5%E6%AD%90%E5%A4%AE%E8%A1%8C%E6%94%BF%E7%AD%96%E8%88%87%E5%B8%82%E5%A0%B4%E5%8B%95%E5%90%91-233502765.html"}, {"title": "美國五月就業增長超預期 聯準會升息壓力再起", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E4%BA%94%E6%9C%88%E5%B0%B1%E6%A5%AD%E5%A2%9E%E9%95%B7%E8%B6%85%E9%A0%90%E6%9C%9F-%E8%81%AF%E6%BA%96%E6%9C%83%E5%8D%87%E6%81%AF%E5%A3%93%E5%8A%9B%E5%86%8D%E8%B5%B7-233459240.html"}, {"title": "黃仁勳實在太接地氣！球場訂百份炸雞還高喊：我來這裡吃「炸啤」的", "url": "https://tw.sports.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E5%AF%A6%E5%9C%A8%E5%A4%AA%E6%8E%A5%E5%9C%B0%E6%B0%A3-%E7%90%83%E5%A0%B4%E8%A8%82%E7%99%BE%E4%BB%BD%E7%82%B8%E9%9B%9E%E9%82%84%E9%AB%98%E5%96%8A-%E6%88%91%E4%BE%86%E9%80%99%E8%A3%A1%E5%90%83-%E7%82%B8%E5%95%A4-%E7%9A%84-232818489.html"}, {"title": "韓元逼近金融海嘯低位淪主要貨幣最遜，韓國跨部會出手圍堵空方押注", "url": "https://tw.stock.yahoo.com/news/%E9%9F%93%E5%85%83%E9%80%BC%E8%BF%91%E9%87%91%E8%9E%8D%E6%B5%B7%E5%98%AF%E4%BD%8E%E4%BD%8D%E6%B7%AA%E4%B8%BB%E8%A6%81%E8%B2%A8%E5%B9%A3%E6%9C%80%E9%81%9C-%E9%9F%93%E5%9C%8B%E8%B7%A8%E9%83%A8%E6%9C%83%E5%87%BA%E6%89%8B%E5%9C%8D%E5%A0%B5%E7%A9%BA%E6%96%B9%E6%8A%BC%E6%B3%A8-232509309.html"}, {"title": "黃仁勳欽點SK海力士，Vera新平台點燃AI記憶體長約爭奪戰", "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E6%AC%BD%E9%BB%9Esk%E6%B5%B7%E5%8A%9B%E5%A3%AB-vera%E6%96%B0%E5%B9%B3%E5%8F%B0%E9%BB%9E%E7%87%83ai%E8%A8%98%E6%86%B6%E9%AB%94%E9%95%B7%E7%B4%84%E7%88%AD%E5%A5%AA%E6%88%B0-232329251.html"}, {"title": "《美債》非農就業火熱 10年債殖利率升破4.5%", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%82%B5-%E9%9D%9E%E8%BE%B2%E5%B0%B1%E6%A5%AD%E7%81%AB%E7%86%B1-10%E5%B9%B4%E5%82%B5%E6%AE%96%E5%88%A9%E7%8E%87%E5%8D%87%E7%A0%B44-5-225600856.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A150007000%E9%BB%9E%E5%A4%9A%E6%AE%BA%E5%A4%9A%E4%BE%86%E4%BA%86%E3%80%81%E3%80%8C%E5%9B%9B%E8%B2%B8%E5%90%8C%E5%A0%82%E3%80%8D%E6%81%90%E6%96%B7%E9%A0%AD%E7%99%BB%E5%87%BA%E7%82%BA%E4%BD%95%E6%88%BF%E5%B8%82%E7%84%A1%E6%B3%95%E6%88%90%E9%81%BF%E9%A2%A8%E6%B8%AF%EF%BC%9F%E5%B0%88%E5%AE%B6%E7%A4%BA%E8%AD%A6%EF%BC%9A%E8%B3%87%E9%87%91%E6%97%A9%E5%B7%B2%E5%8D%A1%E6%AD%BB-230700429.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E6%B5%B7%E5%A4%A7990%E4%BB%B6%E6%88%90%E7%B8%BE%E5%96%AE%E5%8D%A1%E9%97%9C-a7%E8%87%AA%E5%8B%95%E5%8C%96%E8%A8%AD%E5%82%99%E6%83%B9%E7%A6%8D%EF%BC%9F%E4%B8%AD%E8%8F%AF%E9%83%B5%E6%94%BF%E8%AA%8D%E4%BA%86%E6%A9%9F%E5%99%A8%E8%AA%A4%E5%88%A4-025504328.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E6%B5%B7%E5%A4%A7990%E4%BB%B6%E6%88%90%E7%B8%BE%E5%96%AE%E5%BB%B6%E8%AA%A4%EF%BC%81%E4%B8%AD%E8%8F%AF%E9%83%B5%E6%94%BF%E8%87%B4%E6%AD%89%EF%BC%9A%E8%80%83%E7%94%9F%E6%AC%8A%E7%9B%8A%E6%9C%AA%E5%8F%97%E5%BD%B1%E9%9F%BF-023706859.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1etf%E6%96%B0%E5%85%B5%E9%96%8B%E5%8B%9F-%E8%98%8B%E6%9E%9Cwwdc-2026%E5%8F%B0%E7%81%A3%E4%BE%9B%E6%87%89%E9%8F%88%E6%A6%82%E5%BF%B5%E8%82%A1%E5%82%99%E5%8F%97%E7%9F%9A%E7%9B%AE-spacex%E6%9C%80%E5%BF%AB6%E6%9C%8812%E6%97%A5%E6%8E%9B%E7%89%8C-%E9%80%9A%E8%86%A8%E6%95%B8%E6%93%9A%E6%B1%BA%E5%AE%9Afed%E9%99%8D%E6%81%AF%E7%A9%BA%E9%96%93-%E6%9C%AC%E5%91%A8%E6%B2%B9%E5%83%B9%E7%B9%BC%E7%BA%8C%E5%87%8D%E6%BC%B2%EF%BD%9C%E6%8A%95%E8%B3%87%E6%97%A9%E7%9F%A"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E3%80%90%E5%86%8D%E8%A6%8B%E4%BB%81%E4%BE%86%E7%98%8B2%E3%80%91%E9%BB%83%E4%BB%81%E5%8B%B3%E4%BE%86%E5%8F%B0%E5%85%A9%E5%91%A8%E5%8F%B0%E8%82%A1%E6%BC%B2%E9%80%BE2800%E9%BB%9E%EF%BC%813%E5%A4%A7%E7%BE%A4%E6%97%8F%E8%A1%A8%E7%8F%BE%E6%9C%80%E7%8C%9B-020100721.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%BC%B2%E7%BF%BB-%E8%AD%B7%E5%9C%8B%E7%A5%9E%E5%B1%B1%E9%80%A0%E5%B0%B1-%E5%8B%9E%E5%B7%A5%E8%B2%B4%E6%97%8F-%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%82%BA%E4%BD%95%E4%BB%8D%E4%B8%8D%E6%95%A2%E8%8A%B1%E9%8C%A2-104000071.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%A0%B4%E8%BB%8A%E7%A6%8D%E6%94%B9%E8%AE%8A%E4%BB%96%E7%9A%84%E4%BA%BA%E7%94%9F-%E9%87%91%E7%89%8C%E6%89%8B%E6%95%B4%E5%BE%A9%E5%B8%AB%E5%9F%B9%E8%A8%932000%E9%9B%99%E6%89%8B-%E5%89%8D%E9%80%B2%E4%BC%81%E6%A5%AD%E7%95%B6-%E5%B9%95%E5%BE%8C%E6%8E%A8%E6%89%8B-082800796.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E8%94%A3%E8%90%AC%E5%AE%89%E6%9B%9D%E5%8F%B0%E5%8C%97%E7%84%A1%E8%8F%B8%E5%9F%8E%E5%B8%82%E8%A6%8F%E5%8A%83-%E6%8C%87%E5%AE%9A%E5%90%B8%E8%8F%B8%E5%8D%80-%E8%B2%A0%E5%A3%93%E5%BC%8F%E5%90%B8%E8%8F%B8%E5%AE%A4-%E8%A1%A8%E7%9C%8B%E6%87%82-072900358.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%82%A1%E6%9D%B1%E6%9C%833%E5%80%8B%E9%97%9C%E9%8D%B5qa-%E9%AD%8F%E5%93%B2%E5%AE%B6%E5%A6%82%E4%BD%95%E8%AB%87%E8%82%A1%E5%88%A9-%E5%93%A1%E5%B7%A5%E5%88%86%E7%B4%85%E8%88%87%E5%B0%8D%E6%89%8B-033400959.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/a%E8%82%A1%E6%96%B0%E8%82%A1%E7%8E%8B%E9%9D%9E%E5%AF%92%E6%AD%A6%E7%B4%80-%E8%B6%85%E8%B6%8A%E8%B2%B4%E5%B7%9E%E8%8C%85%E5%8F%B0-%E5%A4%AA%E7%98%8B%E7%8B%82-%E4%B8%8A%E5%B8%825%E5%A4%A9%E8%82%A1%E5%83%B9%E7%A0%B4%E5%8D%83%E5%85%83-032700794.html"}, {"title": "台股大考驗1／美股血洗台股要崩了？　杜金龍示警：籌碼極度浮躁", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%A4%A7%E8%80%83%E9%A9%971%EF%BC%8F%E7%BE%8E%E8%82%A1%E8%A1%80%E6%B4%97%E5%8F%B0%E8%82%A1%E8%A6%81%E5%B4%A9%E4%BA%86%EF%BC%9F-%E6%9D%9C%E9%87%91%E9%BE%8D%E7%A4%BA%E8%AD%A6%EF%BC%9A%E7%B1%8C%E7%A2%BC%E6%A5%B5%E5%BA%A6%E6%B5%AE%E8%BA%81-230001054.html"}, {"title": "台股迎綠光估崩3千點！分析師籲緊盯「2大止穩訊號」：到週三是關鍵", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%BF%8E%E7%B6%A0%E5%85%89%E4%BC%B0%E5%B4%A93%E5%8D%83%E9%BB%9E-%E5%88%86%E6%9E%90%E5%B8%AB%E7%B1%B2%E7%B7%8A%E7%9B%AF-2%E5%A4%A7%E6%AD%A2%E7%A9%A9%E8%A8%8A%E8%99%9F-%E5%88%B0%E9%80%B1%E4%B8%89%E6%98%AF%E9%97%9C%E9%8D%B5-000000964.html"}, {"title": "比特幣創FTX崩潰後最慘跌幅 分析師警示恐下探5萬美元", "url": "https://tw.stock.yahoo.com/news/%E6%AF%94%E7%89%B9%E5%B9%A3%E5%89%B5ftx%E5%B4%A9%E6%BD%B0%E5%BE%8C%E6%9C%80%E6%85%98%E8%B7%8C%E5%B9%85-%E5%88%86%E6%9E%90%E5%B8%AB%E8%AD%A6%E7%A4%BA%E6%81%90%E4%B8%8B%E6%8E%A25%E8%90%AC%E7%BE%8E%E5%85%83-233949585.html"}, {"title": "申購抽抽樂最後一天！「光電投控」進行增資　抽中就賺2250元小紅包", "url": "https://tw.stock.yahoo.com/news/%E7%94%B3%E8%B3%BC%E6%8A%BD%E6%8A%BD%E6%A8%82%E6%9C%80%E5%BE%8C-%E5%A4%A9-%E5%85%89%E9%9B%BB%E6%8A%95%E6%8E%A7-%E9%80%B2%E8%A1%8C%E5%A2%9E%E8%B3%87-%E6%8A%BD%E4%B8%AD%E5%B0%B1%E8%B3%BA2250%E5%85%83%E5%B0%8F%E7%B4%85%E5%8C%85-233000595.html"}, {"title": "台股將成全球重災區！　謝金河：日韓同挫、台灣光通訊無天險可守", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%B0%87%E6%88%90%E5%85%A8%E7%90%83%E9%87%8D%E7%81%BD%E5%8D%80-%E8%AC%9D%E9%87%91%E6%B2%B3-%E6%97%A5%E9%9F%93%E5%90%8C%E6%8C%AB-%E5%8F%B0%E7%81%A3%E5%85%89%E9%80%9A%E8%A8%8A%E7%84%A1%E5%A4%A9%E9%9A%AA%E5%8F%AF%E5%AE%88-231917764.html"}, {"title": "台股行情反轉？吳淡如看專家「用賭徒眼光看賭桌」：當烏鴉示警並不難", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%A1%8C%E6%83%85%E5%8F%8D%E8%BD%89-%E5%90%B3%E6%B7%A1%E5%A6%82%E7%9C%8B%E5%B0%88%E5%AE%B6-%E7%94%A8%E8%B3%AD%E5%BE%92%E7%9C%BC%E5%85%89%E7%9C%8B%E8%B3%AD%E6%A1%8C-%E7%95%B6%E7%83%8F%E9%B4%89%E7%A4%BA%E8%AD%A6%E4%B8%A6%E4%B8%8D%E9%9B%A3-231044034.html"}, {"title": "台積電毛利率創高！AI供應鏈續強 下一波買誰？3大受惠族群全掌握", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%AF%9B%E5%88%A9%E7%8E%87%E5%89%B5%E9%AB%98-ai%E4%BE%9B%E6%87%89%E9%8F%88%E7%BA%8C%E5%BC%B7-%E4%B8%8B-%E6%B3%A2%E8%B2%B7%E8%AA%B0-3%E5%A4%A7%E5%8F%97%E6%83%A0%E6%97%8F%E7%BE%A4%E5%85%A8%E6%8E%8C%E6%8F%A1-230600311.html"}]}, "國際政經與環球情報": {"title": ["https://tw.stock.yahoo.com/news/", "https://tw.stock.yahoo.com/news/%E4%B8%8A%E9%8A%80-%E6%8E%A1%E9%AB%98%E9%80%9A%E6%96%B9%E6%A1%88-%E9%9B%BB%E8%85%A6%E5%B1%95%E7%A7%80%E9%9D%A2%E6%9D%BF%E7%B4%9A%E5%B0%81%E8%A3%9D%E6%99%BA%E6%85%A7%E5%8C%96%E8%A8%AD%E5%82%99-103423291.html", "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94gtc%E5%A4%A7%E6%9C%83%E7%99%BB%E5%A0%B4-%E9%BB%83%E4%BB%81%E5%8B%B3%E5%8C%97%E6%B5%81%E9%96%8B%E8%AC%9B-%E7%A7%91%E6%8A%80%E5%A4%A7%E5%92%96%E9%BD%8A%E8%81%9A%E6%9A%96%E5%A0%B4-102707025.html", "https://tw.stock.yahoo.com/news/apos-apos-gtc-taipei%E5%A4%A7%E6%9C%83-apos-102629979.html", "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E4%B8%BB%E9%A1%8C%E6%BC%94%E8%AC%9B%E7%99%BB%E5%A0%B4-5%E5%AE%B6%E5%8F%B0%E5%91%B3%E5%B0%8F%E5%90%83-%E7%99%BBai%E4%BE%9B%E6%87%89%E9%8F%88%E8%83%8C%E6%9D%BF%E8%B6%85%E5%90%B8%E7%9D%9B-102604967.html", "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E5%8C%85%E4%B8%8B%E7%86%B1%E7%82%92%E5%BA%97%E9%87%8D%E6%BC%94-apos-apos-%E9%9F%93%E5%9C%8B%E7%82%B8%E9%9B%9E%E5%AE%B4-apos-102355311.html", "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94%E6%8E%A8rtx-spark%E5%BC%B7%E6%94%BBpc%E5%B8%82%E5%A0%B4-%E9%AB%98%E9%80%9A-%E6%AD%A1%E8%BF%8E%E5%8A%A0%E5%85%A5-102043007.html", "https://tw.stock.yahoo.com/news/%E4%B8%AD%E7%9F%B3%E5%8C%96%E6%96%B0%E8%91%A3%E5%BA%A7%E5%87%BA%E7%88%90-%E8%B3%87%E6%B7%B1%E5%AA%92%E9%AB%94%E4%BA%BA%E8%91%9B%E6%A8%B9%E4%BA%BA%E6%8E%A5%E4%BB%BB%E8%91%A3%E4%BA%8B%E9%95%B7-110302437.html", "https://tw.stock.yahoo.com/news/%E9%80%80%E4%BC%91%E9%87%91%E8%A6%81%E5%A4%9A%E5%B0%91%E6%89%8D%E5%A4%A0%EF%BC%9F%E8%AA%BF%E6%9F%A5%EF%BC%9A%E6%AF%8F%E6%9C%88%E9%9C%804%E8%90%AC1956%E5%85%83%E6%AF%94%E5%8E%BB%E5%B9%B4%E5%A4%9A2%E5%8D%83%E5%85%83-105545279.html", "https://tw.stock.yahoo.com/news/%E3%80%8C%E7%86%8A%E6%9C%AC%E7%9A%84%E5%8F%B0%E7%81%A3%E5%8C%96%E3%80%8D%E6%97%85%E6%97%A510%E5%B9%B4%E5%B0%88%E5%AE%B6%E8%AB%87%E5%8F%B0%E7%A9%8D%E9%9B%BB%E7%8E%87171%E5%AE%B6%E5%8F%B0%E4%BC%81%E9%80%B2%E9%A7%90%E3%80%8C%E7%86%B1%E5%BA%A6%E6%84%88%E9%AB%98%E5%89%AF%E4%BD%9C%E7%94%A8%E6%84%88%E5%A4%A7%E3%80%8D-102819426.html", "https://tw.stock.yahoo.com/news/%E4%BD%A0%E6%9C%89%E5%97%8E%EF%BC%9F%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E5%93%A1%E5%B7%A5%E8%96%AA%E6%B0%B4%E5%B9%B3%E5%9D%87145%E8%90%AC%E5%85%83-101319678.html", "https://tw.stock.yahoo.com/news/ai%E6%98%AF%E7%8F%BE%E5%AF%A6%E9%82%84%E6%98%AF%E6%B3%A1%E6%B2%AB%EF%BC%9F%E5%A4%96%E5%95%86%E8%A7%A3%E5%AF%86%E3%80%8Cai%E4%B8%8D%E6%98%AF%E6%88%90%E6%9C%AC%E3%80%8D%EF%BC%9A%E7%94%9F%E7%94%A2%E5%8A%9B%E7%8B%82%E5%8D%876%E6%88%90-095853482.html", "https://tw.stock.yahoo.com/news/2026%E8%BF%8E%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7computex-%E4%BF%A1%E7%BE%A9-%E5%8D%97%E6%B8%AF%E9%9B%99%E6%A0%B8%E5%BF%83%E8%BF%8E%E6%88%B0-%E8%A6%8B%E8%AD%89%E5%8F%B0%E7%81%A3%E6%88%90%E5%85%A8%E7%90%83ai%E7%94%A2%E6%A5%AD%E6%B1%BA%E7%AD%96%E6%A0%B8%E5%BF%83-060003179.html", "https://tw.stock.yahoo.com/news/%E5%9C%8B%E6%B3%B0%E9%87%91%E8%82%A1%E5%83%B918%E5%B9%B4%E6%96%B0%E9%AB%98%E8%83%BD%E7%BA%8C%E8%A1%9D-%E5%9C%8B%E5%A3%BD%E8%82%A1%E7%A5%A8%E6%9C%AA%E5%AF%A6%E7%8F%BE%E7%8D%B2%E5%88%A9%E9%80%BE2700%E5%84%84-%E6%98%8E%E5%B9%B4%E8%82%A1%E5%88%A9%E9%85%8D%E7%99%BC%E6%9C%89%E5%BA%95%E6%B0%A3-%E6%9D%8E%E9%95%B7%E5%BA%9A%E6%80%8E%E9%BA%BC%E7%9C%8Bai%E5%A4%A7%E6%BD%AE-060002954.html", "https://tw.stock.yahoo.com/news/%E9%95%B7%E6%A6%AE%E6%B5%B7%E9%81%8B%E8%82%A1%E6%9D%B1%E6%8F%90%E8%AD%B0%E8%82%A1%E7%A5%A8-%E6%8B%86%E5%8D%81-%E5%90%A6%E6%B1%BA%E7%90%86%E7%94%B1%E6%9B%9D%E5%85%89-%E8%82%A1%E6%9D%B1%E6%9C%83%E6%9C%89%E5%B0%8F%E5%BD%A9%E8%9B%8B-%E9%9B%BB%E5%BD%B1%E8%A6%8F%E6%A0%BC%E6%8B%8D%E6%94%9D-060002373.html", "https://tw.stock.yahoo.com/news/%E5%BD%B1-%E8%8A%B1%E8%93%AE%E9%9D%92%E5%B0%91%E5%B9%B4%E6%8E%92%E7%AC%9B%E5%9C%98%E9%A9%9A%E8%89%B7-%E9%9F%B3%E6%A8%82%E4%B9%8B%E9%83%BD-%E7%B6%AD%E4%B9%9F%E7%B4%8D-%E8%81%96%E5%BD%BC%E5%BE%97%E6%95%99%E5%A0%82%E5%A5%8F%E9%9F%BF-060003981.html", "https://tw.stock.yahoo.com/news/%E7%B8%BD%E7%B5%B1%E8%88%87%E9%9D%92%E5%B9%B4%E8%AB%96%E5%A3%87-%E6%8A%96%E9%9F%B3-%E5%B0%8F%E7%B4%85%E6%9B%B8-%E5%AD%B8%E5%AD%90%E6%86%82%E9%A4%B5%E9%A4%8A%E5%BC%8F%E5%BD%B1%E9%9F%B3%E6%88%90%E7%99%AE-%E8%B3%B4%E6%B8%85%E5%BE%B7%E6%95%AC%E4%BD%A9%E6%83%B3%E6%B3%95-060003678.html", "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%96%B0%E5%A2%9E10%E6%AA%94-%E9%97%9C%E7%A6%81%E9%96%89-%E5%8A%9B%E7%A9%8D%E9%9B%BB%E5%85%A5%E5%88%97-%E8%99%95%E7%BD%AE%E8%87%B36%E6%9C%8815%E6%97%A5-104500644.html", "https://tw.stock.yahoo.com/news/%E5%8E%BB%E5%B9%B4%E7%87%9F%E6%94%B6%E7%A0%8D%E5%8D%8A%E3%80%81%E4%BB%8A%E5%B9%B4%E5%83%85%E6%8E%A81%E6%A1%88-%E7%9A%87%E7%BF%94%E9%9D%A0%E8%B2%B7%E5%8F%B0%E7%A9%8D%E9%9B%BB%E3%80%8C%E8%B3%BA%E6%AF%94%E6%9C%AC%E6%A5%AD%E5%A4%9A%E3%80%8D-041033303.html", "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%B1%A2%E5%89%B5%E6%96%B0%E9%AB%98-%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E5%93%A1%E5%B7%A52025%E5%B9%B4%E5%B9%B3%E5%9D%87%E8%96%AA%E8%B3%87%E7%A6%8F%E5%88%A9169%E8%90%AC%E5%85%83%E5%B9%B4%E5%A2%9E63-103359303.html", "https://tw.stock.yahoo.com/news/%E6%9C%80%E5%BC%B7%E5%A6%96%E8%82%A1%E7%A5%9E%E8%A9%B1%E7%A0%B4%E6%BB%85-%E5%B0%9A%E8%8C%82%E7%88%86fanuc%E5%80%9F%E6%AE%BC%E5%82%B3%E8%81%9E-%E4%BA%BA%E4%BA%8B%E5%A4%A7%E5%9C%B0%E9%9C%87-%E8%A1%8C%E6%83%85%E6%85%98%E6%91%94%E8%B7%8C%E5%81%9C-104500913.html", "https://tw.stock.yahoo.com/news/%E6%AF%8F%E8%82%A1%E6%93%AC%E9%85%8D1%E5%85%83%E5%8F%88%E5%89%B5%E6%96%B0%E9%AB%98-%E9%80%99%E6%AA%94%E9%AB%98%E8%82%A1%E6%81%AF-%E5%8D%BB%E8%A2%AB%E5%A4%96%E8%B3%87%E8%84%AB%E6%89%8B1-4%E8%90%AC%E5%BC%B5-00918%E9%85%8D%E6%81%AF%E7%BF%BB%E5%80%8D%E4%B9%9F%E9%81%AD%E6%8F%90%E6%AC%BE4%E5%84%84%E5%85%83-103000427.html", "https://tw.stock.yahoo.com/news/%E9%AB%98%E8%82%A1%E6%81%AFetf%E9%96%8B%E5%A5%AC-00918-00919-00929%E9%85%8D%E6%81%AF%E5%89%B5%E6%96%B0%E9%AB%98-%E9%99%A4%E6%81%AF%E6%9C%80%E5%BE%8C%E8%B2%B7%E9%80%B2%E6%97%A5-103738154.html", "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E5%8C%AF%E7%8E%87-%E8%B7%8C%E6%88%90%E6%B0%91%E5%9C%8B58%E5%B9%B4-%E8%B6%85%E7%94%9C-%E9%81%94%E4%BA%BA%E9%A9%9A-%E9%80%99%E6%98%AF%E4%BB%80%E9%BA%BC%E7%8B%80%E6%B3%81-102800841.html", "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E7%8B%82%E9%A3%86-%E7%B6%B2%E5%95%8F-600%E8%90%AC%E8%AE%8A2000%E8%90%AC%E9%9B%A3%E5%BA%A6-%E4%BB%96%E8%A6%AA%E6%9B%9D-%E6%93%8D%E4%BD%9C%E5%BF%83%E6%B3%95-103300607.html"], "time": "2026-06-01 19:14:19", "links": "global_dashboard.html"}, "ai_news_global": {"title": "🌍 國際政經 AI 核心戰略", "time": "2026-06-08 12:12:18", "text": "根據提供的新聞內容，我將分析以下國際市場事實：\n\n亞洲市場 facts\n\n1. 韓元創17年低點，韓國金融服務委員會召集四大銀行討論匯市因應措施。\n2. 日經暴跌2,547點，AI和半導體股受重挫。\n\n歐洲與地緣 facts\n\n無相關新聞內容。\n\n原物料與匯率 facts\n\n1. 美元對韓元匯價創17年新低。\n2. 原油價格走高，但沒有提供具體數據。\n\n今日市場焦點\n\n• 避險資產氛圍：地緣衝突下，黃金和原油避險资金情緒正在上升。投資者應該關注這些資產的走勢。\n• 國際資金流向：非美市場政策大環境對全球資金分配有著重要影響。投資者應該密切關注亞洲市場的政策變動和匯率走勢。\n\n操盤策略與投資建議\n\n• 宏觀風險提示：地緣衝突和供應鏈震盪可能對全球資金套牢造成重大影響。投資者應該謹慎配置資產，避免過度暴露於高風險市場。\n• 避險防禦方針：投資者可以考慮配置一些黃金或原油相關的資產，以抵禦市場波動。同時，也可以考慮購買一些亞洲市場的ETF或股票，以分散風險。"}, "ai_news_us": {"title": "🧠 美股 AI 核心戰略", "time": "2026-06-04 21:41:11", "text": "今日市場焦點\n\n• 大盤指數表現：納斯達克指數上漲 1.2%，標普500指數上漲 0.8%。\n• 主力強勢板塊：半導體板塊領先，輝達晶片股價上漲 5%。\n\n操盤策略與投資建議\n\n• 💰 資金風向：華爾街機構最新聰明錢流向顯示，對於科技巨頭和半導體板塊的投資意欲增加。\n• ⚡ 台股連動影響：根據美股表現，外資可能會在明日加碼台積電等半導體股票。"}, "ai_news_tw": {"title": "🧠 台股 AI 核心戰略", "time": "2026-06-08 08:26:24", "text": "市場事實如下：\n\n1. 美國半導體和科技股出現多殺多行情，可能對台股交易產生變數。\n2. 台股5000~7000點區域有多殺多來的風險，「四貸同堂」恐斷頭登出。\n3. 資金早已卡死，房市無法成為避風港。\n4. 海大990件成績單延誤，中華郵政致歉，但考生權益未受影響。\n\n今日市場焦點\n\n• 產業與板塊動態：半導體、科技股和房地產板塊受到關注。\n• 大盤與總體表現：台股交易增添變數，市場氛圍緊張。\n• 個股與強勢標的：台積電、金牌手整復師培訓2000雙手等個股受到關注。\n\n操盤策略與投資建議\n\n• 潛在風險：美股血洗可能對台股產生重大影響，籌碼極度浮躁。\n• 行動方針：短線操作應謹慎，緊盯「2大止穩訊號」，到週三是關鍵。"}}`.replace(/&quot;/g, '"'));
+        // 🔥 修正：使用 JSON.parse 安全載入資料
+        const dbData = JSON.parse('{"global": {"title": "🌍 國際政經與環球情報", "time": "2026-06-08 12:24:43", "data": [{"title": "國際政經財經線索", "url": "https://tw.stock.yahoo.com/news/"}, {"title": "蒸發9兆免驚？ 專家喊「沒關稅可怕」：美股這幾支已經在偷漲", "url": "https://tw.stock.yahoo.com/news/%E8%92%B8%E7%99%BC9%E5%85%86%E5%85%8D%E9%A9%9A-%E5%B0%88%E5%AE%B6%E5%96%8A-%E6%B2%92%E9%97%9C%E7%A8%85%E5%8F%AF%E6%80%95-%E7%BE%8E%E8%82%A1%E9%80%99%E5%B9%BE%E6%94%AF%E5%B7%B2%E7%B6%93%E5%9C%A8%E5%81%B7%E6%BC%B2-031300427.html"}, {"title": "美股重挫是免驚？5月非農「強中透弱」 專家爆三大驚擾利空：只是技術性修正！", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E9%87%8D%E6%8C%AB%E6%98%AF%E5%85%8D%E9%A9%9A%EF%BC%9F5%E6%9C%88%E9%9D%9E%E8%BE%B2%E3%80%8C%E5%BC%B7%E4%B8%AD%E9%80%8F%E5%BC%B1%E3%80%8D-%E5%B0%88%E5%AE%B6%E7%88%86%E4%B8%89%E5%A4%A7%E9%A9%9A%E6%93%BE%E5%88%A9%E7%A9%BA%EF%BC%9A%E5%8F%AA%E6%98%AF%E6%8A%80%E8%A1%93%E6%80%A7%E4%BF%AE%E6%AD%A3%EF%BC%81-025933038.html"}, {"title": "就業爆棚美股竟跌 川普強力質疑、高呼Fed應降息", "url": "https://tw.stock.yahoo.com/news/%E5%B0%B1%E6%A5%AD%E7%88%86%E6%A3%9A%E7%BE%8E%E8%82%A1%E7%AB%9F%E8%B7%8C-%E5%B7%9D%E6%99%AE%E5%BC%B7%E5%8A%9B%E8%B3%AA%E7%96%91-%E9%AB%98%E5%91%BCfed%E6%87%89%E9%99%8D%E6%81%AF-025800438.html"}, {"title": "韓元創17年低點，韓國金融服務委員會召集四大銀行討論匯市因應措施", "url": "https://tw.stock.yahoo.com/news/%E9%9F%93%E5%85%83%E5%89%B517%E5%B9%B4%E4%BD%8E%E9%BB%9E-%E9%9F%93%E5%9C%8B%E9%87%91%E8%9E%8D%E6%9C%8D%E5%8B%99%E5%A7%94%E5%93%A1%E6%9C%83%E5%8F%AC%E9%9B%86%E5%9B%9B%E5%A4%A7%E9%8A%80%E8%A1%8C%E8%A8%8E%E8%AB%96%E5%8C%AF%E5%B8%82%E5%9B%A0%E6%87%89%E6%8E%AA%E6%96%BD-024131952.html"}, {"title": "《日股早盤》AI、半導體慘 日經暴跌2,547點", "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E8%82%A1%E6%97%A9%E7%9B%A4-ai-%E5%8D%8A%E5%B0%8E%E9%AB%94%E6%85%98-%E6%97%A5%E7%B6%93%E6%9A%B4%E8%B7%8C2-547%E9%BB%9E-023900932.html"}, {"title": "美股AI、晶片股崩跌逾1.3兆美元 那指重挫4%創3年來最大跌幅", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1ai-%E6%99%B6%E7%89%87%E8%82%A1%E5%B4%A9%E8%B7%8C%E9%80%BE1-3%E5%85%86%E7%BE%8E%E5%85%83-%E9%82%A3%E6%8C%87%E9%87%8D%E6%8C%AB4-%E5%89%B53%E5%B9%B4%E4%BE%86%E6%9C%80%E5%A4%A7%E8%B7%8C%E5%B9%85-022917860.html"}, {"title": "美股與中東情勢影響  亞股早盤大跌油價走高", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E8%88%87%E4%B8%AD%E6%9D%B1%E6%83%85%E5%8B%A2%E5%BD%B1%E9%9F%BF-%E4%BA%9E%E8%82%A1%E6%97%A9%E7%9B%A4%E5%A4%A7%E8%B7%8C%E6%B2%B9%E5%83%B9%E8%B5%B0%E9%AB%98-021651402.html"}, {"title": "美國房貸利率飆破6% 聯準會束手無策", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E6%88%BF%E8%B2%B8%E5%88%A9%E7%8E%87%E9%A3%86%E7%A0%B46-%E8%81%AF%E6%BA%96%E6%9C%83%E6%9D%9F%E6%89%8B%E7%84%A1%E7%AD%96-021620208.html"}, {"title": "黃仁勳訪韓國宣布3大合作案　攜手布局AI資料中心", "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E8%A8%AA%E9%9F%93%E5%9C%8B%E5%AE%A3%E5%B8%833%E5%A4%A7%E5%90%88%E4%BD%9C%E6%A1%88-%E6%94%9C%E6%89%8B%E5%B8%83%E5%B1%80ai%E8%B3%87%E6%96%99%E4%B8%AD%E5%BF%83-021548590.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E7%B5%B1%E4%B8%80%E6%95%B4%E5%90%88%E5%BE%8C%E5%86%8D%E4%B8%8B%E4%B8%80%E6%AD%A5%EF%BC%81pchome%E4%B9%9F%E8%83%BD%E8%B2%B77-11%E5%92%96%E5%95%A1%E5%92%8C%E8%8C%B6%E8%91%89%E8%9B%8B-%E8%A9%A6%E7%87%9F%E9%81%8B%E5%B7%B2%E8%B3%A3%E7%A0%B4%E8%90%AC%E4%BB%BD-041518729.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E7%9C%8B%E7%A9%BA%E9%82%84%E6%98%AF%E5%B0%8D%E6%B2%96%E8%B3%A0%E5%B0%91%E9%BB%9E%EF%BC%9F0050%E5%8F%8D%E4%B8%80%E7%AD%89%E3%80%8C2%E6%AA%94%E5%8F%8D%E5%90%91etf%E3%80%8D2%E5%B0%8F%E6%99%82%E7%88%86%E9%80%BE30%E8%90%AC%E5%BC%B5%E5%A4%A7%E9%87%8F-%E5%B0%88%E5%AE%B6%E8%A7%A3%E6%9E%90-040746463.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E9%9D%A2%E6%9D%BF%E9%9B%99%E8%99%8E%E4%B8%80%E5%AD%97%E9%8E%96%E8%B7%8C%E5%81%9C%EF%BC%81%E5%8F%8B%E9%81%94%E7%BE%A4%E5%89%B5%E9%80%BE18%E8%90%AC%E5%BC%B5%E6%8E%92%E9%9A%8A%E7%AD%89%E8%B3%A3-%E5%88%86%E6%9E%90%E5%B8%AB%EF%BC%9A%E8%A6%8B%E5%A4%9A%E6%AE%BA%E5%A4%9A-040517871.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/38%E8%90%AC%E6%95%A3%E6%88%B6qq%E4%BA%86%EF%BC%816%E6%9C%88%E4%BB%A5%E4%BE%86%E9%80%B2%E5%A0%B4%E5%8F%B0%E8%82%A1%E4%BB%8A%E6%85%98%E6%B7%AA%E4%BD%8F%E5%A5%97%E6%88%BF-%E5%88%86%E6%9E%90%E5%B8%AB%E6%95%99%E6%88%B0-040255027.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/momo%E5%AF%8C%E9%82%A6%E5%AA%92%E8%B6%8A%E9%97%9C%E8%B6%8A%E5%A4%A7%E5%B0%BE%EF%BC%81%E4%BB%8A%E9%80%86%E5%8B%A2%E9%A3%86%E6%BC%B2%E5%81%9C-%E5%88%86%E6%9E%90%E5%B8%AB%E9%BB%9E%E5%90%8D%E4%B8%89%E5%A4%A7%E5%84%AA%E5%8B%A2-034738688.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%BC%B2%E7%BF%BB-%E8%AD%B7%E5%9C%8B%E7%A5%9E%E5%B1%B1%E9%80%A0%E5%B0%B1-%E5%8B%9E%E5%B7%A5%E8%B2%B4%E6%97%8F-%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%82%BA%E4%BD%95%E4%BB%8D%E4%B8%8D%E6%95%A2%E8%8A%B1%E9%8C%A2-104000071.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%A0%B4%E8%BB%8A%E7%A6%8D%E6%94%B9%E8%AE%8A%E4%BB%96%E7%9A%84%E4%BA%BA%E7%94%9F-%E9%87%91%E7%89%8C%E6%89%8B%E6%95%B4%E5%BE%A9%E5%B8%AB%E5%9F%B9%E8%A8%932000%E9%9B%99%E6%89%8B-%E5%89%8D%E9%80%B2%E4%BC%81%E6%A5%AD%E7%95%B6-%E5%B9%95%E5%BE%8C%E6%8E%A8%E6%89%8B-082800796.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E8%94%A3%E8%90%AC%E5%AE%89%E6%9B%9D%E5%8F%B0%E5%8C%97%E7%84%A1%E8%8F%B8%E5%9F%8E%E5%B8%82%E8%A6%8F%E5%8A%83-%E6%8C%87%E5%AE%9A%E5%90%B8%E8%8F%B8%E5%8D%80-%E8%B2%A0%E5%A3%93%E5%BC%8F%E5%90%B8%E8%8F%B8%E5%AE%A4-%E8%A1%A8%E7%9C%8B%E6%87%82-072900358.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%82%A1%E6%9D%B1%E6%9C%833%E5%80%8B%E9%97%9C%E9%8D%B5qa-%E9%AD%8F%E5%93%B2%E5%AE%B6%E5%A6%82%E4%BD%95%E8%AB%87%E8%82%A1%E5%88%A9-%E5%93%A1%E5%B7%A5%E5%88%86%E7%B4%85%E8%88%87%E5%B0%8D%E6%89%8B-033400959.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/a%E8%82%A1%E6%96%B0%E8%82%A1%E7%8E%8B%E9%9D%9E%E5%AF%92%E6%AD%A6%E7%B4%80-%E8%B6%85%E8%B6%8A%E8%B2%B4%E5%B7%9E%E8%8C%85%E5%8F%B0-%E5%A4%AA%E7%98%8B%E7%8B%82-%E4%B8%8A%E5%B8%825%E5%A4%A9%E8%82%A1%E5%83%B9%E7%A0%B4%E5%8D%83%E5%85%83-032700794.html"}, {"title": "台股跌勢收斂指數重回43000點之上 台積電盤中跌60元 【不斷更新】", "url": "https://tw.stock.yahoo.com/news/live/%E5%8F%B0%E8%82%A1%E8%B7%8C%E5%8B%A2%E6%94%B6%E6%96%82%E6%8C%87%E6%95%B8%E9%87%8D%E5%9B%9E43000%E9%BB%9E%E4%B9%8B%E4%B8%8A-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E7%9B%A4%E4%B8%AD%E8%B7%8C60%E5%85%83-%E3%80%90%E4%B8%8D%E6%96%B7%E6%9B%B4%E6%96%B0%E3%80%91-000000356.html"}, {"title": "亞股遭血洗！韓國暴跌逾5%一度熔斷　日股慘崩逾2376點", "url": "https://tw.stock.yahoo.com/news/%E4%BA%9E%E8%82%A1%E9%81%AD%E8%A1%80%E6%B4%97-%E9%9F%93%E5%9C%8B%E6%9A%B4%E8%B7%8C6-%E5%BA%A6%E7%86%94%E6%96%B7-%E6%97%A5%E8%82%A1%E6%85%98%E5%B4%A9%E9%80%BE2500%E9%BB%9E-014213209.html"}, {"title": "台股收復43000關卡！台積電跌2%、「聯發科、日月光摔半根」　PCB、低軌衛星、機器人多檔慘崩", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%94%B6%E5%BE%A943000%E9%97%9C%E5%8D%A1-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B7%8C2-%E8%81%AF%E7%99%BC%E7%A7%91-%E6%97%A5%E6%9C%88%E5%85%89%E6%91%94%E5%8D%8A%E6%A0%B9-pcb-035100464.html"}, {"title": "「嬰兒股神」、「未成年股神」崛起！父母幫忙存股3方式 涉贈與稅申報", "url": "https://tw.stock.yahoo.com/news/%E3%80%8C%E5%AC%B0%E5%85%92%E8%82%A1%E7%A5%9E%E3%80%8D%E3%80%81%E3%80%8C%E6%9C%AA%E6%88%90%E5%B9%B4%E8%82%A1%E7%A5%9E%E3%80%8D%E5%B4%9B%E8%B5%B7%EF%BC%81%E7%88%B6%E6%AF%8D%E5%B9%AB%E5%BF%99%E5%AD%98%E8%82%A13%E6%96%B9%E5%BC%8F-%E6%B6%89%E8%B4%88%E8%88%87%E7%A8%85%E7%94%B3%E5%A0%B1-115356044.html"}, {"title": "台股血崩引發洗牌潮！阮慕驊指路「第一波抄底」策略：重量級權值股、市值型ETF優先", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%A1%80%E5%B4%A9%E5%BC%95%E7%99%BC%E6%B4%97%E7%89%8C%E6%BD%AE-%E9%98%AE%E6%85%95%E9%A9%8A%E6%8C%87%E8%B7%AF-%E7%AC%AC-%E6%B3%A2%E6%8A%84%E5%BA%95-%E7%AD%96%E7%95%A5-033500245.html"}]}, "tw": {"title": "📊 台股大數據晨報", "time": "2026-06-08 08:25:57", "data": [{"title": "血色星期一台股崩3000點？謝金河：最慘的不是台灣", "url": "https://tw.stock.yahoo.com/news/%E8%A1%80%E8%89%B2%E6%98%9F%E6%9C%9F-%E5%8F%B0%E8%82%A1%E5%B4%A93000%E9%BB%9E-%E8%AC%9D%E9%87%91%E6%B2%B3-%E6%9C%80%E6%85%98%E7%9A%84%E4%B8%8D%E6%98%AF%E5%8F%B0%E7%81%A3-232236347.html"}, {"title": "台股行情反轉？吳淡如看專家「用賭徒眼光看賭桌」：當烏鴉示警並不難", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%A1%8C%E6%83%85%E5%8F%8D%E8%BD%89-%E5%90%B3%E6%B7%A1%E5%A6%82%E7%9C%8B%E5%B0%88%E5%AE%B6-%E7%94%A8%E8%B3%AD%E5%BE%92%E7%9C%BC%E5%85%89%E7%9C%8B%E8%B3%AD%E6%A1%8C-%E7%95%B6%E7%83%8F%E9%B4%89%E7%A4%BA%E8%AD%A6%E4%B8%A6%E4%B8%8D%E9%9B%A3-231044034.html"}, {"title": "美國半導體、科技股出現多殺多行情，週一台股交易增添變數", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E5%8D%8A%E5%B0%8E%E9%AB%94-%E7%A7%91%E6%8A%80%E8%82%A1%E5%87%BA%E7%8F%BE%E5%A4%9A%E6%AE%BA%E5%A4%9A%E8%A1%8C%E6%83%85-%E9%80%B1-%E5%8F%B0%E8%82%A1%E4%BA%A4%E6%98%93%E5%A2%9E%E6%B7%BB%E8%AE%8A%E6%95%B8-230838374.html"}, {"title": "台股5000~7000點多殺多來了、「四貸同堂」恐斷頭登出…為何房市無法成避風港？專家示警：資金早已卡死", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A150007000%E9%BB%9E%E5%A4%9A%E6%AE%BA%E5%A4%9A%E4%BE%86%E4%BA%86%E3%80%81%E3%80%8C%E5%9B%9B%E8%B2%B8%E5%90%8C%E5%A0%82%E3%80%8D%E6%81%90%E6%96%B7%E9%A0%AD%E7%99%BB%E5%87%BA%E7%82%BA%E4%BD%95%E6%88%BF%E5%B8%82%E7%84%A1%E6%B3%95%E6%88%90%E9%81%BF%E9%A2%A8%E6%B8%AF%EF%BC%9F%E5%B0%88%E5%AE%B6%E7%A4%BA%E8%AD%A6%EF%BC%9A%E8%B3%87%E9%87%91%E6%97%A9%E5%B7%B2%E5%8D%A1%E6%AD%BB-230700429.html"}, {"title": "台股「10檔融資大增」恐釀斷頭！網點最抗跌「2檔」", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1-10%E6%AA%94%E8%9E%8D%E8%B3%87%E5%A4%A7%E5%A2%9E-%E6%81%90%E9%87%80%E6%96%B7%E9%A0%AD-%E7%B6%B2%E9%BB%9E%E6%9C%80%E6%8A%97%E8%B7%8C-2%E6%AA%94-224754041.html"}, {"title": "週一台股開盤怕爆！財經網美一句話示警「投機民眾」", "url": "https://tw.stock.yahoo.com/news/%E9%80%B1-%E5%8F%B0%E8%82%A1%E9%96%8B%E7%9B%A4%E6%80%95%E7%88%86-%E8%B2%A1%E7%B6%93%E7%B6%B2%E7%BE%8E-%E5%8F%A5%E8%A9%B1%E7%A4%BA%E8%AD%A6-%E6%8A%95%E6%A9%9F%E6%B0%91%E7%9C%BE-223314996.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E6%B5%B7%E5%A4%A7990%E4%BB%B6%E6%88%90%E7%B8%BE%E5%96%AE%E5%8D%A1%E9%97%9C-a7%E8%87%AA%E5%8B%95%E5%8C%96%E8%A8%AD%E5%82%99%E6%83%B9%E7%A6%8D%EF%BC%9F%E4%B8%AD%E8%8F%AF%E9%83%B5%E6%94%BF%E8%AA%8D%E4%BA%86%E6%A9%9F%E5%99%A8%E8%AA%A4%E5%88%A4-025504328.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E6%B5%B7%E5%A4%A7990%E4%BB%B6%E6%88%90%E7%B8%BE%E5%96%AE%E5%BB%B6%E8%AA%A4%EF%BC%81%E4%B8%AD%E8%8F%AF%E9%83%B5%E6%94%BF%E8%87%B4%E6%AD%89%EF%BC%9A%E8%80%83%E7%94%9F%E6%AC%8A%E7%9B%8A%E6%9C%AA%E5%8F%97%E5%BD%B1%E9%9F%BF-023706859.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1etf%E6%96%B0%E5%85%B5%E9%96%8B%E5%8B%9F-%E8%98%8B%E6%9E%9Cwwdc-2026%E5%8F%B0%E7%81%A3%E4%BE%9B%E6%87%89%E9%8F%88%E6%A6%82%E5%BF%B5%E8%82%A1%E5%82%99%E5%8F%97%E7%9F%9A%E7%9B%AE-spacex%E6%9C%80%E5%BF%AB6%E6%9C%8812%E6%97%A5%E6%8E%9B%E7%89%8C-%E9%80%9A%E8%86%A8%E6%95%B8%E6%93%9A%E6%B1%BA%E5%AE%9Afed%E9%99%8D%E6%81%AF%E7%A9%BA%E9%96%93-%E6%9C%AC%E5%91%A8%E6%B2%B9%E5%83%B9%E7%B9%BC%E7%BA%8C%E5%87%8D%E6%BC%B2%EF%BD%9C%E6%8A%95%E8%B3%87%E6%97%A9%E7%9F%A"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E3%80%90%E5%86%8D%E8%A6%8B%E4%BB%81%E4%BE%86%E7%98%8B2%E3%80%91%E9%BB%83%E4%BB%81%E5%8B%B3%E4%BE%86%E5%8F%B0%E5%85%A9%E5%91%A8%E5%8F%B0%E8%82%A1%E6%BC%B2%E9%80%BE2800%E9%BB%9E%EF%BC%813%E5%A4%A7%E7%BE%A4%E6%97%8F%E8%A1%A8%E7%8F%BE%E6%9C%80%E7%8C%9B-020100721.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%BC%B2%E7%BF%BB-%E8%AD%B7%E5%9C%8B%E7%A5%9E%E5%B1%B1%E9%80%A0%E5%B0%B1-%E5%8B%9E%E5%B7%A5%E8%B2%B4%E6%97%8F-%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%82%BA%E4%BD%95%E4%BB%8D%E4%B8%8D%E6%95%A2%E8%8A%B1%E9%8C%A2-104000071.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%A0%B4%E8%BB%8A%E7%A6%8D%E6%94%B9%E8%AE%8A%E4%BB%96%E7%9A%84%E4%BA%BA%E7%94%9F-%E9%87%91%E7%89%8C%E6%89%8B%E6%95%B4%E5%BE%A9%E5%B8%AB%E5%9F%B9%E8%A8%932000%E9%9B%99%E6%89%8B-%E5%89%8D%E9%80%B2%E4%BC%81%E6%A5%AD%E7%95%B6-%E5%B9%95%E5%BE%8C%E6%8E%A8%E6%89%8B-082800796.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E8%94%A3%E8%90%AC%E5%AE%89%E6%9B%9D%E5%8F%B0%E5%8C%97%E7%84%A1%E8%8F%B8%E5%9F%8E%E5%B8%82%E8%A6%8F%E5%8A%83-%E6%8C%87%E5%AE%9A%E5%90%B8%E8%8F%B8%E5%8D%80-%E8%B2%A0%E5%A3%93%E5%BC%8F%E5%90%B8%E8%8F%B8%E5%AE%A4-%E8%A1%A8%E7%9C%8B%E6%87%82-072900358.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%82%A1%E6%9D%B1%E6%9C%833%E5%80%8B%E9%97%9C%E9%8D%B5qa-%E9%AD%8F%E5%93%B2%E5%AE%B6%E5%A6%82%E4%BD%95%E8%AB%87%E8%82%A1%E5%88%A9-%E5%93%A1%E5%B7%A5%E5%88%86%E7%B4%85%E8%88%87%E5%B0%8D%E6%89%8B-033400959.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/a%E8%82%A1%E6%96%B0%E8%82%A1%E7%8E%8B%E9%9D%9E%E5%AF%92%E6%AD%A6%E7%B4%80-%E8%B6%85%E8%B6%8A%E8%B2%B4%E5%B7%9E%E8%8C%85%E5%8F%B0-%E5%A4%AA%E7%98%8B%E7%8B%82-%E4%B8%8A%E5%B8%825%E5%A4%A9%E8%82%A1%E5%83%B9%E7%A0%B4%E5%8D%83%E5%85%83-032700794.html"}, {"title": "台股大考驗1／美股血洗台股要崩了？　杜金龍示警：籌碼極度浮躁", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%A4%A7%E8%80%83%E9%A9%971%EF%BC%8F%E7%BE%8E%E8%82%A1%E8%A1%80%E6%B4%97%E5%8F%B0%E8%82%A1%E8%A6%81%E5%B4%A9%E4%BA%86%EF%BC%9F-%E6%9D%9C%E9%87%91%E9%BE%8D%E7%A4%BA%E8%AD%A6%EF%BC%9A%E7%B1%8C%E7%A2%BC%E6%A5%B5%E5%BA%A6%E6%B5%AE%E8%BA%81-230001054.html"}, {"title": "台股迎綠光估崩3千點！分析師籲緊盯「2大止穩訊號」：到週三是關鍵", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%BF%8E%E7%B6%A0%E5%85%89%E4%BC%B0%E5%B4%A93%E5%8D%83%E9%BB%9E-%E5%88%86%E6%9E%90%E5%B8%AB%E7%B1%B2%E7%B7%8A%E7%9B%AF-2%E5%A4%A7%E6%AD%A2%E7%A9%A9%E8%A8%8A%E8%99%9F-%E5%88%B0%E9%80%B1%E4%B8%89%E6%98%AF%E9%97%9C%E9%8D%B5-000000964.html"}, {"title": "比特幣創FTX崩潰後最慘跌幅 分析師警示恐下探5萬美元", "url": "https://tw.stock.yahoo.com/news/%E6%AF%94%E7%89%B9%E5%B9%A3%E5%89%B5ftx%E5%B4%A9%E6%BD%B0%E5%BE%8C%E6%9C%80%E6%85%98%E8%B7%8C%E5%B9%85-%E5%88%86%E6%9E%90%E5%B8%AB%E8%AD%A6%E7%A4%BA%E6%81%90%E4%B8%8B%E6%8E%A25%E8%90%AC%E7%BE%8E%E5%85%83-233949585.html"}, {"title": "申購抽抽樂最後一天！「光電投控」進行增資　抽中就賺2250元小紅包", "url": "https://tw.stock.yahoo.com/news/%E7%94%B3%E8%B3%BC%E6%8A%BD%E6%8A%BD%E6%A8%82%E6%9C%80%E5%BE%8C-%E5%A4%A9-%E5%85%89%E9%9B%BB%E6%8A%95%E6%8E%A7-%E9%80%B2%E8%A1%8C%E5%A2%9E%E8%B3%87-%E6%8A%BD%E4%B8%AD%E5%B0%B1%E8%B3%BA2250%E5%85%83%E5%B0%8F%E7%B4%85%E5%8C%85-233000595.html"}, {"title": "日圓破160關卡 市場聚焦美日歐央行政策與市場動向", "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E7%A0%B4160%E9%97%9C%E5%8D%A1-%E5%B8%82%E5%A0%B4%E8%81%9A%E7%84%A6%E7%BE%8E%E6%97%A5%E6%AD%90%E5%A4%AE%E8%A1%8C%E6%94%BF%E7%AD%96%E8%88%87%E5%B8%82%E5%A0%B4%E5%8B%95%E5%90%91-233502765.html"}, {"title": "美國五月就業增長超預期 聯準會升息壓力再起", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E4%BA%94%E6%9C%88%E5%B0%B1%E6%A5%AD%E5%A2%9E%E9%95%B7%E8%B6%85%E9%A0%90%E6%9C%9F-%E8%81%AF%E6%BA%96%E6%9C%83%E5%8D%87%E6%81%AF%E5%A3%93%E5%8A%9B%E5%86%8D%E8%B5%B7-233459240.html"}, {"title": "台股將成全球重災區！　謝金河：日韓同挫、台灣光通訊無天險可守", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%B0%87%E6%88%90%E5%85%A8%E7%90%83%E9%87%8D%E7%81%BD%E5%8D%80-%E8%AC%9D%E9%87%91%E6%B2%B3-%E6%97%A5%E9%9F%93%E5%90%8C%E6%8C%AB-%E5%8F%B0%E7%81%A3%E5%85%89%E9%80%9A%E8%A8%8A%E7%84%A1%E5%A4%A9%E9%9A%AA%E5%8F%AF%E5%AE%88-231917764.html"}, {"title": "台積電毛利率創高！AI供應鏈續強 下一波買誰？3大受惠族群全掌握", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%AF%9B%E5%88%A9%E7%8E%87%E5%89%B5%E9%AB%98-ai%E4%BE%9B%E6%87%89%E9%8F%88%E7%BA%8C%E5%BC%B7-%E4%B8%8B-%E6%B3%A2%E8%B2%B7%E8%AA%B0-3%E5%A4%A7%E5%8F%97%E6%83%A0%E6%97%8F%E7%BE%A4%E5%85%A8%E6%8E%8C%E6%8F%A1-230600311.html"}, {"title": "黑色星期一恐見「0050跌停」？他沙盤推演可能劇本", "url": "https://tw.stock.yahoo.com/news/%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F-%E6%81%90%E8%A6%8B-0050%E8%B7%8C%E5%81%9C-%E4%BB%96%E6%B2%99%E7%9B%A4%E6%8E%A8%E6%BC%94%E5%8F%AF%E8%83%BD%E5%8A%87%E6%9C%AC-230348353.html"}]}, "us": {"title": "🦅 美股焦點資料來源", "time": "2026-06-08 08:27:46", "data": [{"title": "美股財經新聞線索", "url": "https://tw.stock.yahoo.com/news/"}, {"title": "美股急殺未見人踩人，高盛稱倉位不極端為多頭留一線生機", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E6%80%A5%E6%AE%BA%E6%9C%AA%E8%A6%8B%E4%BA%BA%E8%B8%A9%E4%BA%BA-%E9%AB%98%E7%9B%9B%E7%A8%B1%E5%80%89%E4%BD%8D%E4%B8%8D%E6%A5%B5%E7%AB%AF%E7%82%BA%E5%A4%9A%E9%A0%AD%E7%95%99-%E7%B7%9A%E7%94%9F%E6%A9%9F-001105991.html"}, {"title": "非農就業數據太強嚇壞市場，川普喊美股該漲、哈塞特急滅升息火", "url": "https://tw.stock.yahoo.com/news/%E9%9D%9E%E8%BE%B2%E5%B0%B1%E6%A5%AD%E6%95%B8%E6%93%9A%E5%A4%AA%E5%BC%B7%E5%9A%87%E5%A3%9E%E5%B8%82%E5%A0%B4-%E5%B7%9D%E6%99%AE%E5%96%8A%E7%BE%8E%E8%82%A1%E8%A9%B2%E6%BC%B2-%E5%93%88%E5%A1%9E%E7%89%B9%E6%80%A5%E6%BB%85%E5%8D%87%E6%81%AF%E7%81%AB-000834551.html"}, {"title": "科技股熄火，道瓊歐洲600上週五回吐0.29%，英飛凌重摔逾9%", "url": "https://tw.stock.yahoo.com/news/%E7%A7%91%E6%8A%80%E8%82%A1%E7%86%84%E7%81%AB-%E9%81%93%E7%93%8A%E6%AD%90%E6%B4%B2600%E4%B8%8A%E9%80%B1%E4%BA%94%E5%9B%9E%E5%90%900-29-%E8%8B%B1%E9%A3%9B%E5%87%8C%E9%87%8D%E6%91%94%E9%80%BE9-000317767.html"}, {"title": "晶片股單日蒸發1.3兆美元 美股重挫加密市場同受衝擊", "url": "https://tw.stock.yahoo.com/news/%E6%99%B6%E7%89%87%E8%82%A1%E5%96%AE%E6%97%A5%E8%92%B8%E7%99%BC1-3%E5%85%86%E7%BE%8E%E5%85%83-%E7%BE%8E%E8%82%A1%E9%87%8D%E6%8C%AB%E5%8A%A0%E5%AF%86%E5%B8%82%E5%A0%B4%E5%90%8C%E5%8F%97%E8%A1%9D%E6%93%8A-235612146.html"}, {"title": "日圓空軍捲土重來，投機淨空單升至近兩年新高", "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E7%A9%BA%E8%BB%8D%E6%8D%B2%E5%9C%9F%E9%87%8D%E4%BE%86-%E6%8A%95%E6%A9%9F%E6%B7%A8%E7%A9%BA%E5%96%AE%E5%8D%87%E8%87%B3%E8%BF%91%E5%85%A9%E5%B9%B4%E6%96%B0%E9%AB%98-235050909.html"}, {"title": "加州汽油衝上全美最貴，美能源部研議設石油儲備穩油市", "url": "https://tw.stock.yahoo.com/news/%E5%8A%A0%E5%B7%9E%E6%B1%BD%E6%B2%B9%E8%A1%9D%E4%B8%8A%E5%85%A8%E7%BE%8E%E6%9C%80%E8%B2%B4-%E7%BE%8E%E8%83%BD%E6%BA%90%E9%83%A8%E7%A0%94%E8%AD%B0%E8%A8%AD%E7%9F%B3%E6%B2%B9%E5%84%B2%E5%82%99%E7%A9%A9%E6%B2%B9%E5%B8%82-234707220.html"}, {"title": "日圓破160關卡 市場聚焦美日歐央行政策與市場動向", "url": "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E7%A0%B4160%E9%97%9C%E5%8D%A1-%E5%B8%82%E5%A0%B4%E8%81%9A%E7%84%A6%E7%BE%8E%E6%97%A5%E6%AD%90%E5%A4%AE%E8%A1%8C%E6%94%BF%E7%AD%96%E8%88%87%E5%B8%82%E5%A0%B4%E5%8B%95%E5%90%91-233502765.html"}, {"title": "美國五月就業增長超預期 聯準會升息壓力再起", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%9C%8B%E4%BA%94%E6%9C%88%E5%B0%B1%E6%A5%AD%E5%A2%9E%E9%95%B7%E8%B6%85%E9%A0%90%E6%9C%9F-%E8%81%AF%E6%BA%96%E6%9C%83%E5%8D%87%E6%81%AF%E5%A3%93%E5%8A%9B%E5%86%8D%E8%B5%B7-233459240.html"}, {"title": "黃仁勳實在太接地氣！球場訂百份炸雞還高喊：我來這裡吃「炸啤」的", "url": "https://tw.sports.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E5%AF%A6%E5%9C%A8%E5%A4%AA%E6%8E%A5%E5%9C%B0%E6%B0%A3-%E7%90%83%E5%A0%B4%E8%A8%82%E7%99%BE%E4%BB%BD%E7%82%B8%E9%9B%9E%E9%82%84%E9%AB%98%E5%96%8A-%E6%88%91%E4%BE%86%E9%80%99%E8%A3%A1%E5%90%83-%E7%82%B8%E5%95%A4-%E7%9A%84-232818489.html"}, {"title": "韓元逼近金融海嘯低位淪主要貨幣最遜，韓國跨部會出手圍堵空方押注", "url": "https://tw.stock.yahoo.com/news/%E9%9F%93%E5%85%83%E9%80%BC%E8%BF%91%E9%87%91%E8%9E%8D%E6%B5%B7%E5%98%AF%E4%BD%8E%E4%BD%8D%E6%B7%AA%E4%B8%BB%E8%A6%81%E8%B2%A8%E5%B9%A3%E6%9C%80%E9%81%9C-%E9%9F%93%E5%9C%8B%E8%B7%A8%E9%83%A8%E6%9C%83%E5%87%BA%E6%89%8B%E5%9C%8D%E5%A0%B5%E7%A9%BA%E6%96%B9%E6%8A%BC%E6%B3%A8-232509309.html"}, {"title": "黃仁勳欽點SK海力士，Vera新平台點燃AI記憶體長約爭奪戰", "url": "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E6%AC%BD%E9%BB%9Esk%E6%B5%B7%E5%8A%9B%E5%A3%AB-vera%E6%96%B0%E5%B9%B3%E5%8F%B0%E9%BB%9E%E7%87%83ai%E8%A8%98%E6%86%B6%E9%AB%94%E9%95%B7%E7%B4%84%E7%88%AD%E5%A5%AA%E6%88%B0-232329251.html"}, {"title": "《美債》非農就業火熱 10年債殖利率升破4.5%", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%82%B5-%E9%9D%9E%E8%BE%B2%E5%B0%B1%E6%A5%AD%E7%81%AB%E7%86%B1-10%E5%B9%B4%E5%82%B5%E6%AE%96%E5%88%A9%E7%8E%87%E5%8D%87%E7%A0%B44-5-225600856.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A150007000%E9%BB%9E%E5%A4%9A%E6%AE%BA%E5%A4%9A%E4%BE%86%E4%BA%86%E3%80%81%E3%80%8C%E5%9B%9B%E8%B2%B8%E5%90%8C%E5%A0%82%E3%80%8D%E6%81%90%E6%96%B7%E9%A0%AD%E7%99%BB%E5%87%BA%E7%82%BA%E4%BD%95%E6%88%BF%E5%B8%82%E7%84%A1%E6%B3%95%E6%88%90%E9%81%BF%E9%A2%A8%E6%B8%AF%EF%BC%9F%E5%B0%88%E5%AE%B6%E7%A4%BA%E8%AD%A6%EF%BC%9A%E8%B3%87%E9%87%91%E6%97%A9%E5%B7%B2%E5%8D%A1%E6%AD%BB-230700429.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E6%B5%B7%E5%A4%A7990%E4%BB%B6%E6%88%90%E7%B8%BE%E5%96%AE%E5%8D%A1%E9%97%9C-a7%E8%87%AA%E5%8B%95%E5%8C%96%E8%A8%AD%E5%82%99%E6%83%B9%E7%A6%8D%EF%BC%9F%E4%B8%AD%E8%8F%AF%E9%83%B5%E6%94%BF%E8%AA%8D%E4%BA%86%E6%A9%9F%E5%99%A8%E8%AA%A4%E5%88%A4-025504328.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E6%B5%B7%E5%A4%A7990%E4%BB%B6%E6%88%90%E7%B8%BE%E5%96%AE%E5%BB%B6%E8%AA%A4%EF%BC%81%E4%B8%AD%E8%8F%AF%E9%83%B5%E6%94%BF%E8%87%B4%E6%AD%89%EF%BC%9A%E8%80%83%E7%94%9F%E6%AC%8A%E7%9B%8A%E6%9C%AA%E5%8F%97%E5%BD%B1%E9%9F%BF-023706859.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1etf%E6%96%B0%E5%85%B5%E9%96%8B%E5%8B%9F-%E8%98%8B%E6%9E%9Cwwdc-2026%E5%8F%B0%E7%81%A3%E4%BE%9B%E6%87%89%E9%8F%88%E6%A6%82%E5%BF%B5%E8%82%A1%E5%82%99%E5%8F%97%E7%9F%9A%E7%9B%AE-spacex%E6%9C%80%E5%BF%AB6%E6%9C%8812%E6%97%A5%E6%8E%9B%E7%89%8C-%E9%80%9A%E8%86%A8%E6%95%B8%E6%93%9A%E6%B1%BA%E5%AE%9Afed%E9%99%8D%E6%81%AF%E7%A9%BA%E9%96%93-%E6%9C%AC%E5%91%A8%E6%B2%B9%E5%83%B9%E7%B9%BC%E7%BA%8C%E5%87%8D%E6%BC%B2%EF%BD%9C%E6%8A%95%E8%B3%87%E6%97%A9%E7%9F%A"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E3%80%90%E5%86%8D%E8%A6%8B%E4%BB%81%E4%BE%86%E7%98%8B2%E3%80%91%E9%BB%83%E4%BB%81%E5%8B%B3%E4%BE%86%E5%8F%B0%E5%85%A9%E5%91%A8%E5%8F%B0%E8%82%A1%E6%BC%B2%E9%80%BE2800%E9%BB%9E%EF%BC%813%E5%A4%A7%E7%BE%A4%E6%97%8F%E8%A1%A8%E7%8F%BE%E6%9C%80%E7%8C%9B-020100721.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%BC%B2%E7%BF%BB-%E8%AD%B7%E5%9C%8B%E7%A5%9E%E5%B1%B1%E9%80%A0%E5%B0%B1-%E5%8B%9E%E5%B7%A5%E8%B2%B4%E6%97%8F-%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%82%BA%E4%BD%95%E4%BB%8D%E4%B8%8D%E6%95%A2%E8%8A%B1%E9%8C%A2-104000071.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%A0%B4%E8%BB%8A%E7%A6%8D%E6%94%B9%E8%AE%8A%E4%BB%96%E7%9A%84%E4%BA%BA%E7%94%9F-%E9%87%91%E7%89%8C%E6%89%8B%E6%95%B4%E5%BE%A9%E5%B8%AB%E5%9F%B9%E8%A8%932000%E9%9B%99%E6%89%8B-%E5%89%8D%E9%80%B2%E4%BC%81%E6%A5%AD%E7%95%B6-%E5%B9%95%E5%BE%8C%E6%8E%A8%E6%89%8B-082800796.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E8%94%A3%E8%90%AC%E5%AE%89%E6%9B%9D%E5%8F%B0%E5%8C%97%E7%84%A1%E8%8F%B8%E5%9F%8E%E5%B8%82%E8%A6%8F%E5%8A%83-%E6%8C%87%E5%AE%9A%E5%90%B8%E8%8F%B8%E5%8D%80-%E8%B2%A0%E5%A3%93%E5%BC%8F%E5%90%B8%E8%8F%B8%E5%AE%A4-%E8%A1%A8%E7%9C%8B%E6%87%82-072900358.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%82%A1%E6%9D%B1%E6%9C%833%E5%80%8B%E9%97%9C%E9%8D%B5qa-%E9%AD%8F%E5%93%B2%E5%AE%B6%E5%A6%82%E4%BD%95%E8%AB%87%E8%82%A1%E5%88%A9-%E5%93%A1%E5%B7%A5%E5%88%86%E7%B4%85%E8%88%87%E5%B0%8D%E6%89%8B-033400959.html"}, {"title": "查看原始新聞", "url": "https://tw.stock.yahoo.com/news/a%E8%82%A1%E6%96%B0%E8%82%A1%E7%8E%8B%E9%9D%9E%E5%AF%92%E6%AD%A6%E7%B4%80-%E8%B6%85%E8%B6%8A%E8%B2%B4%E5%B7%9E%E8%8C%85%E5%8F%B0-%E5%A4%AA%E7%98%8B%E7%8B%82-%E4%B8%8A%E5%B8%825%E5%A4%A9%E8%82%A1%E5%83%B9%E7%A0%B4%E5%8D%83%E5%85%83-032700794.html"}, {"title": "台股大考驗1／美股血洗台股要崩了？　杜金龍示警：籌碼極度浮躁", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%A4%A7%E8%80%83%E9%A9%971%EF%BC%8F%E7%BE%8E%E8%82%A1%E8%A1%80%E6%B4%97%E5%8F%B0%E8%82%A1%E8%A6%81%E5%B4%A9%E4%BA%86%EF%BC%9F-%E6%9D%9C%E9%87%91%E9%BE%8D%E7%A4%BA%E8%AD%A6%EF%BC%9A%E7%B1%8C%E7%A2%BC%E6%A5%B5%E5%BA%A6%E6%B5%AE%E8%BA%81-230001054.html"}, {"title": "台股迎綠光估崩3千點！分析師籲緊盯「2大止穩訊號」：到週三是關鍵", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%BF%8E%E7%B6%A0%E5%85%89%E4%BC%B0%E5%B4%A93%E5%8D%83%E9%BB%9E-%E5%88%86%E6%9E%90%E5%B8%AB%E7%B1%B2%E7%B7%8A%E7%9B%AF-2%E5%A4%A7%E6%AD%A2%E7%A9%A9%E8%A8%8A%E8%99%9F-%E5%88%B0%E9%80%B1%E4%B8%89%E6%98%AF%E9%97%9C%E9%8D%B5-000000964.html"}, {"title": "比特幣創FTX崩潰後最慘跌幅 分析師警示恐下探5萬美元", "url": "https://tw.stock.yahoo.com/news/%E6%AF%94%E7%89%B9%E5%B9%A3%E5%89%B5ftx%E5%B4%A9%E6%BD%B0%E5%BE%8C%E6%9C%80%E6%85%98%E8%B7%8C%E5%B9%85-%E5%88%86%E6%9E%90%E5%B8%AB%E8%AD%A6%E7%A4%BA%E6%81%90%E4%B8%8B%E6%8E%A25%E8%90%AC%E7%BE%8E%E5%85%83-233949585.html"}, {"title": "申購抽抽樂最後一天！「光電投控」進行增資　抽中就賺2250元小紅包", "url": "https://tw.stock.yahoo.com/news/%E7%94%B3%E8%B3%BC%E6%8A%BD%E6%8A%BD%E6%A8%82%E6%9C%80%E5%BE%8C-%E5%A4%A9-%E5%85%89%E9%9B%BB%E6%8A%95%E6%8E%A7-%E9%80%B2%E8%A1%8C%E5%A2%9E%E8%B3%87-%E6%8A%BD%E4%B8%AD%E5%B0%B1%E8%B3%BA2250%E5%85%83%E5%B0%8F%E7%B4%85%E5%8C%85-233000595.html"}, {"title": "台股將成全球重災區！　謝金河：日韓同挫、台灣光通訊無天險可守", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%B0%87%E6%88%90%E5%85%A8%E7%90%83%E9%87%8D%E7%81%BD%E5%8D%80-%E8%AC%9D%E9%87%91%E6%B2%B3-%E6%97%A5%E9%9F%93%E5%90%8C%E6%8C%AB-%E5%8F%B0%E7%81%A3%E5%85%89%E9%80%9A%E8%A8%8A%E7%84%A1%E5%A4%A9%E9%9A%AA%E5%8F%AF%E5%AE%88-231917764.html"}, {"title": "台股行情反轉？吳淡如看專家「用賭徒眼光看賭桌」：當烏鴉示警並不難", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E8%A1%8C%E6%83%85%E5%8F%8D%E8%BD%89-%E5%90%B3%E6%B7%A1%E5%A6%82%E7%9C%8B%E5%B0%88%E5%AE%B6-%E7%94%A8%E8%B3%AD%E5%BE%92%E7%9C%BC%E5%85%89%E7%9C%8B%E8%B3%AD%E6%A1%8C-%E7%95%B6%E7%83%8F%E9%B4%89%E7%A4%BA%E8%AD%A6%E4%B8%A6%E4%B8%8D%E9%9B%A3-231044034.html"}, {"title": "台積電毛利率創高！AI供應鏈續強 下一波買誰？3大受惠族群全掌握", "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%AF%9B%E5%88%A9%E7%8E%87%E5%89%B5%E9%AB%98-ai%E4%BE%9B%E6%87%89%E9%8F%88%E7%BA%8C%E5%BC%B7-%E4%B8%8B-%E6%B3%A2%E8%B2%B7%E8%AA%B0-3%E5%A4%A7%E5%8F%97%E6%83%A0%E6%97%8F%E7%BE%A4%E5%85%A8%E6%8E%8C%E6%8F%A1-230600311.html"}]}, "國際政經與環球情報": {"title": ["https://tw.stock.yahoo.com/news/", "https://tw.stock.yahoo.com/news/%E4%B8%8A%E9%8A%80-%E6%8E%A1%E9%AB%98%E9%80%9A%E6%96%B9%E6%A1%88-%E9%9B%BB%E8%85%A6%E5%B1%95%E7%A7%80%E9%9D%A2%E6%9D%BF%E7%B4%9A%E5%B0%81%E8%A3%9D%E6%99%BA%E6%85%A7%E5%8C%96%E8%A8%AD%E5%82%99-103423291.html", "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94gtc%E5%A4%A7%E6%9C%83%E7%99%BB%E5%A0%B4-%E9%BB%83%E4%BB%81%E5%8B%B3%E5%8C%97%E6%B5%81%E9%96%8B%E8%AC%9B-%E7%A7%91%E6%8A%80%E5%A4%A7%E5%92%96%E9%BD%8A%E8%81%9A%E6%9A%96%E5%A0%B4-102707025.html", "https://tw.stock.yahoo.com/news/apos-apos-gtc-taipei%E5%A4%A7%E6%9C%83-apos-102629979.html", "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E4%B8%BB%E9%A1%8C%E6%BC%94%E8%AC%9B%E7%99%BB%E5%A0%B4-5%E5%AE%B6%E5%8F%B0%E5%91%B3%E5%B0%8F%E5%90%83-%E7%99%BBai%E4%BE%9B%E6%87%89%E9%8F%88%E8%83%8C%E6%9D%BF%E8%B6%85%E5%90%B8%E7%9D%9B-102604967.html", "https://tw.stock.yahoo.com/news/%E9%BB%83%E4%BB%81%E5%8B%B3%E5%8C%85%E4%B8%8B%E7%86%B1%E7%82%92%E5%BA%97%E9%87%8D%E6%BC%94-apos-apos-%E9%9F%93%E5%9C%8B%E7%82%B8%E9%9B%9E%E5%AE%B4-apos-102355311.html", "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94%E6%8E%A8rtx-spark%E5%BC%B7%E6%94%BBpc%E5%B8%82%E5%A0%B4-%E9%AB%98%E9%80%9A-%E6%AD%A1%E8%BF%8E%E5%8A%A0%E5%85%A5-102043007.html", "https://tw.stock.yahoo.com/news/%E4%B8%AD%E7%9F%B3%E5%8C%96%E6%96%B0%E8%91%A3%E5%BA%A7%E5%87%BA%E7%88%90-%E8%B3%87%E6%B7%B1%E5%AA%92%E9%AB%94%E4%BA%BA%E8%91%9B%E6%A8%B9%E4%BA%BA%E6%8E%A5%E4%BB%BB%E8%91%A3%E4%BA%8B%E9%95%B7-110302437.html", "https://tw.stock.yahoo.com/news/%E9%80%80%E4%BC%91%E9%87%91%E8%A6%81%E5%A4%9A%E5%B0%91%E6%89%8D%E5%A4%A0%EF%BC%9F%E8%AA%BF%E6%9F%A5%EF%BC%9A%E6%AF%8F%E6%9C%88%E9%9C%804%E8%90%AC1956%E5%85%83%E6%AF%94%E5%8E%BB%E5%B9%B4%E5%A4%9A2%E5%8D%83%E5%85%83-105545279.html", "https://tw.stock.yahoo.com/news/%E3%80%8C%E7%86%8A%E6%9C%AC%E7%9A%84%E5%8F%B0%E7%81%A3%E5%8C%96%E3%80%8D%E6%97%85%E6%97%A510%E5%B9%B4%E5%B0%88%E5%AE%B6%E8%AB%87%E5%8F%B0%E7%A9%8D%E9%9B%BB%E7%8E%87171%E5%AE%B6%E5%8F%B0%E4%BC%81%E9%80%B2%E9%A7%90%E3%80%8C%E7%86%B1%E5%BA%A6%E6%84%88%E9%AB%98%E5%89%AF%E4%BD%9C%E7%94%A8%E6%84%88%E5%A4%A7%E3%80%8D-102819426.html", "https://tw.stock.yahoo.com/news/%E4%BD%A0%E6%9C%89%E5%97%8E%EF%BC%9F%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E5%93%A1%E5%B7%A5%E8%96%AA%E6%B0%B4%E5%B9%B3%E5%9D%87145%E8%90%AC%E5%85%83-101319678.html", "https://tw.stock.yahoo.com/news/ai%E6%98%AF%E7%8F%BE%E5%AF%A6%E9%82%84%E6%98%AF%E6%B3%A1%E6%B2%AB%EF%BC%9F%E5%A4%96%E5%95%86%E8%A7%A3%E5%AF%86%E3%80%8Cai%E4%B8%8D%E6%98%AF%E6%88%90%E6%9C%AC%E3%80%8D%EF%BC%9A%E7%94%9F%E7%94%A2%E5%8A%9B%E7%8B%82%E5%8D%876%E6%88%90-095853482.html", "https://tw.stock.yahoo.com/news/2026%E8%BF%8E%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7computex-%E4%BF%A1%E7%BE%A9-%E5%8D%97%E6%B8%AF%E9%9B%99%E6%A0%B8%E5%BF%83%E8%BF%8E%E6%88%B0-%E8%A6%8B%E8%AD%89%E5%8F%B0%E7%81%A3%E6%88%90%E5%85%A8%E7%90%83ai%E7%94%A2%E6%A5%AD%E6%B1%BA%E7%AD%96%E6%A0%B8%E5%BF%83-060003179.html", "https://tw.stock.yahoo.com/news/%E5%9C%8B%E6%B3%B0%E9%87%91%E8%82%A1%E5%83%B918%E5%B9%B4%E6%96%B0%E9%AB%98%E8%83%BD%E7%BA%8C%E8%A1%9D-%E5%9C%8B%E5%A3%BD%E8%82%A1%E7%A5%A8%E6%9C%AA%E5%AF%A6%E7%8F%BE%E7%8D%B2%E5%88%A9%E9%80%BE2700%E5%84%84-%E6%98%8E%E5%B9%B4%E8%82%A1%E5%88%A9%E9%85%8D%E7%99%BC%E6%9C%89%E5%BA%95%E6%B0%A3-%E6%9D%8E%E9%95%B7%E5%BA%9A%E6%80%8E%E9%BA%BC%E7%9C%8Bai%E5%A4%A7%E6%BD%AE-060002954.html", "https://tw.stock.yahoo.com/news/%E9%95%B7%E6%A6%AE%E6%B5%B7%E9%81%8B%E8%82%A1%E6%9D%B1%E6%8F%90%E8%AD%B0%E8%82%A1%E7%A5%A8-%E6%8B%86%E5%8D%81-%E5%90%A6%E6%B1%BA%E7%90%86%E7%94%B1%E6%9B%9D%E5%85%89-%E8%82%A1%E6%9D%B1%E6%9C%83%E6%9C%89%E5%B0%8F%E5%BD%A9%E8%9B%8B-%E9%9B%BB%E5%BD%B1%E8%A6%8F%E6%A0%BC%E6%8B%8D%E6%94%9D-060002373.html", "https://tw.stock.yahoo.com/news/%E5%BD%B1-%E8%8A%B1%E8%93%AE%E9%9D%92%E5%B0%91%E5%B9%B4%E6%8E%92%E7%AC%9B%E5%9C%98%E9%A9%9A%E8%89%B7-%E9%9F%B3%E6%A8%82%E4%B9%8B%E9%83%BD-%E7%B6%AD%E4%B9%9F%E7%B4%8D-%E8%81%96%E5%BD%BC%E5%BE%97%E6%95%99%E5%A0%82%E5%A5%8F%E9%9F%BF-060003981.html", "https://tw.stock.yahoo.com/news/%E7%B8%BD%E7%B5%B1%E8%88%87%E9%9D%92%E5%B9%B4%E8%AB%96%E5%A3%87-%E6%8A%96%E9%9F%B3-%E5%B0%8F%E7%B4%85%E6%9B%B8-%E5%AD%B8%E5%AD%90%E6%86%82%E9%A4%B5%E9%A4%8A%E5%BC%8F%E5%BD%B1%E9%9F%B3%E6%88%90%E7%99%AE-%E8%B3%B4%E6%B8%85%E5%BE%B7%E6%95%AC%E4%BD%A9%E6%83%B3%E6%B3%95-060003678.html", "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%96%B0%E5%A2%9E10%E6%AA%94-%E9%97%9C%E7%A6%81%E9%96%89-%E5%8A%9B%E7%A9%8D%E9%9B%BB%E5%85%A5%E5%88%97-%E8%99%95%E7%BD%AE%E8%87%B36%E6%9C%8815%E6%97%A5-104500644.html", "https://tw.stock.yahoo.com/news/%E5%8E%BB%E5%B9%B4%E7%87%9F%E6%94%B6%E7%A0%8D%E5%8D%8A%E3%80%81%E4%BB%8A%E5%B9%B4%E5%83%85%E6%8E%A81%E6%A1%88-%E7%9A%87%E7%BF%94%E9%9D%A0%E8%B2%B7%E5%8F%B0%E7%A9%8D%E9%9B%BB%E3%80%8C%E8%B3%BA%E6%AF%94%E6%9C%AC%E6%A5%AD%E5%A4%9A%E3%80%8D-041033303.html", "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%B1%A2%E5%89%B5%E6%96%B0%E9%AB%98-%E5%8F%B0%E7%81%A3%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E5%93%A1%E5%B7%A52025%E5%B9%B4%E5%B9%B3%E5%9D%87%E8%96%AA%E8%B3%87%E7%A6%8F%E5%88%A9169%E8%90%AC%E5%85%83%E5%B9%B4%E5%A2%9E63-103359303.html", "https://tw.stock.yahoo.com/news/%E6%9C%80%E5%BC%B7%E5%A6%96%E8%82%A1%E7%A5%9E%E8%A9%B1%E7%A0%B4%E6%BB%85-%E5%B0%9A%E8%8C%82%E7%88%86fanuc%E5%80%9F%E6%AE%BC%E5%82%B3%E8%81%9E-%E4%BA%BA%E4%BA%8B%E5%A4%A7%E5%9C%B0%E9%9C%87-%E8%A1%8C%E6%83%85%E6%85%98%E6%91%94%E8%B7%8C%E5%81%9C-104500913.html", "https://tw.stock.yahoo.com/news/%E6%AF%8F%E8%82%A1%E6%93%AC%E9%85%8D1%E5%85%83%E5%8F%88%E5%89%B5%E6%96%B0%E9%AB%98-%E9%80%99%E6%AA%94%E9%AB%98%E8%82%A1%E6%81%AF-%E5%8D%BB%E8%A2%AB%E5%A4%96%E8%B3%87%E8%84%AB%E6%89%8B1-4%E8%90%AC%E5%BC%B5-00918%E9%85%8D%E6%81%AF%E7%BF%BB%E5%80%8D%E4%B9%9F%E9%81%AD%E6%8F%90%E6%AC%BE4%E5%84%84%E5%85%83-103000427.html", "https://tw.stock.yahoo.com/news/%E9%AB%98%E8%82%A1%E6%81%AFetf%E9%96%8B%E5%A5%AC-00918-00919-00929%E9%85%8D%E6%81%AF%E5%89%B5%E6%96%B0%E9%AB%98-%E9%99%A4%E6%81%AF%E6%9C%80%E5%BE%8C%E8%B2%B7%E9%80%B2%E6%97%A5-103738154.html", "https://tw.stock.yahoo.com/news/%E6%97%A5%E5%9C%93%E5%8C%AF%E7%8E%87-%E8%B7%8C%E6%88%90%E6%B0%91%E5%9C%8B58%E5%B9%B4-%E8%B6%85%E7%94%9C-%E9%81%94%E4%BA%BA%E9%A9%9A-%E9%80%99%E6%98%AF%E4%BB%80%E9%BA%BC%E7%8B%80%E6%B3%81-102800841.html", "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E7%8B%82%E9%A3%86-%E7%B6%B2%E5%95%8F-600%E8%90%AC%E8%AE%8A2000%E8%90%AC%E9%9B%A3%E5%BA%A6-%E4%BB%96%E8%A6%AA%E6%9B%9D-%E6%93%8D%E4%BD%9C%E5%BF%83%E6%B3%95-103300607.html"], "time": "2026-06-01 19:14:19", "links": "global_dashboard.html"}, "ai_news_global": {"title": "🌍 國際政經 AI 核心戰略", "time": "2026-06-08 12:25:20", "text": "以下是對新聞事件的客觀分析：\n\n亞洲市場 facts\n\n• 韓元創17年低點，韓國金融服務委員會召集四大銀行討論匯市因應措施。\n• 日股早盤暴跌2,547點，AI和半導體股慘跌。\n• 亞股遭血洗！韓國暴跌逾5%一度熔斷，日股慘崩逾2376點。\n\n歐洲與地緣 facts\n\n• 美國房貸利率飆破6%，聯準會束手無策。\n• 韓元創17年低點，可能與韓美貿易戰有關。\n\n原物料與匯率 facts\n\n• 原油價格走高，可能與中東情勢影響有關。\n• 美元兌日幣和韓元的匯率走弱。\n\n今日市場焦點\n\n• 避險資產氛圍：地緣衝突下拉動的黃金、原油避險资金情緒正在上升。\n• 國際資金流向：非美市場政策大環境對全球資金分配的影響正在加劇。\n\n操盤策略與投資建議\n\n• 宏觀風險提示：國際局勢對供應鏈和外匯造成了劇烈震盪，避險警告。\n• 避險防禦方針：宏觀資產配置、防禦型板塊避險或商品操作的具體方向建議是投資者應該關注的。"}, "ai_news_us": {"title": "🧠 美股 AI 核心戰略", "time": "2026-06-04 21:41:11", "text": "今日市場焦點\n\n• 大盤指數表現：納斯達克指數上漲 1.2%，標普500指數上漲 0.8%。\n• 主力強勢板塊：半導體板塊領先，輝達晶片股價上漲 5%。\n\n操盤策略與投資建議\n\n• 💰 資金風向：華爾街機構最新聰明錢流向顯示，對於科技巨頭和半導體板塊的投資意欲增加。\n• ⚡ 台股連動影響：根據美股表現，外資可能會在明日加碼台積電等半導體股票。"}, "ai_news_tw": {"title": "🧠 台股 AI 核心戰略", "time": "2026-06-08 08:26:24", "text": "市場事實如下：\n\n1. 美國半導體和科技股出現多殺多行情，可能對台股交易產生變數。\n2. 台股5000~7000點區域有多殺多來的風險，「四貸同堂」恐斷頭登出。\n3. 資金早已卡死，房市無法成為避風港。\n4. 海大990件成績單延誤，中華郵政致歉，但考生權益未受影響。\n\n今日市場焦點\n\n• 產業與板塊動態：半導體、科技股和房地產板塊受到關注。\n• 大盤與總體表現：台股交易增添變數，市場氛圍緊張。\n• 個股與強勢標的：台積電、金牌手整復師培訓2000雙手等個股受到關注。\n\n操盤策略與投資建議\n\n• 潛在風險：美股血洗可能對台股產生重大影響，籌碼極度浮躁。\n• 行動方針：短線操作應謹慎，緊盯「2大止穩訊號」，到週三是關鍵。"}}'.replace(/\\/g, '\\\\').replace(/'/g, "\\'"));
         const NGROK_TUNNEL_URL = "https://jigsaw-camisole-dynasty.ngrok-free.dev";
         const SHENG_SECRET_KEY = "ShengGeSecret666";
         
@@ -189,7 +189,7 @@
         let activeAiBlock = 'facts';
         let currentSettingTab = 'appearance';
         let stockPollInterval = null;
-        let isFirstStockLoad = true;
+        let isFirstStockLoad = true;  // 🔥 智慧防閃爍：首次載入標記
         
         // ========== 使用者認證功能 ==========
         let currentUser = null;
@@ -220,6 +220,7 @@
             ]
         };
 
+        // 收集所有股票代號
         const ALL_STOCK_SYMBOLS = [
             ...STOCK_LISTS.tw.map(s => s.symbol),
             ...STOCK_LISTS.us.map(s => s.symbol),
@@ -233,7 +234,7 @@
             { step: 4, stage: "系統組裝", title: "Assembly", color: "from-blue-500 to-indigo-500", companies: [{ name: "鴻海", id: "2317", desc: "NVL72 整機櫃超級代工贏家。" }] }
         ];
 
-        // ========== 批量股票 API ==========
+        // ========== 批量股票 API（一次請求所有股票） ==========
         async function fetchAllStockPrices() {
             try {
                 const response = await fetch(`${NGROK_TUNNEL_URL}/api/prices`, {
@@ -245,79 +246,105 @@
                     body: JSON.stringify({ symbols: ALL_STOCK_SYMBOLS })
                 });
                 const data = await response.json();
-                return data;
+                
+                if (data.success && data.prices) {
+                    return data.prices;
+                }
+                return {};
             } catch (err) {
                 console.error('批量抓取股票失敗:', err);
                 return {};
             }
         }
 
+        // 🔥 智慧防閃爍：只在首次載入（數字還是 --- 時）才顯示 loading 動畫
         function showAllLoading() {
             for (const symbol of ALL_STOCK_SYMBOLS) {
                 const cleanSymbol = symbol.replace(/\./g, '-');
                 const priceEl = document.getElementById(`price-${cleanSymbol}`);
                 const changeEl = document.getElementById(`change-${cleanSymbol}`);
+                
+                // 檢查是否還是初始狀態 "---"
                 if (priceEl && priceEl.innerHTML === '---') {
                     priceEl.innerHTML = '<span class="loading-spinner"></span>';
                     if (changeEl) changeEl.innerHTML = '載入中...';
                 }
+                // 已有數字的卡片：保留舊數字，不做任何清空動作
             }
         }
 
+        // 🔥 無縫替換：只有價格真正改變時才更新
         function updateAllStockDisplays(pricesData) {
             for (const [symbol, data] of Object.entries(pricesData)) {
                 const cleanSymbol = symbol.replace(/\./g, '-');
                 const priceEl = document.getElementById(`price-${cleanSymbol}`);
                 const changeEl = document.getElementById(`change-${cleanSymbol}`);
                 
-                if (priceEl && changeEl && data && data.price) {
-                    const isPositive = data.change >= 0;
-                    const oldPrice = priceEl.innerHTML;
-                    const newPrice = data.price.toFixed(2);
-                    const isLoading = priceEl.querySelector('.loading-spinner') || oldPrice === '---';
-                    
-                    if (isLoading) {
-                        priceEl.innerHTML = newPrice;
-                        priceEl.className = `stock-price font-bold ${isPositive ? 'text-red-500' : 'text-green-500'}`;
-                        const changeText = `${data.change > 0 ? '+' : ''}${data.change.toFixed(2)} (${data.changePercent > 0 ? '+' : ''}${data.changePercent.toFixed(2)}%)`;
-                        changeEl.innerHTML = changeText;
-                        changeEl.className = `stock-change font-medium ${isPositive ? 'text-red-500' : 'text-green-500'}`;
-                    } else if (oldPrice !== newPrice) {
-                        priceEl.innerHTML = newPrice;
-                        priceEl.className = `stock-price font-bold ${isPositive ? 'text-red-500' : 'text-green-500'}`;
-                        const changeText = `${data.change > 0 ? '+' : ''}${data.change.toFixed(2)} (${data.changePercent > 0 ? '+' : ''}${data.changePercent.toFixed(2)}%)`;
-                        changeEl.innerHTML = changeText;
-                        changeEl.className = `stock-change font-medium ${isPositive ? 'text-red-500' : 'text-green-500'}`;
-                        const card = priceEl.closest('.stock-card');
-                        if (card) {
-                            card.classList.add('update-flash');
-                            setTimeout(() => card.classList.remove('update-flash'), 300);
+                if (priceEl && changeEl && data) {
+                    if (data.price !== null && data.price !== undefined) {
+                        const isPositive = data.change >= 0;
+                        const oldPrice = priceEl.innerHTML;
+                        const newPrice = data.price.toFixed(2);
+                        
+                        // 檢查是否是 loading 狀態或首次載入
+                        const isLoading = priceEl.querySelector('.loading-spinner') || oldPrice === '---';
+                        
+                        if (isLoading) {
+                            // 首次載入：直接顯示
+                            priceEl.innerHTML = newPrice;
+                            priceEl.className = `stock-price font-bold ${isPositive ? 'text-red-500' : 'text-green-500'}`;
+                            
+                            const changeText = `${data.change > 0 ? '+' : ''}${data.change.toFixed(2)} (${data.changePercent > 0 ? '+' : ''}${data.changePercent.toFixed(2)}%)`;
+                            changeEl.innerHTML = changeText;
+                            changeEl.className = `stock-change font-medium ${isPositive ? 'text-red-500' : 'text-green-500'}`;
+                            
+                            // 首次載入不閃爍
+                        } else if (oldPrice !== newPrice) {
+                            // 價格真正改變：無縫替換 + 閃爍提示
+                            priceEl.innerHTML = newPrice;
+                            priceEl.className = `stock-price font-bold ${isPositive ? 'text-red-500' : 'text-green-500'}`;
+                            
+                            const changeText = `${data.change > 0 ? '+' : ''}${data.change.toFixed(2)} (${data.changePercent > 0 ? '+' : ''}${data.changePercent.toFixed(2)}%)`;
+                            changeEl.innerHTML = changeText;
+                            changeEl.className = `stock-change font-medium ${isPositive ? 'text-red-500' : 'text-green-500'}`;
+                            
+                            // 添加閃爍效果（只在數值真正改變時觸發）
+                            const card = priceEl.closest('.stock-card');
+                            if (card) {
+                                card.classList.add('update-flash');
+                                setTimeout(() => card.classList.remove('update-flash'), 300);
+                            }
                         }
+                        // 價格沒變：不做任何操作，保留原有顯示
                     }
                 }
             }
         }
 
+        // 🔥 智慧載入：首次顯示 loading，後續靜默更新
         async function loadAllStocks() {
             if (isFirstStockLoad) {
                 showAllLoading();
             }
+            
             const pricesData = await fetchAllStockPrices();
             updateAllStockDisplays(pricesData);
+            
             if (isFirstStockLoad) {
                 isFirstStockLoad = false;
-                console.log('✅ 首次股票載入完成');
+                console.log('✅ 首次股票載入完成', new Date().toLocaleTimeString());
             } else {
-                console.log('✅ 股票靜默更新完成');
+                console.log('✅ 股票靜默更新完成', new Date().toLocaleTimeString());
             }
         }
 
+        // 啟動股票定時輪詢 (每10秒)
         function startStockPolling() {
             if (stockPollInterval) clearInterval(stockPollInterval);
-            isFirstStockLoad = true;
+            isFirstStockLoad = true;  // 重置標記（確保重新載入時行為正確）
             loadAllStocks();
             stockPollInterval = setInterval(loadAllStocks, 10000);
-            console.log('✅ 股票批量輪詢已啟動，間隔 10 秒');
+            console.log('✅ 股票批量輪詢已啟動，間隔 10 秒（智慧防閃爍模式）');
         }
 
         async function searchStock() {
@@ -330,6 +357,7 @@
             
             try {
                 const response = await fetch(`${NGROK_TUNNEL_URL}/api/price/${symbol}`, {
+                    method: 'GET',
                     headers: { 'ngrok-skip-browser-warning': 'true' }
                 });
                 const data = await response.json();
@@ -365,44 +393,7 @@
             searchStock();
         }
 
-        // ========== 新聞顯示功能 ==========
-        function switchTab(tabId) {
-            activeTabId = tabId;
-            const btnTw = document.getElementById('btn-tw');
-            const btnUs = document.getElementById('btn-us');
-            const btnGlobal = document.getElementById('btn-global');
-            
-            if (btnTw) btnTw.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
-            if (btnUs) btnUs.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
-            if (btnGlobal) btnGlobal.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
-
-            let titleStr = "📊 台股大數據資料來源";
-            if (tabId === 'tw' && btnTw) { btnTw.className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-md border-transparent"; titleStr = "📊 台股大數據資料來源"; }
-            if (tabId === 'us' && btnUs) { btnUs.className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md border-transparent"; titleStr = "🦅 美股科技巨頭晚報資料來源"; }
-            if (tabId === 'global' && btnGlobal) { btnGlobal.className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-md border-transparent"; titleStr = "🌍 國際政經與環球情報資料來源"; }
-
-            const panelTitle = document.getElementById('panel-title');
-            const panelTime = document.getElementById('panel-time');
-            if (panelTitle) panelTitle.innerText = titleStr;
-            const tabData = dbData[tabId] || { "time": "尚未更新", "data": [] };
-            if (panelTime) panelTime.innerText = "UPDATE: " + tabData.time;
-            
-            const container = document.getElementById('link-list');
-            if (!container) return;
-            container.innerHTML = "";
-            const dataList = tabData.data || [];
-            dataList.slice(0, 15).forEach(function(item) {
-                const li = document.createElement('li');
-                li.className = "p-2.5 bg-gray-50/50 dark:bg-gray-800/20 rounded-lg border border-gray-200 dark:border-gray-700/30 text-xs flex flex-col gap-0.5 hover:border-gray-300 dark:hover:bg-gray-600 transition-colors shadow-sm group";
-                const titleText = item.title || '查看原始新聞';
-                const urlText = item.url || '#';
-                li.innerHTML = '<div class="text-gray-700 dark:text-gray-300 font-medium truncate">📌 新聞：' + escapeHtml(titleText) + '</div>' +
-                               '<a href="' + escapeHtml(urlText) + '" target="_blank" class="text-[10px] font-mono text-gray-400 block truncate hover:text-purple-400 transition-colors">' + escapeHtml(urlText) + '</a>';
-                container.appendChild(li);
-            });
-        }
-
-        // 登入/登出功能
+        // ========== 登入/登出功能 ==========
         function loadUserSession() {
             const savedUser = localStorage.getItem('quant_user');
             const savedToken = localStorage.getItem('quant_token');
@@ -433,7 +424,11 @@
 
         function openLoginModal() {
             const modal = document.getElementById('login-modal');
-            if (modal) modal.style.display = 'flex';
+            if (modal) {
+                modal.style.display = 'flex';
+                const errorDiv = document.getElementById('login-error');
+                if (errorDiv) errorDiv.classList.add('hidden');
+            }
         }
 
         function closeLoginModal() {
@@ -443,7 +438,13 @@
 
         function openRegisterModal() {
             const modal = document.getElementById('register-modal');
-            if (modal) modal.style.display = 'flex';
+            if (modal) {
+                modal.style.display = 'flex';
+                const errorDiv = document.getElementById('register-error');
+                const successDiv = document.getElementById('register-success');
+                if (errorDiv) errorDiv.classList.add('hidden');
+                if (successDiv) successDiv.classList.add('hidden');
+            }
         }
 
         function closeRegisterModal() {
@@ -481,7 +482,9 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password })
                 });
+                
                 const data = await response.json();
+                
                 if (response.ok) {
                     currentUser = data.username;
                     currentToken = data.session_token;
@@ -497,8 +500,11 @@
                     }
                 }
             } catch (err) {
-                if (errorDiv) errorDiv.textContent = '無法連線到伺服器';
-                console.error(err);
+                if (errorDiv) {
+                    errorDiv.textContent = '無法連線到伺服器';
+                    errorDiv.classList.remove('hidden');
+                }
+                console.error('登入錯誤:', err);
             }
         }
 
@@ -513,13 +519,16 @@
                     errorDiv.textContent = '帳號至少需要 3 個字元';
                     errorDiv.classList.remove('hidden');
                 }
+                if (successDiv) successDiv.classList.add('hidden');
                 return;
             }
+            
             if (!password || password.length < 4) {
                 if (errorDiv) {
                     errorDiv.textContent = '密碼至少需要 4 個字元';
                     errorDiv.classList.remove('hidden');
                 }
+                if (successDiv) successDiv.classList.add('hidden');
                 return;
             }
             
@@ -529,12 +538,17 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password })
                 });
+                
                 const data = await response.json();
+                
                 if (response.ok) {
+                    if (errorDiv) errorDiv.classList.add('hidden');
                     if (successDiv) {
                         successDiv.textContent = '✅ 註冊成功！請返回登入';
                         successDiv.classList.remove('hidden');
                     }
+                    document.getElementById('register-username').value = '';
+                    document.getElementById('register-password').value = '';
                     setTimeout(() => {
                         closeRegisterModal();
                         openLoginModal();
@@ -544,10 +558,14 @@
                         errorDiv.textContent = data.detail || '註冊失敗';
                         errorDiv.classList.remove('hidden');
                     }
+                    if (successDiv) successDiv.classList.add('hidden');
                 }
             } catch (err) {
-                if (errorDiv) errorDiv.textContent = '無法連線到伺服器';
-                console.error(err);
+                if (errorDiv) {
+                    errorDiv.textContent = '無法連線到伺服器';
+                    errorDiv.classList.remove('hidden');
+                }
+                console.error('註冊錯誤:', err);
             }
         }
 
@@ -561,6 +579,7 @@
                     });
                 } catch (err) {}
             }
+            
             currentUser = null;
             currentToken = null;
             localStorage.removeItem('quant_user');
@@ -569,7 +588,7 @@
             showToast('🔓 已登出', 'info');
         }
 
-        // 設定頁面功能
+        // ========== 設定頁面功能 ==========
         function applyTheme(theme) {
             const html = document.documentElement;
             if (theme === 'dark') {
@@ -580,6 +599,7 @@
                 document.body.className = "theme-light text-gray-900 min-h-screen flex flex-col justify-between overflow-hidden";
             }
             localStorage.setItem('theme', theme);
+            
             const themeStatus = document.getElementById('theme-status');
             const themeSelect = document.getElementById('theme-select');
             if (themeStatus) themeStatus.textContent = theme === 'dark' ? '🌙 暗黑模式' : '☀️ 亮色模式';
@@ -588,12 +608,14 @@
 
         function saveThemeSettings() {
             const themeSelect = document.getElementById('theme-select');
-            applyTheme(themeSelect.value);
+            const selectedTheme = themeSelect.value;
+            applyTheme(selectedTheme);
             showToast('⚙️ 主題設定已儲存', 'success');
         }
 
         function switchSettingTab(tabName) {
             currentSettingTab = tabName;
+            
             const tabs = ['appearance', 'account', 'about'];
             tabs.forEach(tab => {
                 const btn = document.getElementById(`setting-tab-${tab}`);
@@ -608,15 +630,126 @@
                     }
                 }
             });
+            
             if (tabName === 'account') refreshSettingsContent();
         }
 
         async function updateUsername() {
-            showToast('⚠️ 修改名稱功能需要後端支援', 'error');
+            if (!currentUser) {
+                showToast('請先登入', 'error');
+                return;
+            }
+            
+            const newUsername = document.getElementById('settings-new-username').value.trim();
+            const password = document.getElementById('settings-username-password').value;
+            
+            if (!newUsername) {
+                showToast('請輸入新使用者名稱', 'error');
+                return;
+            }
+            
+            if (newUsername.length < 3) {
+                showToast('使用者名稱至少需要 3 個字元', 'error');
+                return;
+            }
+            
+            if (!password) {
+                showToast('請輸入密碼驗證', 'error');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${NGROK_TUNNEL_URL}/api/update-username`, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-Quant-Key': SHENG_SECRET_KEY
+                    },
+                    body: JSON.stringify({ 
+                        old_username: currentUser,
+                        new_username: newUsername,
+                        password: password
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showToast('✅ 使用者名稱修改成功，請重新登入', 'success');
+                    localStorage.removeItem('quant_user');
+                    localStorage.removeItem('quant_token');
+                    currentUser = null;
+                    currentToken = null;
+                    updateUILoginState(false);
+                    setTimeout(() => window.location.reload(), 1500);
+                } else {
+                    showToast(data.detail || '修改失敗', 'error');
+                }
+            } catch (err) {
+                showToast('無法連線到伺服器', 'error');
+            }
         }
 
         async function updatePassword() {
-            showToast('⚠️ 修改密碼功能需要後端支援', 'error');
+            if (!currentUser) {
+                showToast('請先登入', 'error');
+                return;
+            }
+            
+            const oldPassword = document.getElementById('settings-old-password').value;
+            const newPassword = document.getElementById('settings-new-password').value;
+            const confirmPassword = document.getElementById('settings-confirm-password').value;
+            
+            if (!oldPassword) {
+                showToast('請輸入舊密碼', 'error');
+                return;
+            }
+            
+            if (!newPassword) {
+                showToast('請輸入新密碼', 'error');
+                return;
+            }
+            
+            if (newPassword.length < 4) {
+                showToast('新密碼至少需要 4 個字元', 'error');
+                return;
+            }
+            
+            if (newPassword !== confirmPassword) {
+                showToast('新密碼與確認密碼不一致', 'error');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${NGROK_TUNNEL_URL}/api/change-password`, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-Quant-Key': SHENG_SECRET_KEY
+                    },
+                    body: JSON.stringify({ 
+                        username: currentUser,
+                        old_password: oldPassword,
+                        new_password: newPassword
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showToast('✅ 密碼修改成功，請重新登入', 'success');
+                    localStorage.removeItem('quant_user');
+                    localStorage.removeItem('quant_token');
+                    currentUser = null;
+                    currentToken = null;
+                    updateUILoginState(false);
+                    setTimeout(() => window.location.reload(), 1500);
+                } else {
+                    showToast(data.detail || '密碼修改失敗', 'error');
+                }
+            } catch (err) {
+                showToast('無法連線到伺服器', 'error');
+            }
         }
 
         function clearUsernameForm() {
@@ -633,6 +766,7 @@
         function refreshSettingsContent() {
             const profileSection = document.getElementById('profile-settings');
             const loginPromptSection = document.getElementById('login-prompt-section');
+            
             if (profileSection && loginPromptSection) {
                 if (currentUser) {
                     profileSection.style.display = 'block';
@@ -646,7 +780,7 @@
             }
         }
 
-        // 視圖切換
+        // ========== 視圖切換功能 ==========
         function toggleSidebar() { 
             const sidebar = document.getElementById('sidebar');
             const backdrop = document.getElementById('sidebar-backdrop');
@@ -691,20 +825,71 @@
 
             if(viewMode === 'chain') renderStaticChain(blackwellDefault);
             if(viewMode === 'ainews') switchAiTab(activeAiTabId);
-            if(viewMode === 'stocks') loadAllStocks();
+            if(viewMode === 'stocks') {
+                loadAllStocks();
+            }
             if(viewMode === 'settings') {
                 setTimeout(() => {
                     switchSettingTab(currentSettingTab);
-                    const isDark = document.documentElement.classList.contains('dark');
                     const themeSelect = document.getElementById('theme-select');
+                    const isDark = document.documentElement.classList.contains('dark');
                     if (themeSelect) themeSelect.value = isDark ? 'dark' : 'light';
+                    const themeStatus = document.getElementById('theme-status');
+                    if (themeStatus) themeStatus.textContent = isDark ? '🌙 暗黑模式' : '☀️ 亮色模式';
                     refreshSettingsContent();
                 }, 50);
             }
             toggleSidebar();
         }
 
-        // AI 功能（簡化版）
+        // ========== 新聞顯示功能 ==========
+        function switchTab(tabId) {
+            activeTabId = tabId;
+            const btnTw = document.getElementById('btn-tw');
+            const btnUs = document.getElementById('btn-us');
+            const btnGlobal = document.getElementById('btn-global');
+            
+            if (btnTw) btnTw.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+            if (btnUs) btnUs.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+            if (btnGlobal) btnGlobal.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200";
+
+            let titleStr = "📊 台股大數據資料來源";
+            if (tabId === 'tw' && btnTw) { btnTw.className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-md border-transparent"; titleStr = "📊 台股大數據資料來源"; }
+            if (tabId === 'us' && btnUs) { btnUs.className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md border-transparent"; titleStr = "🦅 美股科技巨頭晚報資料來源"; }
+            if (tabId === 'global' && btnGlobal) { btnGlobal.className = "tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-md border-transparent"; titleStr = "🌍 國際政經與環球情報資料來源"; }
+
+            const mainPanel = document.getElementById('main-panel');
+            if (mainPanel) mainPanel.className = "bg-white/90 dark:bg-gray-900/70 backdrop-blur-xl p-4 md:p-5 rounded-xl border border-gray-200 dark:border-gray-800/80 shadow-md transition-all duration-300 flex flex-col h-[calc(100vh-210px)] overflow-hidden";
+            
+            const panelTitle = document.getElementById('panel-title');
+            const panelTime = document.getElementById('panel-time');
+            if (panelTitle) panelTitle.innerText = titleStr;
+            const tabData = dbData[tabId] || { "time": "尚未更新", "data": [] };
+            if (panelTime) panelTime.innerText = "UPDATE: " + tabData.time;
+            
+            const container = document.getElementById('link-list');
+            if (!container) return;
+            renderNewsList(container, tabData.data || []);
+        }
+
+        function renderNewsList(container, dataList) {
+            if (!container) return;
+            container.innerHTML = "";
+            if (!dataList || dataList.length === 0) {
+                container.innerHTML = '<div class="text-center py-8 text-gray-500">📭 暫無新聞資料</div>';
+                return;
+            }
+            dataList.slice(0, 15).forEach(function(item) {
+                const li = document.createElement('li');
+                li.className = "p-2.5 bg-gray-50/50 dark:bg-gray-800/20 rounded-lg border border-gray-200 dark:border-gray-700/30 text-xs flex flex-col gap-0.5 hover:border-gray-300 dark:hover:bg-gray-600 transition-colors shadow-sm group";
+                const titleText = item.title || '查看原始新聞';
+                const urlText = item.url || '#';
+                li.innerHTML = '<div class="text-gray-700 dark:text-gray-300 font-medium truncate">📌 新聞：' + escapeHtml(titleText) + '</div>' +
+                               '<a href="' + escapeHtml(urlText) + '" target="_blank" class="text-[10px] font-mono text-gray-400 block truncate hover:text-purple-400 transition-colors">' + escapeHtml(urlText) + '</a>';
+                container.appendChild(li);
+            });
+        }
+
         function escapeHtml(text) {
             if (!text) return '';
             return text.replace(/[&<>]/g, function(m) {
@@ -715,33 +900,272 @@
             });
         }
 
-        function switchAiTab(subTabId) {
-            activeAiTabId = subTabId;
-            const aiMapping = {
-                'tw': 'ai_news_tw',
-                'us': 'ai_news_us',
-                'global': 'ai_news_global'
-            };
-            const key = aiMapping[subTabId];
-            const tabData = dbData[key] || { text: "暫無資料" };
-            const contentArea = document.getElementById('ai-content-area');
-            if (contentArea) {
-                contentArea.innerHTML = '<div class="font-mono text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap">' + (tabData.text || '暫無資料') + '</div>';
+        // ========== AI 內容解析 ==========
+        function extractSection(fullText, sectionMarkers) {
+            if (!fullText) return "";
+            const lowerText = fullText.toLowerCase();
+            
+            for (let i = 0; i < sectionMarkers.length; i++) {
+                const marker = sectionMarkers[i];
+                const lowerMarker = marker.toLowerCase();
+                let startIdx = lowerText.indexOf(lowerMarker);
+                
+                if (startIdx !== -1) {
+                    let contentStart = startIdx + marker.length;
+                    
+                    const nextMarkers = ["**今日市場焦點**", "今日市場焦點", "**操盤策略與投資建議**", "操盤策略", "投資建議", "市場事實如下", "市場事實"];
+                    let endIdx = fullText.length;
+                    
+                    for (let nextMarker of nextMarkers) {
+                        if (nextMarker.toLowerCase() !== lowerMarker) {
+                            let mIdx = lowerText.indexOf(nextMarker.toLowerCase(), contentStart);
+                            if (mIdx !== -1 && mIdx < endIdx && mIdx > contentStart) {
+                                endIdx = mIdx;
+                            }
+                        }
+                    }
+                    
+                    let section = fullText.substring(contentStart, endIdx);
+                    section = section.replace(/^[\s\n:：\-•*]+|[\s\n]+$/g, '').trim();
+                    
+                    if (section && section.length > 3) {
+                        return section;
+                    }
+                }
             }
+            
+            if (sectionMarkers.includes("市場事實")) {
+                const match = fullText.match(/市場事實[：:]\s*([\s\S]*?)(?=今日市場焦點|操盤策略|投資建議|$)/i);
+                if (match && match[1]) return match[1].trim();
+            }
+            if (sectionMarkers.includes("今日市場焦點")) {
+                const match = fullText.match(/今日市場焦點[：:]\s*([\s\S]*?)(?=操盤策略|投資建議|市場事實|$)/i);
+                if (match && match[1]) return match[1].trim();
+            }
+            if (sectionMarkers.includes("操盤策略")) {
+                const match = fullText.match(/操盤策略[與和投資建議]*[：:]\s*([\s\S]*?)(?=市場事實|今日市場焦點|$)/i);
+                if (match && match[1]) return match[1].trim();
+            }
+            
+            return "";
+        }
+
+        function cleanAndFormatText(rawText) {
+            if (!rawText) return "";
+            let cleaned = rawText.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+            cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
+            cleaned = cleaned.replace(/f=ac\+ts|\*\*|\*/g, '');
+            cleaned = cleaned.trim();
+            return cleaned;
         }
 
         function showAiBlock(blockType) {
-            // 簡化版
+            activeAiBlock = blockType;
+            const displayArea = document.getElementById('ai-content-area');
+            if (!displayArea) return;
+
+            let content = "";
+            const shadowFacts = document.getElementById('shadow-facts');
+            const shadowFocus = document.getElementById('shadow-focus');
+            const shadowStrategy = document.getElementById('shadow-strategy');
+            const blockFacts = document.getElementById('block-facts');
+            const blockFocus = document.getElementById('block-focus');
+            const blockStrategy = document.getElementById('block-strategy');
+            
+            if (blockType === 'facts') { 
+                content = shadowFacts ? shadowFacts.innerHTML : "";
+                if (!content || content === "") content = blockFacts ? blockFacts.innerHTML : "";
+            }
+            if (blockType === 'focus') { 
+                content = shadowFocus ? shadowFocus.innerHTML : "";
+                if (!content || content === "") content = blockFocus ? blockFocus.innerHTML : "";
+            }
+            if (blockType === 'strategy') { 
+                content = shadowStrategy ? shadowStrategy.innerHTML : "";
+                if (!content || content === "") content = blockStrategy ? blockStrategy.innerHTML : "";
+            }
+            
+            if (content && content !== "") {
+                displayArea.innerHTML = '<div class="font-mono text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap pr-1 tracking-wide">' + content + '</div>';
+                displayArea.classList.add('update-flash');
+                setTimeout(() => displayArea.classList.remove('update-flash'), 300);
+            } else {
+                displayArea.innerHTML = '<div class="font-mono text-[13px] text-gray-500 dark:text-gray-500 leading-relaxed text-center py-8">📭 暫無數據，請等待系統更新</div>';
+            }
+
+            const subBtnFacts = document.getElementById('sub-btn-facts');
+            const subBtnFocus = document.getElementById('sub-btn-focus');
+            const subBtnStrategy = document.getElementById('sub-btn-strategy');
+            
+            if (subBtnFacts) subBtnFacts.className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
+            if (subBtnFocus) subBtnFocus.className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
+            if (subBtnStrategy) subBtnStrategy.className = "sub-block-btn px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg text-[11px] font-medium transition-all shadow-sm border border-gray-300 dark:border-gray-700/50";
+
+            if (blockType === 'facts' && subBtnFacts) subBtnFacts.className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-blue-500 text-blue-500 bg-blue-50 dark:bg-blue-950/40";
+            if (blockType === 'focus' && subBtnFocus) subBtnFocus.className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-purple-500 text-purple-500 bg-purple-50 dark:bg-purple-950/40";
+            if (blockType === 'strategy' && subBtnStrategy) subBtnStrategy.className = "sub-block-btn px-3 py-1 font-bold rounded-lg text-[11px] border shadow-md border-emerald-500 text-emerald-500 bg-emerald-50 dark:bg-emerald-950/40";
+        }
+
+        function switchAiTab(subTabId) {
+            activeAiTabId = subTabId;
+            const aiMapping = {
+                'tw': { key: 'ai_news_tw', btn: 'from-green-500 to-emerald-600', name: '台股戰略' },
+                'us': { key: 'ai_news_us', btn: 'from-blue-500 to-indigo-600', name: '美股焦點' },
+                'global': { key: 'ai_news_global', btn: 'from-purple-500 to-pink-600', name: '國際政經' }
+            };
+            
+            document.querySelectorAll('.ai-tab-btn').forEach(function(b) {
+                b.className = "ai-tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50 hover:bg-gray-300/60 dark:hover:bg-gray-800/80 transition-all duration-200 shadow-sm";
+            });
+            
+            const activeCfg = aiMapping[subTabId];
+            const activeBtn = document.getElementById('ai-btn-' + subTabId);
+            if (activeBtn) activeBtn.className = "ai-tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r " + activeCfg.btn + " text-white shadow-md border-transparent";
+
+            const tabData = dbData[activeCfg.key] || { "title": activeCfg.name, "time": "尚未更新", "text": "暫無日報資料。" };
+            
+            const tEl = document.getElementById('ainews-title');
+            const mEl = document.getElementById('ainews-time');
+            if (tEl) tEl.innerText = tabData.title;
+            if (mEl) mEl.innerText = "UPDATE: " + tabData.time;
+            
+            let text = tabData.text || "";
+            let cleanText = cleanAndFormatText(text);
+            
+            let partFacts = extractSection(cleanText, ["市場事實如下：", "市場事實如下", "市場事實"]);
+            let partFocus = extractSection(cleanText, ["**今日市場焦點**", "今日市場焦點："]);
+            let partStrategy = extractSection(cleanText, ["**操盤策略與投資建議**", "操盤策略與投資建議：", "操盤策略："]);
+            
+            if ((!partFacts || partFacts === "") && cleanText && cleanText.length > 0) {
+                partFacts = cleanText.substring(0, 500);
+                partFocus = "請參考市場事實部分";
+                partStrategy = "請參考市場事實部分";
+            } else if ((!partFacts || partFacts === "") && (!partFocus || partFocus === "") && (!partStrategy || partStrategy === "")) {
+                partFacts = "📊 暫無市場事實數據\n\n請執行數據採集任務獲取最新 AI 分析報告。";
+                partFocus = "🔥 暫無焦點數據";
+                partStrategy = "⚡ 暫無策略數據";
+            }
+            
+            function formatContent(content) {
+                if (!content) return "";
+                let formatted = content;
+                formatted = formatted.replace(/\n/g, '<br>');
+                formatted = formatted.replace(/(\d+)\.\s/g, '<br>$1. ');
+                formatted = formatted.replace(/[•·-]\s/g, '• ');
+                return '<div class="leading-relaxed">' + formatted + '</div>';
+            }
+            
+            const fBlock = document.getElementById('block-facts');
+            const oBlock = document.getElementById('block-focus');
+            const sBlock = document.getElementById('block-strategy');
+            const shadowFacts = document.getElementById('shadow-facts');
+            const shadowFocus = document.getElementById('shadow-focus');
+            const shadowStrategy = document.getElementById('shadow-strategy');
+            
+            const formattedFacts = formatContent(partFacts);
+            const formattedFocus = formatContent(partFocus);
+            const formattedStrategy = formatContent(partStrategy);
+            
+            if (fBlock) fBlock.innerHTML = formattedFacts;
+            if (oBlock) oBlock.innerHTML = formattedFocus;
+            if (sBlock) sBlock.innerHTML = formattedStrategy;
+            if (shadowFacts) shadowFacts.innerHTML = formattedFacts;
+            if (shadowFocus) shadowFocus.innerHTML = formattedFocus;
+            if (shadowStrategy) shadowStrategy.innerHTML = formattedStrategy;
+            
+            showAiBlock('facts');
         }
 
         function renderStaticChain(dataList) {
             const container = document.getElementById('chain-flow-container');
             if (!container) return;
-            container.innerHTML = '<div class="text-center py-8 text-gray-500">供應鏈地圖載入中...</div>';
+            container.innerHTML = "";
+            container.className = "grid grid-cols-1 md:grid-cols-4 gap-3 flex-1 overflow-hidden"; 
+            dataList.forEach(function(node) {
+                let cardsHtml = "";
+                node.companies.forEach(function(c) {
+                    let idBadge = c.id ? '<span class="font-mono text-[9px] text-gray-400 bg-gray-100 dark:bg-gray-800 px-1 py-0.2 rounded">' + c.id + '</span>' : '';
+                    cardsHtml += '<div class="p-2.5 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950/40 shadow-sm border-l-4 border-l-purple-500 flex flex-col justify-between mb-2">' +
+                                    '<div class="flex justify-between items-center mb-0.5">' +
+                                        '<span class="font-bold text-gray-800 dark:text-gray-100 text-xs truncate max-w-[120px]">' + c.name + '</span>' +
+                                        idBadge +
+                                    '</div>' +
+                                    '<p class="text-[10px] text-gray-500 dark:text-gray-400 leading-relaxed">' + c.desc + '</p>' +
+                                 '</div>';
+                });
+                let stepBadge = node.step ? node.step : '•';
+                let colDiv = document.createElement('div');
+                colDiv.className = "flex flex-col bg-white/60 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800/80 rounded-xl p-3 shadow-md h-full";
+                colDiv.innerHTML = '<div class="flex items-center gap-2 mb-2 border-b border-gray-200 dark:border-gray-800 pb-1.5 flex-shrink-0">' +
+                                        '<span class="w-5 h-5 rounded-full bg-gradient-to-r ' + node.color + ' text-white flex items-center justify-center font-bold text-[10px] shadow-sm">' + stepBadge + '</span>' +
+                                        '<h3 class="text-xs font-bold text-gray-800 dark:text-gray-100">' + node.stage + ' <span class="text-[10px] font-normal text-gray-400 ml-1">' + node.title + '</span></h3>' +
+                                   '</div>' +
+                                   '<div class="space-y-2 flex-1 overflow-y-auto pr-1 max-h-[320px] md:max-h-[380px]">' + cardsHtml + '</div>';
+                container.appendChild(colDiv);
+            });
         }
 
         async function triggerRealtimeAiAnalysis() {
-            alert('AI 分析功能需要後端支援');
+            const inputVal = document.getElementById('chain-search-input').value.trim();
+            const btn = document.getElementById('ai-analyze-btn');
+            const brainPanel = document.getElementById('chain-ai-brain');
+            const brainText = document.getElementById('brain-comp-text');
+            const container = document.getElementById('chain-flow-container');
+            if (!inputVal) { alert("請輸入想要剖析的產業或技術主題（例如：低軌衛星、液冷）"); return; }
+            if (!btn || !container) return;
+            btn.disabled = true;
+            btn.className = "px-5 py-3 bg-gray-400 dark:bg-gray-700 text-gray-200 text-sm font-bold rounded-xl shadow-md cursor-not-allowed";
+            btn.innerText = "分析中...";
+            if (brainPanel) brainPanel.classList.remove('hidden');
+            const brainTitle = document.getElementById('brain-comp-name');
+            if (brainTitle) brainTitle.innerText = "🔍 正在現場動態生成『" + inputVal + "』的上中下游全球供應鏈...";
+            if (brainText) brainText.innerHTML = "<span class='animate-pulse text-purple-500 font-bold text-xs'>⚡ 本地端 Llama 3.1 正在功能推理並編織知識圖譜...</span>";
+            
+            const headers = { 'Content-Type': 'application/json', 'X-Quant-Key': SHENG_SECRET_KEY };
+            if (currentUser) headers['X-Username'] = currentUser;
+            
+            try {
+                const response = await fetch(NGROK_TUNNEL_URL + "/api/analyze", {
+                    method: 'POST', headers: headers, body: JSON.stringify({ query: inputVal })
+                });
+                const resData = await response.json();
+                if (!response.ok || !resData.chains) throw new Error();
+                if (brainTitle) brainTitle.innerText = "🧠 " + inputVal + " — 全球產業量化核心戰略解讀";
+                if (brainText) {
+                    brainText.className = "text-xs text-gray-700 dark:text-gray-300 leading-relaxed font-mono whitespace-pre-line";
+                    brainText.innerText = resData.summary;
+                }
+                container.innerHTML = "";
+                container.className = "grid grid-cols-1 md:grid-cols-3 gap-3 flex-1 overflow-hidden";
+                const colors = { "上游": "from-red-500 to-orange-500", "中游": "from-amber-500 to-yellow-500", "下游": "from-blue-500 to-indigo-500" };
+                resData.chains.forEach(function(node, idx) {
+                    let cardsHtml = "";
+                    node.companies.forEach(function(c) {
+                        let idBadge = c.id ? '<span class="font-mono text-[9px] text-gray-400 bg-gray-100 dark:bg-gray-800 px-1 py-0.2 rounded">' + c.id + '</span>' : '';
+                        cardsHtml += '<div class="p-2.5 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950/40 shadow-sm border-l-4 border-l-purple-500 flex flex-col justify-between mb-2">' +
+                                        '<div class="flex justify-between items-center mb-0.5">' +
+                                            '<span class="font-bold text-gray-800 dark:text-gray-100 text-xs truncate max-w-[120px]">' + c.name + '</span>' + idBadge +
+                                        '</div>' +
+                                        '<p class="text-[10px] text-gray-500 dark:text-gray-400 leading-relaxed">' + c.desc + '</p>' +
+                                     '</div>';
+                    });
+                    const nodeColor = colors[node.stage] || "from-purple-500 to-pink-500";
+                    const colDiv = document.createElement('div');
+                    colDiv.className = "flex flex-col bg-white/60 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800/80 rounded-xl p-3 shadow-md h-full";
+                    colDiv.innerHTML = '<div class="flex items-center gap-2 mb-2 border-b border-gray-200 dark:border-gray-800 pb-1.5 flex-shrink-0">' +
+                                            '<span class="w-5 h-5 rounded-full bg-gradient-to-r ' + nodeColor + ' text-white flex items-center justify-center font-bold text-[10px] shadow-sm">' + (idx + 1) + '</span>' +
+                                            '<h3 class="text-xs font-bold text-gray-800 dark:text-gray-100">' + node.stage + ' <span class="text-[10px] font-normal text-gray-400 ml-1">' + node.title + '</span></h3>' +
+                                        '</div>' +
+                                        '<div class="space-y-2 flex-1 overflow-y-auto pr-1 max-h-[320px] md:max-h-[380px]">' + cardsHtml + '</div>';
+                    container.appendChild(colDiv);
+                });
+            } catch (err) {
+                if (brainText) brainText.innerHTML = "<span class='text-red-500 font-bold text-xs'>❌ 數據串接異常：請確認本機 api_server.py 是否正常開機運作。</span>";
+            } finally {
+                btn.disabled = false;
+                btn.className = "px-5 py-3 bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold rounded-xl shadow-md transition duration-200";
+                btn.innerText = "即時 AI 分析";
+            }
         }
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -829,16 +1253,16 @@
         <!-- 新聞情報中心 -->
         <div id="news-section" class="space-y-4 flex-1 flex flex-col overflow-hidden hidden">
             <nav class="flex justify-center space-x-2 mb-2 flex-shrink-0">
-                <button id="btn-tw" onclick="switchTab('tw')" class="tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-md border-transparent">📊 台股大數據</button>
-                <button id="btn-us" onclick="switchTab('us')" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50">🦅 美股焦點</button>
-                <button id="btn-global" onclick="switchTab('global')" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50">🌍 國際政經</button>
+                <button id="btn-tw" onclick="switchTab('tw')" class="tab-btn">📊 台股大數據</button>
+                <button id="btn-us" onclick="switchTab('us')" class="tab-btn">🦅 美股焦點</button>
+                <button id="btn-global" onclick="switchTab('global')" class="tab-btn">🌍 國際政經</button>
             </nav>
-            <main id="main-panel" class="bg-white/90 dark:bg-gray-900/70 backdrop-blur-xl p-4 md:p-5 rounded-xl border border-gray-200 dark:border-gray-800/80 shadow-md transition-all duration-300 flex flex-col h-[calc(100vh-210px)] overflow-hidden">
+            <main id="main-panel" class="p-4 rounded-xl min-h-[300px] flex-1 flex flex-col overflow-hidden">
                 <div class="flex justify-between border-b border-gray-200 dark:border-gray-800 pb-2 mb-3 flex-shrink-0">
-                    <h2 id="panel-title" class="text-xs font-bold text-gray-400">📊 台股大數據資料來源</h2>
-                    <span id="panel-time" class="text-[10px] font-mono text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-950/50 px-2 py-0.5 rounded">UPDATE: 載入中...</span>
+                    <h2 id="panel-title" class="text-xs font-bold text-gray-400">載入中...</h2>
+                    <span id="panel-time" class="text-[10px] font-mono text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-950/50 px-2 py-0.5 rounded">--</span>
                 </div>
-                <ul id="link-list" class="space-y-2 flex-1 overflow-y-auto pr-1"></ul>
+                <ul id="link-list"></ul>
             </main>
         </div>
 
@@ -859,13 +1283,28 @@
         <!-- AI 新聞戰略中心 -->
         <div id="ainews-section" class="hidden flex-1 flex-col overflow-hidden h-full">
             <nav class="flex justify-center space-x-2 mb-2 flex-shrink-0">
-                <button id="ai-btn-tw" onclick="switchAiTab('tw')" class="ai-tab-btn px-5 py-2 rounded-xl font-bold text-xs bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-md border-transparent">📊 台股戰略</button>
-                <button id="ai-btn-us" onclick="switchAiTab('us')" class="ai-tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50">🦅 美股焦點</button>
-                <button id="ai-btn-global" onclick="switchAiTab('global')" class="ai-tab-btn px-4 py-2 rounded-xl font-medium text-xs text-gray-500 dark:text-gray-400 bg-gray-200/70 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700/50">🌍 國際政經</button>
+                <button id="ai-btn-tw" onclick="switchAiTab('tw')" class="ai-tab-btn">📊 台股戰略</button>
+                <button id="ai-btn-us" onclick="switchAiTab('us')" class="ai-tab-btn">🦅 美股焦點</button>
+                <button id="ai-btn-global" onclick="switchAiTab('global')" class="ai-tab-btn">🌍 國際政經</button>
             </nav>
-            <div class="flex flex-col bg-white/60 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800/80 rounded-xl p-4 shadow-md h-[calc(100vh-210px)] overflow-hidden">
-                <div id="ai-content-area" class="flex-1 overflow-y-auto font-mono text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap pr-1 tracking-wide pb-6">選擇上方標籤載入內容...</div>
+            <nav class="flex justify-center space-x-2 mb-2 flex-shrink-0 bg-gray-900/40 p-1 rounded-xl max-w-sm mx-auto border border-gray-800/60">
+                <button id="sub-btn-facts" onclick="showAiBlock('facts')" class="sub-block-btn px-3 py-1 text-gray-400 rounded-lg text-[11px]">📋 市場事實</button>
+                <button id="sub-btn-focus" onclick="showAiBlock('focus')" class="sub-block-btn px-3 py-1 text-gray-400 rounded-lg text-[11px]">🔥 重要焦點</button>
+                <button id="sub-btn-strategy" onclick="showAiBlock('strategy')" class="sub-block-btn px-3 py-1 text-gray-400 rounded-lg text-[11px]">⚡ 操盤方針</button>
+            </nav>
+            <div class="flex justify-between border-b border-gray-200 dark:border-gray-800 pb-1.5 mb-2 flex-shrink-0">
+                <h2 id="ainews-title" class="text-xs font-bold text-gray-400">載入中...</h2>
+                <span id="ainews-time" class="text-[10px] font-mono text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-950/50 px-2 py-0.5 rounded border border-gray-200 dark:border-gray-800">--</span>
             </div>
+            <div class="flex flex-col bg-white/60 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800/80 rounded-xl p-4 shadow-md h-[calc(100vh-210px)] overflow-hidden">
+                <div id="ai-content-area" class="flex-1 overflow-y-auto font-mono text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap pr-1 tracking-wide pb-6 selection:bg-purple-500/30">載入中...</div>
+            </div>
+            <div id="shadow-facts" style="display:none;"></div>
+            <div id="shadow-focus" style="display:none;"></div>
+            <div id="shadow-strategy" style="display:none;"></div>
+            <div id="block-facts" style="display:none;"></div>
+            <div id="block-focus" style="display:none;"></div>
+            <div id="block-strategy" style="display:none;"></div>
         </div>
 
         <!-- 股票行情頁面 -->
